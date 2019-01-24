@@ -121,7 +121,7 @@ export default class Index extends PureComponent {
                       <strong><h4>ฝ่ายจัดซื้อ</h4></strong>
                       </div>
                       <div>
-                      <Button type="primary">ตกลง</Button>
+                      <Button type="primary"></Button>
                   </div>
                   </div>
                     </CardHeader>
@@ -304,7 +304,7 @@ export default class Index extends PureComponent {
                       <strong><h4>ฝ่ายบัญชีและการเงิน</h4></strong>
                       </div>
                       <div>
-                      <Button type="primary">ตกลง</Button>
+                      <Button type="primary">ส่งเอกสาร</Button>
                   </div>
                   </div>
                     </CardHeader>
