@@ -121,8 +121,7 @@ export default class Index extends PureComponent {
                       <strong><h4>ฝ่ายจัดซื้อ</h4></strong>
                       </div>
                       <div>
-                      <Button type="primary">อนุมัติ</Button>
-                  <Button type="danger">ไม่อนุมัติ</Button>
+                      <Button type="primary">ตกลง</Button>
                   </div>
                   </div>
                     </CardHeader>
@@ -248,7 +247,7 @@ export default class Index extends PureComponent {
                         <Select
                             value={selectedOption4}
                             onChange={this.handleChange4}
-                            placeholder={'กรุณาเลือกกรรมการผู้จัดการฝ่าย'}
+                            placeholder={'กรุณาเลือกบริษัท'}
                             options={options}
                           />
                         </Col>
@@ -305,7 +304,7 @@ export default class Index extends PureComponent {
                       <strong><h4>ฝ่ายบัญชีและการเงิน</h4></strong>
                       </div>
                       <div>
-                      <Button type="primary">ส่งเอกสาร</Button>
+                      <Button type="primary">ตกลง</Button>
                   </div>
                   </div>
                     </CardHeader>
@@ -495,7 +494,7 @@ export default class Index extends PureComponent {
                         <Select
                             value={selectedOption4}
                             onChange={this.handleChange4}
-                            placeholder={'กรุณาเลือกกรรมการผู้จัดการฝ่าย'}
+                            placeholder={'กรุณาเลือกบริษัท'}
                             options={options}
                           />
                         </Col>
