@@ -4,9 +4,8 @@ import ReactDOM from 'react-dom';
 import 'antd/dist/antd.css';
 import './index.css';
 import {
-  Table, Input, Popconfirm, Form,
+  Table, Input, Button, Popconfirm, Form,
 } from 'antd';
-import { Button, Card, CardBody, CardHeader, Col, Row } from 'reactstrap';
 
 const FormItem = Form.Item;
 const EditableContext = React.createContext();
@@ -100,7 +99,7 @@ class EditableCell extends React.Component {
                   <div
                     className="editable-cell-value-wrap"
                     style={{ paddingRight: 24 }}
-                    // onClick={this.toggleEdit}
+                    onClick={this.toggleEdit}
                   >
                     {restProps.children}
                   </div>
@@ -114,22 +113,22 @@ class EditableCell extends React.Component {
   }
 }
 
-export default class Index extends React.Component {
+export default class EditableTable extends React.Component {
   constructor(props) {
     super(props);
-    this.columns = [{
-      title: 'รายการ',
-      dataIndex: 'name',
+    this.columns = [
+    {
+      title: 'Item',
+      dataIndex: 'Item',
       width: '30%',
       editable: true,
     }, {
-      title: 'age',
+      title: 'Description',
       dataIndex: 'age',
+      width: '70%',
+      editable: true,
     }, {
-      title: 'address',
-      dataIndex: 'address',
-    }, {
-      title: 'operation',
+      title: '',
       dataIndex: 'operation',
       render: (text, record) => (
         this.state.dataSource.length >= 1
@@ -142,18 +141,8 @@ export default class Index extends React.Component {
     }];
 
     this.state = {
-      dataSource: [{
-        key: '0',
-        name: 'Edward King 0',
-        age: '32',
-        address: 'London, Park Lane no. 0',
-      }, {
-        key: '1',
-        name: 'Edward King 1',
-        age: '32',
-        address: 'London, Park Lane no. 1',
-      }],
-      count: 2,
+      dataSource: [],
+      count: 0,
     };
   }
 
@@ -166,9 +155,9 @@ export default class Index extends React.Component {
     const { count, dataSource } = this.state;
     const newData = {
       key: count,
-      name: `Edward King ${count}`,
-      age: 32,
-      address: `London, Park Lane no. ${count}`,
+      name: ``,
+      age: ``,
+      address: ``,
     };
     this.setState({
       dataSource: [...dataSource, newData],
@@ -211,25 +200,21 @@ export default class Index extends React.Component {
       };
     });
     return (
-        <div className="animated fadeIn">
-        <Card>
-          <CardHeader>
-            <strong><h4>Inbox</h4></strong>
-          </CardHeader>
-          <CardBody>
-        <Button onClick={this.handleAdd} style={{ marginBottom: 16 }}>
+      <div>
+        <Button onClick={this.handleAdd} type="primary" style={{ marginBottom: 16 }}>
           Add a row
         </Button>
         <Table
           components={components}
-        //   rowClassName={() => 'editable-row'}
+          rowClassName={() => 'editable-row'}
           bordered
+          title={() => 'ประเภทกลุ่มสินค้า'}
           dataSource={dataSource}
           columns={columns}
         />
-        </CardBody>
-        </Card>
-        </div>  
+      </div>
     );
   }
-}          
+}
+
+          
