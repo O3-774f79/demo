@@ -50,7 +50,7 @@ const routes = [
   { path: '/inbox', exact: true, name: 'Inbox',component: Inbox},
   { path: '/po', exact:true, name: 'PO', component: PO},
   { path: '/new-item' , exact: true, name: 'NewItem', component: NewItem},
-  { path: '/supplier', exact: true, name: 'Supplier', componnet: Supplier},
+  { path: '/supplier', exact: true, name: 'Supplier', component: Supplier},
   { path:  '/product',exact:true,name:'Product',component: Product},
   
   { path: '/dashboard', name: 'Dashboard', component: Dashboard },
