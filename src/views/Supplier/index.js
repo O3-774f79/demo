@@ -5,6 +5,7 @@ import './index.css';
 import { Steps, Button, message,Icon,Tabs,Checkbox  } from 'antd';
 import Select from 'react-select';
 import EditableTable from './EditableTable'
+import UploadItem from './Upload'
 const Step = Steps.Step;
 const TabPane = Tabs.TabPane;
 
@@ -269,7 +270,7 @@ export default class Index extends PureComponent {
                     <hr />
                     <Checkbox.Group style={{ width: '100%' }} onChange={onChange}>
                     <Row>
-                      <Col span={8}><Checkbox value="A">Supplier ที่ราคาถูกกวา</Checkbox></Col>
+                      <Col span={8}><Checkbox value="A">Supplier ที่ราคาถูกกว่า</Checkbox></Col>
                       <Col span={8}><Checkbox value="B">Supplier ที่ราคาแพงกว่า แต่มีรายเดียว</Checkbox></Col>
                       <Col span={8}><Checkbox value="C">Supplier รายใหมเ่พิ่ม Itemใหม่</Checkbox></Col>
                       </Row> 
@@ -304,21 +305,54 @@ export default class Index extends PureComponent {
                     <CardBody>
                     <Form>
                       <FormGroup row>
-                        <Label for="exampleEmail" sm={1}>Email</Label>
+                        <Label for="SupplierData" sm={1}>Supplier Data</Label>
+                        <Col sm={4}>
+                          <Input type="email" name="SupplierData" id="SupplierData"  />
+                        </Col>
+                      </FormGroup>
+                      <FormGroup row>
+                        <Label for="Bank" sm={1}>Bank</Label>
+                        <Col sm={4}>
+                          <Input type="email" name="Bank" id="Bank"  />
+                        </Col>
+                        <Label for="exampleEmail" sm={1}>Currency</Label>
                         <Col sm={4}>
                           <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
                         </Col>
                       </FormGroup>
                       <FormGroup row>
-                        <Label for="exampleEmail" sm={1}>Email</Label>
+                        <Label for="exampleEmail" sm={1}>Price Table</Label>
                         <Col sm={4}>
                           <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
                         </Col>
-                        <Label for="exampleEmail" sm={1}>Email</Label>
+                        <Label for="exampleEmail" sm={1}>Coc Number </Label>
                         <Col sm={4}>
                           <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
                         </Col>
                       </FormGroup>
+                      <FormGroup row>
+                        <Label for="exampleEmail" sm={1}>Bank Account </Label>
+                        <Col sm={4}>
+                          <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
+                        </Col>
+                        <Label for="exampleEmail" sm={1}>Bank</Label>
+                        <Col sm={4}>
+                          <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
+                        </Col>
+                      </FormGroup>
+                      <FormGroup row>
+                        <Label for="exampleEmail" sm={1}>Acct Type</Label>
+                        <Col sm={4}>
+                          <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
+                        </Col>
+                        <Label for="exampleEmail" sm={1}>Bank</Label>
+                        <Col sm={4}>
+                        <Checkbox value="A">Transfer</Checkbox>
+                        <Checkbox value="B">Cheque</Checkbox>
+                        </Col>
+                      </FormGroup>
+                      <hr />
+                      <UploadItem />
                     </Form>
                   </CardBody>
                 </Card>
