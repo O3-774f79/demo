@@ -7,7 +7,7 @@ export default class Index extends PureComponent {
             <div className="animated fadeIn">
             <Card>
               <CardHeader>
-                <strong><h4>NewItem</h4></strong>
+                <strong><h4>New Item</h4></strong>
               </CardHeader>
               <CardBody>
                   
