@@ -109,8 +109,8 @@ export default class Index extends PureComponent {
             <hr></hr>
                   <div style={{marginBottom: 10}}>
         <Steps current={current}>
-          {steps.map(item => <Step key={item.title} title={item.title} status={item.status} icon={item.icon}/>)}
-        </Steps>
+                    {stepsBuyer.map(item => <Step key={item.title} title={item.title} status={item.status} icon={item.icon}/>)}
+                    </Steps>
       </div>
       <Tabs onChange={callback} type="card">
           <TabPane tab="ฝ่ายจัดซื้อ" key="1"> 
@@ -127,9 +127,9 @@ export default class Index extends PureComponent {
                   </div>
                     </CardHeader>
                   <div style={{padding: 10}}>
-                    <Steps current={current}>
-                    {stepsBuyer.map(item => <Step key={item.title} title={item.title} status={item.status} icon={item.icon}/>)}
-                    </Steps>
+                  <Steps current={current}>
+                  {steps.map(item => <Step key={item.title} title={item.title} status={item.status} icon={item.icon}/>)}
+                </Steps>
                   </div>
                     <CardBody>
                     <Form>
@@ -300,10 +300,252 @@ export default class Index extends PureComponent {
           <TabPane tab="ฝ่ายบัญชีและการเงิน" key="2">              
           <Card style={{width:"100%"}}>
                     <CardHeader>
+                      <div style={{display:'flex',justifyContent:'space-between'}}>
+                      <div>
                       <strong><h4>ฝ่ายบัญชีและการเงิน</h4></strong>
+                      </div>
+                      <div>
+                      <Button type="primary">ส่งเอกสาร</Button>
+                  </div>
+                  </div>
                     </CardHeader>
                     <CardBody>
                     <Form>
+                      <FormGroup row>
+                        <Label for="SupplierData" sm={1}>Supplier Data</Label>
+                        <Col sm={4}>
+                          <Input type="email" name="SupplierData" id="SupplierData"  />
+                        </Col>
+                      </FormGroup>
+                      <FormGroup row>
+                        <Label for="Bank" sm={1}>Bank</Label>
+                        <Col sm={4}>
+                          <Input type="email" name="Bank" id="Bank"  />
+                        </Col>
+                        <Label for="exampleEmail" sm={1}>Currency</Label>
+                        <Col sm={4}>
+                          <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
+                        </Col>
+                      </FormGroup>
+                      <FormGroup row>
+                        <Label for="exampleEmail" sm={1}>Price Table</Label>
+                        <Col sm={4}>
+                          <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
+                        </Col>
+                        <Label for="exampleEmail" sm={1}>Coc Number </Label>
+                        <Col sm={4}>
+                          <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
+                        </Col>
+                      </FormGroup>
+                      <FormGroup row>
+                        <Label for="exampleEmail" sm={1}>Bank Account </Label>
+                        <Col sm={4}>
+                          <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
+                        </Col>
+                        <Label for="exampleEmail" sm={1}>Bank</Label>
+                        <Col sm={4}>
+                          <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
+                        </Col>
+                      </FormGroup>
+                      <FormGroup row>
+                        <Label for="exampleEmail" sm={1}>Acct Type</Label>
+                        <Col sm={4}>
+                          <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
+                        </Col>
+                        <Label for="exampleEmail" sm={1}>Bank</Label>
+                        <Col sm={4}>
+                        <Checkbox value="A">Transfer</Checkbox>
+                        <Checkbox value="B">Cheque</Checkbox>
+                        </Col>
+                      </FormGroup>
+                      <hr />
+                      <UploadItem />
+                    </Form>
+                  </CardBody>
+                </Card>
+                </TabPane>
+                <TabPane tab="approver" key="3">              
+          <Card style={{width:"100%"}}>
+                    <CardHeader>
+                      <div style={{display:'flex',justifyContent:'space-between'}}>
+                      <div>
+                      <strong><h4>Approver</h4></strong>
+                      </div>
+                      <div>
+                      <Button type="primary">อนุมัติ</Button>
+                  <Button type="danger">ไม่อนุมัติ</Button>
+                  </div>
+                  </div>
+                    </CardHeader>
+                    <CardBody>
+                    <Form>
+                      <h4>ฝ่ายจัดซื้อ</h4>
+                      <FormGroup row>
+                        <Label for="exampleEmail" sm={1}>Supplier Code</Label>
+                        <Col sm={4}>
+                          <Input type="email" name="email" id="exampleEmail"/>
+                        </Col>
+                      </FormGroup>
+                      <FormGroup row>
+                        <Label for="exampleEmail" sm={1}>ชื่อ Supplier</Label>
+                        <Col sm={4}>
+                          <Input type="email" name="email" id="exampleEmail"  />
+                        </Col>
+                        <Label for="exampleEmail" sm={1} >เงื่อนไขการชำระเงิน</Label>
+                        <Col sm={1}>
+                          <Input type="email" name="email" id="exampleEmail" />
+                        </Col>
+                        <Label sm={1} >วัน</Label>
+                      </FormGroup>
+                      <FormGroup row>
+                        <Label for="SortName" sm={1}>Sort Name</Label>
+                        <Col sm={4}>
+                          <Input type="SortName" name="SortName" id="SortName"/>
+                        </Col>
+                      </FormGroup>
+                      <FormGroup row>
+                        <Label for="address" sm={1}>ที่อยู่</Label>
+                        <Col sm={11}>
+                          <Input type="textarea" name="SortName" id="address"/>
+                        </Col>
+                      </FormGroup>
+                      <FormGroup row>
+                        <Label for="contact" sm={1}>ผู้ติดต่อ</Label>
+                        <Col sm={4}>
+                          <Input type="email" name="email" id="contact"  />
+                        </Col>
+                        <Label for="tell" sm={1} >เบอร์โทรศัพท์</Label>
+                        <Col sm={2}>
+                          <Input type="email" name="email" id="tell" />
+                        </Col>
+                      </FormGroup>
+                      <FormGroup row>
+                        <Label for="email" sm={1}>Email</Label>
+                        <Col sm={4}>
+                          <Input type="email" name="email" id="email"  />
+                        </Col>
+                        <Label for="fax" sm={1} >เบอร์แฟกซ์</Label>
+                        <Col sm={2}>
+                          <Input type="email" name="email" id="fax" />
+                        </Col>
+                      </FormGroup>
+                      <FormGroup row>
+                        <Label for="email" sm={1}>ซุปเปอร์ไวเซอร์</Label>
+                        <Col sm={4}>
+                        <Select
+                            value={selectedOption1}
+                            onChange={this.handleChange1}
+                            placeholder={'กรุณาเลือกบริษัท'}
+                            options={options}
+                          />
+                        </Col>
+                        <Label for="fax" sm={1} >ซุปเปอร์ไวเซอร์</Label>
+                        <Col sm={2}>
+                        <Select
+                            value={selectedOption5}
+                            onChange={this.handleChange5}
+                            placeholder={'กรุณาเลือกซุปเปอร์ไวเซอร์'}
+                            options={emp}
+                          />
+                        </Col>
+                      </FormGroup>
+                      <FormGroup row>
+                        <Label for="email" sm={1}>ประธานกลุ่มสินค้า</Label>
+                        <Col sm={4}>
+                        <Select
+                            value={selectedOption2}
+                            onChange={this.handleChange2}
+                            placeholder={'กรุณาเลือกบริษัท'}
+                            options={options}
+                          />
+                        </Col>
+                        <Label for="fax" sm={1} >ประธานกลุ่มสินค้า</Label>
+                        <Col sm={2}>
+                        <Select
+                            value={selectedOption6}
+                            onChange={this.handleChange6}
+                            placeholder={'กรุณาเลือกประธานกลุ่มสินค้า'}
+                            options={emp}
+                          />
+                        </Col>
+                      </FormGroup>
+                      <FormGroup row>
+                        <Label for="email" sm={1}>ผู้จัดการฝ่าย</Label>
+                        <Col sm={4}>
+                        <Select
+                            value={selectedOption3}
+                            onChange={this.handleChange3}
+                            placeholder={'กรุณาเลือกบริษัท'}
+                            options={options}
+                          />
+                        </Col>
+                        <Label for="fax" sm={1} >ผู้จัดการฝ่าย</Label>
+                        <Col sm={2}>
+                        <Select
+                            value={selectedOption7}
+                            onChange={this.handleChange7}
+                            placeholder={'กรุณาเลือกผู้จัดการฝ่าย'}
+                            options={emp}
+                          />
+                        </Col>
+                      </FormGroup>
+                      <FormGroup row>
+                        <Label for="email" sm={1}>กรรมการผู้จัดการฝ่าย</Label>
+                        <Col sm={4}>
+                        <Select
+                            value={selectedOption4}
+                            onChange={this.handleChange4}
+                            placeholder={'กรุณาเลือกกรรมการผู้จัดการฝ่าย'}
+                            options={options}
+                          />
+                        </Col>
+                        <Label for="fax" sm={1} >กรรมการผู้จัดการฝ่าย</Label>
+                        <Col sm={2}>
+                        <Select
+                            value={selectedOption8}
+                            onChange={this.handleChange8}
+                            placeholder={'กรุณาเลือกกรรมการผู้จัดการฝ่าย'}
+                            options={emp}
+                          />
+                        </Col>
+                      </FormGroup>
+                    </Form>
+                    <hr />
+                    <div>รายละเอียด</div>
+                    <br />
+                    <EditableTable />
+                    <hr />
+                    <Checkbox.Group style={{ width: '100%' }} onChange={onChange}>
+                    <Row>
+                      <Col span={8}><Checkbox value="A">Supplier ที่ราคาถูกกว่า</Checkbox></Col>
+                      <Col span={8}><Checkbox value="B">Supplier ที่ราคาแพงกว่า แต่มีรายเดียว</Checkbox></Col>
+                      <Col span={8}><Checkbox value="C">Supplier รายใหมเ่พิ่ม Itemใหม่</Checkbox></Col>
+                      </Row> 
+                      <Row>
+                      <Col span={8}><Checkbox value="D">Supplier ที่ราคาแพงกว่า และมีมากกว่า 1 ราย</Checkbox></Col>
+                      <Col span={8}><Checkbox value="E">Supplier รายใหม่เพิ่ม Itemใหม่ที่ฝ่ายอื่นหาให้ </Checkbox> 
+                        <select>
+                          <option >ก</option>
+                          <option >ข</option>
+                          <option >ค</option>
+                          <option >ง</option>
+                      </select>
+                    </Col>
+                      <Col span={8}><Checkbox value="E">Supplier ที่ฝ่ายอื่นหาให้</Checkbox>
+                      <select>
+                          <option >ก</option>
+                          <option >ข</option>
+                          <option >ค</option>
+                          <option >ง</option>
+                      </select>
+                    </Col>
+                    </Row>
+  </Checkbox.Group>,
+                  </CardBody>
+                  <hr />
+                    <CardBody>
+                    <Form>
+                    <h4>ฝ่ายบัญชีและการเงิน</h4>
                       <FormGroup row>
                         <Label for="SupplierData" sm={1}>Supplier Data</Label>
                         <Col sm={4}>
