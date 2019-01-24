@@ -1,37 +1,12 @@
-import React, { PureComponent } from 'react'
-// import { Button, Card, CardBody, CardHeader, Col, Row } from 'reactstrap';
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import 'antd/dist/antd.css';
+import './index.css';
 import {
-    Table, Input, Button, Popconfirm, Form,
-  } from 'antd';
-import './index.css'
-// const FormItem = Form.Item;
-// const EditableContext = React.createContext();
-
-// const EditableRow = ({ form, index, ...props }) => (
-//   <EditableContext.Provider value={form}>
-//     <tr {...props} />
-//   </EditableContext.Provider>
-// );
-
-// export default class Index extends PureComponent {
-//     render() {
-//          return(
-//             <div className="animated fadeIn">
-//             <Card>
-//               <CardHeader>
-//                 <strong><h4>Inbox</h4></strong>
-//               </CardHeader>
-//               <CardBody>
-                  
-//             </CardBody>
-//             </Card>
-//             </div>  
-//          )
-//     }
-// }
-
-
-// const { Table, Input, Button, Popconfirm, Form, } = antd;
+  Table, Input, Popconfirm, Form,
+} from 'antd';
+import { Button, Card, CardBody, CardHeader, Col, Row } from 'reactstrap';
 
 const FormItem = Form.Item;
 const EditableContext = React.createContext();
@@ -125,7 +100,7 @@ class EditableCell extends React.Component {
                   <div
                     className="editable-cell-value-wrap"
                     style={{ paddingRight: 24 }}
-                    onClick={this.toggleEdit}
+                    // onClick={this.toggleEdit}
                   >
                     {restProps.children}
                   </div>
@@ -143,7 +118,7 @@ export default class Index extends React.Component {
   constructor(props) {
     super(props);
     this.columns = [{
-      title: 'name',
+      title: 'รายการ',
       dataIndex: 'name',
       width: '30%',
       editable: true,
@@ -236,34 +211,26 @@ export default class Index extends React.Component {
       };
     });
     return (
-      <div>
+        <div className="animated fadeIn">
+        <Card>
+          <CardHeader>
+            <strong><h4>Inbox</h4></strong>
+          </CardHeader>
+          <CardBody>
         <Button onClick={this.handleAdd} type="primary" style={{ marginBottom: 16 }}>
           Add a row
         </Button>
         <Table
           components={components}
-          rowClassName={() => 'editable-row'}
+        //   rowClassName={() => 'editable-row'}
           bordered
           dataSource={dataSource}
           columns={columns}
         />
-      </div>
+                    
+                    </CardBody>
+        </Card>
+        </div>  
     );
   }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}          
