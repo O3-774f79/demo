@@ -133,56 +133,56 @@ export default class Index extends PureComponent {
                     <CardBody>
                     <Form>
                       <FormGroup row>
-                        <Label for="exampleEmail" sm={1}>Supplier Code</Label>
+                        <Label for="exampleEmail" sm={2}>Supplier Code</Label>
                         <Col sm={4}>
                           <Input type="email" name="email" id="exampleEmail"/>
                         </Col>
                       </FormGroup>
                       <FormGroup row>
-                        <Label for="exampleEmail" sm={1}>ชื่อ Supplier</Label>
+                        <Label for="exampleEmail" sm={2}>ชื่อ Supplier</Label>
                         <Col sm={4}>
                           <Input type="email" name="email" id="exampleEmail"  />
                         </Col>
-                        <Label for="exampleEmail" sm={1} >เงื่อนไขการชำระเงิน</Label>
+                        <Label for="exampleEmail" sm={2}>เงื่อนไขการชำระเงิน</Label>
                         <Col sm={1}>
                           <Input type="email" name="email" id="exampleEmail" />
                         </Col>
                         <Label sm={1} >วัน</Label>
                       </FormGroup>
                       <FormGroup row>
-                        <Label for="SortName" sm={1}>Sort Name</Label>
+                        <Label for="SortName" sm={2}>Sort Name</Label>
                         <Col sm={4}>
                           <Input type="SortName" name="SortName" id="SortName"/>
                         </Col>
                       </FormGroup>
                       <FormGroup row>
-                        <Label for="address" sm={1}>ที่อยู่</Label>
+                        <Label for="address" sm={2}>ที่อยู่</Label>
                         <Col sm={11}>
                           <Input type="textarea" name="SortName" id="address"/>
                         </Col>
                       </FormGroup>
                       <FormGroup row>
-                        <Label for="contact" sm={1}>ผู้ติดต่อ</Label>
+                        <Label for="contact" sm={2}>ผู้ติดต่อ</Label>
                         <Col sm={4}>
                           <Input type="email" name="email" id="contact"  />
                         </Col>
-                        <Label for="tell" sm={1} >เบอร์โทรศัพท์</Label>
+                        <Label for="tell" sm={2} >เบอร์โทรศัพท์</Label>
                         <Col sm={2}>
                           <Input type="email" name="email" id="tell" />
                         </Col>
                       </FormGroup>
                       <FormGroup row>
-                        <Label for="email" sm={1}>Email</Label>
+                        <Label for="email" sm={2}>Email</Label>
                         <Col sm={4}>
                           <Input type="email" name="email" id="email"  />
                         </Col>
-                        <Label for="fax" sm={1} >เบอร์แฟกซ์</Label>
+                        <Label for="fax" sm={2} >เบอร์แฟกซ์</Label>
                         <Col sm={2}>
                           <Input type="email" name="email" id="fax" />
                         </Col>
                       </FormGroup>
                       <FormGroup row>
-                        <Label for="email" sm={1}>ซุปเปอร์ไวเซอร์</Label>
+                        <Label for="email" sm={2}>ซุปเปอร์ไวเซอร์</Label>
                         <Col sm={4}>
                         <Select
                             value={selectedOption1}
@@ -191,8 +191,8 @@ export default class Index extends PureComponent {
                             options={options}
                           />
                         </Col>
-                        <Label for="fax" sm={1} >ซุปเปอร์ไวเซอร์</Label>
-                        <Col sm={2}>
+                        <Label for="fax" sm={2} >ซุปเปอร์ไวเซอร์</Label>
+                        <Col sm={4}>
                         <Select
                             value={selectedOption5}
                             onChange={this.handleChange5}
@@ -202,7 +202,7 @@ export default class Index extends PureComponent {
                         </Col>
                       </FormGroup>
                       <FormGroup row>
-                        <Label for="email" sm={1}>ประธานกลุ่มสินค้า</Label>
+                        <Label for="email" sm={2}>ประธานกลุ่มสินค้า</Label>
                         <Col sm={4}>
                         <Select
                             value={selectedOption2}
@@ -211,8 +211,8 @@ export default class Index extends PureComponent {
                             options={options}
                           />
                         </Col>
-                        <Label for="fax" sm={1} >ประธานกลุ่มสินค้า</Label>
-                        <Col sm={2}>
+                        <Label for="fax" sm={2} >ประธานกลุ่มสินค้า</Label>
+                        <Col sm={4}>
                         <Select
                             value={selectedOption6}
                             onChange={this.handleChange6}
@@ -222,7 +222,7 @@ export default class Index extends PureComponent {
                         </Col>
                       </FormGroup>
                       <FormGroup row>
-                        <Label for="email" sm={1}>ผู้จัดการฝ่าย</Label>
+                        <Label for="email" sm={2}>ผู้จัดการฝ่าย</Label>
                         <Col sm={4}>
                         <Select
                             value={selectedOption3}
@@ -231,8 +231,8 @@ export default class Index extends PureComponent {
                             options={options}
                           />
                         </Col>
-                        <Label for="fax" sm={1} >ผู้จัดการฝ่าย</Label>
-                        <Col sm={2}>
+                        <Label for="fax" sm={2} >ผู้จัดการฝ่าย</Label>
+                        <Col sm={4}>
                         <Select
                             value={selectedOption7}
                             onChange={this.handleChange7}
@@ -242,7 +242,7 @@ export default class Index extends PureComponent {
                         </Col>
                       </FormGroup>
                       <FormGroup row>
-                        <Label for="email" sm={1}>กรรมการผู้จัดการฝ่าย</Label>
+                        <Label for="email" sm={2}>กรรมการผู้จัดการฝ่าย</Label>
                         <Col sm={4}>
                         <Select
                             value={selectedOption4}
@@ -251,8 +251,8 @@ export default class Index extends PureComponent {
                             options={options}
                           />
                         </Col>
-                        <Label for="fax" sm={1} >กรรมการผู้จัดการฝ่าย</Label>
-                        <Col sm={2}>
+                        <Label for="fax" sm={2} >กรรมการผู้จัดการฝ่าย</Label>
+                        <Col sm={4}>
                         <Select
                             value={selectedOption8}
                             onChange={this.handleChange8}
@@ -311,47 +311,47 @@ export default class Index extends PureComponent {
                     <CardBody>
                     <Form>
                       <FormGroup row>
-                        <Label for="SupplierData" sm={1}>Supplier Data</Label>
+                        <Label for="SupplierData" sm={2}>Supplier Data</Label>
                         <Col sm={4}>
                           <Input type="email" name="SupplierData" id="SupplierData"  />
                         </Col>
                       </FormGroup>
                       <FormGroup row>
-                        <Label for="Bank" sm={1}>Bank</Label>
+                        <Label for="Bank" sm={2}>Bank</Label>
                         <Col sm={4}>
                           <Input type="email" name="Bank" id="Bank"  />
                         </Col>
-                        <Label for="exampleEmail" sm={1}>Currency</Label>
+                        <Label for="exampleEmail" sm={2}>Currency</Label>
                         <Col sm={4}>
-                          <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
+                          <Input type="email" name="email" id="exampleEmail"  />
                         </Col>
                       </FormGroup>
                       <FormGroup row>
-                        <Label for="exampleEmail" sm={1}>Price Table</Label>
+                        <Label for="exampleEmail" sm={2}>Price Table</Label>
                         <Col sm={4}>
-                          <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
+                          <Input type="email" name="email" id="exampleEmail"  />
                         </Col>
-                        <Label for="exampleEmail" sm={1}>Coc Number </Label>
+                        <Label for="exampleEmail" sm={2}>Coc Number </Label>
                         <Col sm={4}>
-                          <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
-                        </Col>
-                      </FormGroup>
-                      <FormGroup row>
-                        <Label for="exampleEmail" sm={1}>Bank Account </Label>
-                        <Col sm={4}>
-                          <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
-                        </Col>
-                        <Label for="exampleEmail" sm={1}>Bank</Label>
-                        <Col sm={4}>
-                          <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
+                          <Input type="email" name="email" id="exampleEmail"  />
                         </Col>
                       </FormGroup>
                       <FormGroup row>
-                        <Label for="exampleEmail" sm={1}>Acct Type</Label>
+                        <Label for="exampleEmail" sm={2}>Bank Account </Label>
                         <Col sm={4}>
-                          <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
+                          <Input type="email" name="email" id="exampleEmail"  />
                         </Col>
-                        <Label for="exampleEmail" sm={1}>Bank</Label>
+                        <Label for="exampleEmail" sm={2}>Bank</Label>
+                        <Col sm={4}>
+                          <Input type="email" name="email" id="exampleEmail"  />
+                        </Col>
+                      </FormGroup>
+                      <FormGroup row>
+                        <Label for="exampleEmail" sm={2}>Acct Type</Label>
+                        <Col sm={4}>
+                          <Input type="email" name="email" id="exampleEmail"  />
+                        </Col>
+                        <Label for="exampleEmail" sm={2}>Bank</Label>
                         <Col sm={4}>
                         <Checkbox value="A">Transfer</Checkbox>
                         <Checkbox value="B">Cheque</Checkbox>
@@ -380,56 +380,56 @@ export default class Index extends PureComponent {
                     <Form>
                       <h4>ฝ่ายจัดซื้อ</h4>
                       <FormGroup row>
-                        <Label for="exampleEmail" sm={1}>Supplier Code</Label>
+                        <Label for="exampleEmail" sm={2}>Supplier Code</Label>
                         <Col sm={4}>
                           <Input type="email" name="email" id="exampleEmail"/>
                         </Col>
                       </FormGroup>
                       <FormGroup row>
-                        <Label for="exampleEmail" sm={1}>ชื่อ Supplier</Label>
+                        <Label for="exampleEmail" sm={2}>ชื่อ Supplier</Label>
                         <Col sm={4}>
                           <Input type="email" name="email" id="exampleEmail"  />
                         </Col>
-                        <Label for="exampleEmail" sm={1} >เงื่อนไขการชำระเงิน</Label>
+                        <Label for="exampleEmail" sm={2} >เงื่อนไขการชำระเงิน</Label>
                         <Col sm={1}>
                           <Input type="email" name="email" id="exampleEmail" />
                         </Col>
-                        <Label sm={1} >วัน</Label>
+                        <Label>วัน</Label>
                       </FormGroup>
                       <FormGroup row>
-                        <Label for="SortName" sm={1}>Sort Name</Label>
+                        <Label for="SortName" sm={2}>Sort Name</Label>
                         <Col sm={4}>
                           <Input type="SortName" name="SortName" id="SortName"/>
                         </Col>
                       </FormGroup>
                       <FormGroup row>
-                        <Label for="address" sm={1}>ที่อยู่</Label>
+                        <Label for="address" sm={2}>ที่อยู่</Label>
                         <Col sm={11}>
                           <Input type="textarea" name="SortName" id="address"/>
                         </Col>
                       </FormGroup>
                       <FormGroup row>
-                        <Label for="contact" sm={1}>ผู้ติดต่อ</Label>
+                        <Label for="contact" sm={2}>ผู้ติดต่อ</Label>
                         <Col sm={4}>
                           <Input type="email" name="email" id="contact"  />
                         </Col>
-                        <Label for="tell" sm={1} >เบอร์โทรศัพท์</Label>
-                        <Col sm={2}>
+                        <Label for="tell" sm={2} >เบอร์โทรศัพท์</Label>
+                        <Col sm={3} md={3}>
                           <Input type="email" name="email" id="tell" />
                         </Col>
                       </FormGroup>
                       <FormGroup row>
-                        <Label for="email" sm={1}>Email</Label>
+                        <Label for="email" sm={2}>Email</Label>
                         <Col sm={4}>
                           <Input type="email" name="email" id="email"  />
                         </Col>
-                        <Label for="fax" sm={1} >เบอร์แฟกซ์</Label>
+                        <Label for="fax" sm={2} >เบอร์แฟกซ์</Label>
                         <Col sm={2}>
                           <Input type="email" name="email" id="fax" />
                         </Col>
                       </FormGroup>
                       <FormGroup row>
-                        <Label for="email" sm={1}>ซุปเปอร์ไวเซอร์</Label>
+                        <Label for="email" sm={2}>ซุปเปอร์ไวเซอร์</Label>
                         <Col sm={4}>
                         <Select
                             value={selectedOption1}
@@ -438,8 +438,8 @@ export default class Index extends PureComponent {
                             options={options}
                           />
                         </Col>
-                        <Label for="fax" sm={1} >ซุปเปอร์ไวเซอร์</Label>
-                        <Col sm={2}>
+                        <Label for="fax" sm={2} >ซุปเปอร์ไวเซอร์</Label>
+                        <Col sm={4}>
                         <Select
                             value={selectedOption5}
                             onChange={this.handleChange5}
@@ -449,7 +449,7 @@ export default class Index extends PureComponent {
                         </Col>
                       </FormGroup>
                       <FormGroup row>
-                        <Label for="email" sm={1}>ประธานกลุ่มสินค้า</Label>
+                        <Label for="email" sm={2}>ประธานกลุ่มสินค้า</Label>
                         <Col sm={4}>
                         <Select
                             value={selectedOption2}
@@ -458,8 +458,8 @@ export default class Index extends PureComponent {
                             options={options}
                           />
                         </Col>
-                        <Label for="fax" sm={1} >ประธานกลุ่มสินค้า</Label>
-                        <Col sm={2}>
+                        <Label for="fax" sm={2} >ประธานกลุ่มสินค้า</Label>
+                        <Col sm={4}>
                         <Select
                             value={selectedOption6}
                             onChange={this.handleChange6}
@@ -469,7 +469,7 @@ export default class Index extends PureComponent {
                         </Col>
                       </FormGroup>
                       <FormGroup row>
-                        <Label for="email" sm={1}>ผู้จัดการฝ่าย</Label>
+                        <Label for="email" sm={2}>ผู้จัดการฝ่าย</Label>
                         <Col sm={4}>
                         <Select
                             value={selectedOption3}
@@ -478,8 +478,8 @@ export default class Index extends PureComponent {
                             options={options}
                           />
                         </Col>
-                        <Label for="fax" sm={1} >ผู้จัดการฝ่าย</Label>
-                        <Col sm={2}>
+                        <Label for="fax" sm={2} >ผู้จัดการฝ่าย</Label>
+                        <Col sm={4}>
                         <Select
                             value={selectedOption7}
                             onChange={this.handleChange7}
@@ -489,7 +489,7 @@ export default class Index extends PureComponent {
                         </Col>
                       </FormGroup>
                       <FormGroup row>
-                        <Label for="email" sm={1}>กรรมการผู้จัดการฝ่าย</Label>
+                        <Label for="email" sm={2}>กรรมการผู้จัดการฝ่าย</Label>
                         <Col sm={4}>
                         <Select
                             value={selectedOption4}
@@ -498,8 +498,8 @@ export default class Index extends PureComponent {
                             options={options}
                           />
                         </Col>
-                        <Label for="fax" sm={1} >กรรมการผู้จัดการฝ่าย</Label>
-                        <Col sm={2}>
+                        <Label for="fax" sm={2} >กรรมการผู้จัดการฝ่าย</Label>
+                        <Col sm={4}>
                         <Select
                             value={selectedOption8}
                             onChange={this.handleChange8}
@@ -558,33 +558,33 @@ export default class Index extends PureComponent {
                         </Col>
                         <Label for="exampleEmail" sm={1}>Currency</Label>
                         <Col sm={4}>
-                          <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
+                          <Input type="email" name="email" id="exampleEmail"  />
                         </Col>
                       </FormGroup>
                       <FormGroup row>
                         <Label for="exampleEmail" sm={1}>Price Table</Label>
                         <Col sm={4}>
-                          <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
+                          <Input type="email" name="email" id="exampleEmail"  />
                         </Col>
                         <Label for="exampleEmail" sm={1}>Coc Number </Label>
                         <Col sm={4}>
-                          <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
+                          <Input type="email" name="email" id="exampleEmail"  />
                         </Col>
                       </FormGroup>
                       <FormGroup row>
                         <Label for="exampleEmail" sm={1}>Bank Account </Label>
                         <Col sm={4}>
-                          <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
+                          <Input type="email" name="email" id="exampleEmail"  />
                         </Col>
                         <Label for="exampleEmail" sm={1}>Bank</Label>
                         <Col sm={4}>
-                          <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
+                          <Input type="email" name="email" id="exampleEmail"  />
                         </Col>
                       </FormGroup>
                       <FormGroup row>
                         <Label for="exampleEmail" sm={1}>Acct Type</Label>
                         <Col sm={4}>
-                          <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
+                          <Input type="email" name="email" id="exampleEmail"  />
                         </Col>
                         <Label for="exampleEmail" sm={1}>Bank</Label>
                         <Col sm={4}>
