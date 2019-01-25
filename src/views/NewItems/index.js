@@ -378,7 +378,7 @@ export default class Index extends PureComponent {
           <TabPane tab="ฝ่าย R&D" key="3">
 
             <Tabs defaultActiveKey="1">
-              <TabPane tab={<span><Icon type="apple" /> น้าหนักสินค้า</span>} key="1">
+              <TabPane tab={<span> น้าหนักสินค้า</span>} key="1">
 
                 <Card style={{ width: "100%" }}>
                   <CardHeader>
@@ -420,7 +420,7 @@ export default class Index extends PureComponent {
                   </CardBody>
                 </Card>
               </TabPane>
-              <TabPane tab={<span><Icon type="android" /> การจัดการสูตรการผลิต</span>} key="2">
+              <TabPane tab={<span> การจัดการสูตรการผลิต</span>} key="2">
                 <Card style={{ width: "100%" }}>
                   <CardHeader>
                     <div style={{ display: 'flex', justifyContent: 'space-between' }}>
@@ -456,7 +456,7 @@ export default class Index extends PureComponent {
                   </CardBody>
                 </Card>
               </TabPane>
-              <TabPane tab={<span><Icon type="android" />เพื่อกำหนดการแปลงหน่วย Work In Process</span>} key="3">
+              <TabPane tab={<span>เพื่อกำหนดการแปลงหน่วย Work In Process</span>} key="3">
                 <Card style={{ width: "100%" }}>
                   <CardHeader>
                     <div style={{ display: 'flex', justifyContent: 'space-between' }}>
@@ -488,7 +488,7 @@ export default class Index extends PureComponent {
                   </CardBody>
                 </Card>
               </TabPane>
-              <TabPane tab={<span><Icon type="android" />Item Data เพื่อทำการกำหนด Reference ของการผลิต</span>} key="4">
+              <TabPane tab={<span>Item Data เพื่อทำการกำหนด Reference ของการผลิต</span>} key="4">
                 <Card style={{ width: "100%" }}>
                   <CardHeader>
                     <div style={{ display: 'flex', justifyContent: 'space-between' }}>
@@ -516,7 +516,7 @@ export default class Index extends PureComponent {
                   </CardBody>
                 </Card>
               </TabPane>
-              <TabPane tab={<span><Icon type="android" />ข้อมูลทางด้านการควบคุมสินค้าคงคล้งและจ้ดส่ง</span>} key="5">
+              <TabPane tab={<span>ข้อมูลทางด้านการควบคุมสินค้าคงคล้งและจ้ดส่ง</span>} key="5">
                 <Card style={{ width: "100%" }}>
                   <CardHeader>
                     <div style={{ display: 'flex', justifyContent: 'space-between' }}>
@@ -579,7 +579,7 @@ export default class Index extends PureComponent {
                   </CardBody>
                 </Card>
               </TabPane>
-              <TabPane tab={<span><Icon type="android" />การจัดสถานะสินค้า</span>} key="6">
+              <TabPane tab={<span>การจัดสถานะสินค้า</span>} key="6">
                 <Card style={{ width: "100%" }}>
                   <CardHeader>
                     <div style={{ display: 'flex', justifyContent: 'space-between' }}>
@@ -619,7 +619,7 @@ export default class Index extends PureComponent {
 
           <TabPane tab="ฝ่ายวางแผนการผลิต" key="4">
             <Tabs defaultActiveKey="1">
-              <TabPane tab={<span><Icon type="apple" />Item Planning Data ข้อมูล ที่ใช้ในการวางแผนผลิต</span>} key="1">
+              <TabPane tab={<span>Item Planning Data ข้อมูล ที่ใช้ในการวางแผนผลิต</span>} key="1">
               <Card style={{ width: "100%" }}>
               <CardHeader>
                 <div style={{ display: 'flex', justifyContent: 'space-between' }}>
@@ -727,7 +727,7 @@ export default class Index extends PureComponent {
                   </CardBody>
             </Card>
     </TabPane>
-              <TabPane tab={<span><Icon type="android" />ข้อมูลทางด้านการควบคุมสินค้าคงคลัง</span>} key="2">
+              <TabPane tab={<span>ข้อมูลทางด้านการควบคุมสินค้าคงคลัง</span>} key="2">
               <Card style={{ width: "100%" }}>
               <CardHeader>
                 <div style={{ display: 'flex', justifyContent: 'space-between' }}>
@@ -763,7 +763,7 @@ export default class Index extends PureComponent {
               </CardBody>
             </Card>
     </TabPane>
-    <TabPane tab={<span><Icon type="android" />ข้อมูลกระบวนการผลิต</span>} key="3">
+    <TabPane tab={<span>ข้อมูลกระบวนการผลิต</span>} key="3">
     <Card style={{ width: "100%" }}>
               <CardHeader>
                 <div style={{ display: 'flex', justifyContent: 'space-between' }}>
