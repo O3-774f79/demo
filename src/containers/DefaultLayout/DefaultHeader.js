@@ -4,7 +4,9 @@ import { Badge,Nav, NavItem, NavLink,Button } from 'reactstrap';
 import PropTypes from 'prop-types';
 
 import { AppNavbarBrand, AppSidebarToggler } from '@coreui/react';
-import logo from '../../assets/img/brand/logo.svg'
+// import logo from '../../assets/img/brand/logo.svg'
+import logo from '../../assets/img/brand/11.png'
+
 import sygnet from '../../assets/img/brand/sygnet.svg'
 
 const propTypes = {
@@ -22,12 +24,13 @@ class DefaultHeader extends Component {
     return (
       <React.Fragment>
         <AppSidebarToggler className="d-lg-none" display="md" mobile />
-        <AppNavbarBrand
-          full={{ src: logo, width: 89, height: 25, alt: 'CoreUI Logo' }}
-          minimized={{ src: sygnet, width: 30, height: 30, alt: 'CoreUI Logo' }}
-        />
+        {/* <AppNavbarBrand
+          full={{ src: logo, width: 70, height: 50, }}
+        /> */}
+        {/* <AppSidebarToggler className="d-md-down-none" display="lg" /> */}
+        <h2>Ampolfood</h2><img src={logo} width={70} height={50} />
         <AppSidebarToggler className="d-md-down-none" display="lg" />
-        <h1>System Name </h1>
+
         <Nav className="ml-auto" navbar>
           <NavItem className="d-md-down-none">
             <NavLink href="#"><i className="icon-bell"></i><Badge pill color="danger">5</Badge></NavLink>
