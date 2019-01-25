@@ -124,11 +124,11 @@ export default class EditableTable extends React.Component {
     }, {
       title: 'เลขที่เอกสาร',
       dataIndex: 'เลขที่เอกสาร',
-      width: '13%',
+      width: '11%',
     },{
       title: 'รายละเอียด',
       dataIndex: 'รายละเอียด',
-      width: '30%',
+      width: '25%',
     },
     {
         title: 'จาก',
@@ -148,9 +148,9 @@ export default class EditableTable extends React.Component {
           ? (
            
             <div>
-              <Button>แสดง</Button>
-              <Button>อนุมัติ</Button>
-              <Button>ไม่อนุมัติ</Button>
+              <Button style={{fontSize:14}}>แสดง</Button>
+              <Button type="primary">อนุมัติ</Button>
+              <Button type="danger">ไม่อนุมัติ</Button>
               </div>
    
           ) : null
@@ -209,6 +209,15 @@ export default class EditableTable extends React.Component {
         cell: EditableCell,
       },
     };
+    const rowSelection = {
+        onChange: (selectedRowKeys, selectedRows) => {
+          console.log(`selectedRowKeys: ${selectedRowKeys}`, 'selectedRows: ', selectedRows);
+        },
+        getCheckboxProps: record => ({
+          disabled: record.name === 'Disabled User', // Column configuration not to be checked
+          name: record.name,
+        }),
+      };
     const columns = this.columns.map((col) => {
       if (!col.editable) {
         return col;
@@ -229,8 +238,9 @@ export default class EditableTable extends React.Component {
         <Table
           components={components}
           rowClassName={() => 'editable-row'}
+          rowSelection={rowSelection}
           bordered
-          title={() => 'Inbox'}
+        //   title={() => 'Inbox'}
           dataSource={dataSource}
           columns={columns}
         />

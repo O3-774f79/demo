@@ -34,13 +34,17 @@ export default class Index extends PureComponent {
               </CardHeader>
               <CardBody>
               <Form>
-                <div style={{display:'flex',justifyContent:'flex-end'}}>
+                <div style={{display:'flex',justifyContent:'space-between'}}>
                 <div><FormGroup row>
                         <Label for="exampleEmail">ค้นหา</Label>
                         <Col sm={8}>
                           <Input type="email" name="email" id="exampleEmail" />
                         </Col>
                       </FormGroup></div>
+                      <div>
+                        <Button type="primary">อนุมัติ</Button>
+                        <Button type="danger">ไม่อนุมัติ</Button>
+                        </div>
                 </div>
                       <TableItem />
                   </Form>
