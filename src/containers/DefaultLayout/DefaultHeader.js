@@ -28,7 +28,7 @@ class DefaultHeader extends Component {
           full={{ src: logo, width: 70, height: 50, }}
         /> */}
         {/* <AppSidebarToggler className="d-md-down-none" display="lg" /> */}
-        <h2>Ampolfood</h2><img src={logo} width={70} height={50} />
+        <h3>Ampolfood</h3><img src={logo} width={70} height={50} />
         <AppSidebarToggler className="d-md-down-none" display="lg" />
 
         <Nav className="ml-auto" navbar>
