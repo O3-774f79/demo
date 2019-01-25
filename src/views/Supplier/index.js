@@ -28,24 +28,20 @@ const emp = [
 const steps = [{
   title: 'ฝ่ายจัดซื้อ',
   status: 'finish',
-  icon: <Icon type="user" />
+  icon: <Icon style={{color:"green"}}type="user" />
 }, {
   title: 'ฝ่ายบัญชีและการเงิน',
   status: 'process',
-  icon: <Icon type="loading" />
-}, {
-  title: 'เสร็จสิ้น',
-  status: 'wait',
-  icon: <Icon type="smile-o" />
+  icon: <Icon type="user" />
 }];
 const stepsBuyer = [{
   title: 'ซุปเปอร์ไวเซอร์',
   status: 'finish',
-  icon: <Icon type="user" />
+  icon: <Icon style={{color:"green"}} type="user" />
 }, {
   title: 'ประธานกลุ่มสินค้า',
   status: 'process',
-  icon: <Icon type="loading" />
+  icon: <Icon type="user" />
 }, {
   title: 'กรรมการผู้จัดการฝ่าย',
   status: 'wait',
@@ -121,7 +117,7 @@ export default class Index extends PureComponent {
                       <strong><h4>ฝ่ายจัดซื้อ</h4></strong>
                       </div>
                       <div>
-                      <Button type="primary"></Button>
+                      <Button type="primary">ตกลง</Button>
                   </div>
                   </div>
                     </CardHeader>

@@ -7,11 +7,11 @@ const Step = Steps.Step;
 const stepsBuyer = [{
   title: 'ผู้เบิก',
   status: 'finish',
-  icon: <Icon type="user" />
+  icon: <Icon style={{color: "green"}}type="user" />
 }, {
   title: 'ผู้อนุมัติ',
   status: 'process',
-  icon: <Icon type="loading" />
+  icon: <Icon type="user" />
 }, {
   title: 'ผู้รับสินค้า',
   status: 'wait',

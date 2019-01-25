@@ -7,11 +7,11 @@ const TabPane = Tabs.TabPane;
 const steps = [{
   title: ' ผู้จัดการฝ่าย QA ',
   status: 'finish',
-  icon: <Icon type="user" />
+  icon: <Icon style={{color:"green"}}type="user" />
 }, {
   title: 'ผู้จัดการฝ่าย QC',
   status: 'process',
-  icon: <Icon type="loading" />
+  icon: <Icon type="user" />
 }, {
   title: 'ผู้จัดการฝ่ายคลังสินค้า & จัดส่ง',
   status: 'wait',
@@ -28,20 +28,20 @@ const steps = [{
 const Req = [{
   title: 'ผู้ส่งตัวอย่างพร้อมเอกสารแนบ ',
   status: 'finish',
-  icon: <Icon type="user" />
+  icon: <Icon style={{color:"green"}} type="user" />
 }, {
   title: 'ผู้ตรวจสอบเอกสาร',
   status: 'process',
-  icon: <Icon type="loading" />
+  icon: <Icon type="user" />
 },];
 const ReqAudit = [{
   title: 'ชื่อผู้ทดสอบ ',
   status: 'finish',
-  icon: <Icon type="user" />
+  icon: <Icon style={{color:"green"}} type="user" />
 }, {
   title: 'ผู้ตรวจสอบเอกสาร',
   status: 'process',
-  icon: <Icon type="loading" />
+  icon: <Icon type="user" />
 },{
   title: 'ชื่อพิจารณา(เจ้าหน้าที่ฝ่าย QA)  ',
   status: 'wait',
@@ -57,7 +57,7 @@ export default class Index extends PureComponent {
       const { current } = this.state;
          return(
             <div className="animated fadeIn">
-             <div><h2><b>ใบขอให้มี & แจ้งผลการทดสอบสินค้าตัวอย่าง</b></h2></div>
+             <div><h2><b>ใบขอให้มี และ แจ้งผลการทดสอบสินค้าตัวอย่าง</b></h2></div>
             <hr></hr>
             <div style={{marginBottom: 10}}>
                     <Steps current={current}>
@@ -75,7 +75,7 @@ export default class Index extends PureComponent {
               <CardHeader>
               <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                       <div>
-                        <strong><h4>ใบขอให้มี</h4></strong>
+                        <strong><h4>ใบขอให้มีการทดสอบสินค้าตัวอย่าง</h4></strong>
                       </div>
                       <div>
                         <Button type="primary">ตกลง</Button>

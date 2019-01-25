@@ -27,11 +27,11 @@ const emp = [
 const steps = [{
   title: 'ฝ่ายการตลาด',
   status: 'finish',
-  icon: <Icon type="user" />
+  icon: <Icon style={{color:"green"}}type="user" />
 }, {
   title: 'ฝ่ายบัญชีและการเงิน',
   status: 'process',
-  icon: <Icon type="loading" />
+  icon: <Icon type="user" />
 }, {
   title: 'ฝ่ายR&D',
   status: 'wait',
