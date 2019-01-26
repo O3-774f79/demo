@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react'
 import { Col, Row, Form, FormGroup, Label, Input, Card, CardBody, CardHeader,FormText } from 'reactstrap';
 import { Steps, Button, message,Icon,Tabs,Checkbox  } from 'antd';
 import Upload from  './Upload'
+import PickerDate from '../../components/Datepicker/index'
 const Step = Steps.Step;
 const TabPane = Tabs.TabPane;
 const steps = [{
@@ -242,18 +243,19 @@ export default class Index extends PureComponent {
                         <Col sm={4}></Col>
                         <Label for="exampleEmail" >วันที่รับตัวอย่าง & เอกสารแนบ </Label>
                         <Col sm={2}>
-                          <Input type="email" name="email" id="exampleEmail" />
+                        <PickerDate />
                         </Col>
                       </FormGroup>
                       <FormGroup row>
                         <Label for="exampleEmail">วันที่ทำการทดสอบ</Label>
                         <Col sm={3}>
-                          <Input type="email" name="email" id="exampleEmail" />
+                        <PickerDate />
+                         
                         </Col>
                         <Col sm={3}></Col>
                         <Label for="exampleEmail" >วันที่ส่งผลการทดสอบกลับฝ่ายจัดซื้อ</Label>
                         <Col sm={2}>
-                          <Input type="email" name="email" id="exampleEmail" />
+                        <PickerDate />
                         </Col>
                       </FormGroup>
                       <FormGroup row>
@@ -350,7 +352,7 @@ export default class Index extends PureComponent {
                       <FormGroup row>
                         <Label for="exampleEmail"sm={2}> วันที่เข้าประชุม / วันที่สรุป</Label>
                         <Col sm={3}>
-                          <Input type="email" name="email" id="exampleEmail" />
+                        <PickerDate />
                         </Col>
                       </FormGroup>
                       <FormGroup row>
