@@ -139,7 +139,7 @@ export default class Index extends PureComponent {
                         <Col sm={4}>
                           <Input type="email" name="email" id="exampleEmail"  />
                         </Col>
-                        <Label for="exampleEmail" sm={2}>เงื่อนไขการชำระเงิน</Label>
+                        <Label for="exampleEmail" >เงื่อนไขการชำระเงิน</Label>
                         <Col sm={1}>
                           <Input type="email" name="email" id="exampleEmail" />
                         </Col>
@@ -386,7 +386,7 @@ export default class Index extends PureComponent {
                         <Col sm={4}>
                           <Input type="email" name="email" id="exampleEmail"  />
                         </Col>
-                        <Label for="exampleEmail" sm={2} >เงื่อนไขการชำระเงิน</Label>
+                        <Label for="exampleEmail">เงื่อนไขการชำระเงิน</Label>
                         <Col sm={1}>
                           <Input type="email" name="email" id="exampleEmail" />
                         </Col>
