@@ -31,9 +31,9 @@ export default {
       icon: 'icon-magnifier-add'
     },
     {
-      name: 'Material Master Maintenance',
+      name: 'Material Maintenance',
       url: '/Material-Master-Maintenance',
-      icon: 'icon-magnifier-add'
+      icon: 'icon-wrench'
     },
   ],
 };
