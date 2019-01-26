@@ -30,5 +30,10 @@ export default {
       url: '/product',
       icon: 'icon-magnifier-add'
     },
+    {
+      name: 'Material Master Maintenance',
+      url: '/Material-Master-Maintenance',
+      icon: 'icon-magnifier-add'
+    },
   ],
 };

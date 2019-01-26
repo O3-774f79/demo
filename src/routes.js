@@ -6,6 +6,7 @@ const PO = React.lazy(()=> import('./views/PO'))
 const Product = React.lazy(() => import('./views/Product'))
 const Supplier = React.lazy(()=> import('./views/Supplier'))
 const NewItem = React.lazy(()=> import('./views/NewItems'))
+const Material = React.lazy(()=> import('./views/Material'))
 
 const Breadcrumbs = React.lazy(() => import('./views/Base/Breadcrumbs'));
 const Cards = React.lazy(() => import('./views/Base/Cards'));
@@ -52,7 +53,9 @@ const routes = [
   { path: '/new-item' , exact: true, name: 'NewItem', component: NewItem},
   { path: '/supplier', exact: true, name: 'Supplier', component: Supplier},
   { path:  '/product',exact:true,name:'Product',component: Product},
+  { path:  '//Material-Master-Maintenance',exact:true,name:'Material',component: Material},
   
+
   { path: '/dashboard', name: 'Dashboard', component: Dashboard },
   { path: '/theme', exact: true, name: 'Theme', component: Colors },
   { path: '/theme/colors', name: 'Colors', component: Colors },
