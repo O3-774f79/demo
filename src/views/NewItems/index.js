@@ -5,6 +5,7 @@ import './index.css';
 import { Steps, Button, message, Icon, Tabs, Checkbox } from 'antd';
 import Select from 'react-select';
 import UploadItem from './Upload'
+import PickerDate from '../../components/Datepicker/'
 const Step = Steps.Step;
 const TabPane = Tabs.TabPane;
 
@@ -189,7 +190,7 @@ export default class Index extends PureComponent {
                       <FormGroup row>
                         <Label for="email" sm={1}>Effective Date</Label>
                         <Col sm={2}>
-                          <Input type="email" name="email" id="email" />
+                        <PickerDate />
                         </Col>
                         <Label for="fax" sm={1} >Safety Stock</Label>
                         <Col sm={2}>
@@ -207,9 +208,10 @@ export default class Index extends PureComponent {
                         <Col sm={2}>
                           <Input type="email" name="email" id="fax" />
                         </Col>
-                        <Label for="fax" sm={1} >Date</Label>
+                        <Label for="fax"  >Date</Label>
                         <Col sm={2}>
-                          <Input type="email" name="email" id="fax" />
+                        <PickerDate />
+                        
                         </Col>
                       </FormGroup>
 
@@ -222,9 +224,10 @@ export default class Index extends PureComponent {
                         <Col sm={2}>
 
                         </Col>
-                        <Label for="fax" sm={1} >Date</Label>
+                        <Label for="fax" >Date</Label>
                         <Col sm={2}>
-                          <Input type="email" name="email" id="fax" />
+                        <PickerDate />
+                       
                         </Col>
                       </FormGroup>
                     </Form>
@@ -404,7 +407,7 @@ export default class Index extends PureComponent {
                         <Col sm={2}>
                           <Input type="email" name="email" id="exampleEmail" />
                         </Col>
-                        <Label for="exampleEmail" sm={1}> UM</Label>
+                        <Label for="exampleEmail"> UM</Label>
                         <Col sm={2}>
                           <Input type="email" name="email" id="exampleEmail" />
                         </Col>
@@ -503,7 +506,7 @@ export default class Index extends PureComponent {
                   <CardBody>
                     <Form>
                       <FormGroup row>
-                        <Label for="exampleEmail" sm={1}>Rev</Label>
+                        <Label for="exampleEmail" >Rev</Label>
                         <Col sm={2}>
                           <Input type="email" name="email" id="exampleEmail" />
                         </Col>
@@ -531,15 +534,15 @@ export default class Index extends PureComponent {
                   <CardBody>
                     <Form>
                       <FormGroup row>
-                        <Label for="exampleEmail" sm={2}> Lot/Serial Control</Label>
+                        <Label for="exampleEmail" > Lot/Serial Control</Label>
                         <Col sm={2}>
                           <Input type="email" name="email" id="exampleEmail" />
                         </Col>
-                        <Label for="exampleEmail" sm={1}> Site</Label>
+                        <Label for="exampleEmail" > Site</Label>
                         <Col sm={2}>
                           <Input type="email" name="email" id="exampleEmail" />
                         </Col>
-                        <Label for="exampleEmail" sm={1}>Location</Label>
+                        <Label for="exampleEmail" >Location</Label>
                         <Col sm={2}>
                           <Input type="email" name="email" id="exampleEmail" />
                         </Col>
@@ -554,22 +557,22 @@ export default class Index extends PureComponent {
                     ส่วนน้าหนักในการส่งสินค้า (FG Product)
                       <Form>
                       <FormGroup row>
-                        <Label for="exampleEmail" sm={2}>Net Weight</Label>
+                        <Label for="exampleEmail" >Net Weight</Label>
                         <Col sm={2}>
                           <Input type="email" name="email" id="exampleEmail" />
                         </Col>
-                        <Label for="exampleEmail" sm={1}>UM</Label>
+                        <Label for="exampleEmail" >UM</Label>
                         <Col sm={2}>
                           <Input type="email" name="email" id="exampleEmail" />
                         </Col>
                         <Label for="exampleEmail">(Ship Weight / จำนวนสินค้าต่อหน่วยขาย)</Label>
                       </FormGroup>
                       <FormGroup row>
-                        <Label for="exampleEmail" sm={2}>Ship Weight</Label>
+                        <Label for="exampleEmail" >Ship Weight</Label>
                         <Col sm={2}>
                           <Input type="email" name="email" id="exampleEmail" />
                         </Col>
-                        <Label for="exampleEmail" sm={1}>UM</Label>
+                        <Label for="exampleEmail" >UM</Label>
                         <Col sm={2}>
                           <Input type="email" name="email" id="exampleEmail" />
                         </Col>
@@ -594,11 +597,11 @@ export default class Index extends PureComponent {
                   <CardBody>
                     <Form>
                       <FormGroup row>
-                        <Label for="exampleEmail" sm={2}>WO Receipt Status</Label>
+                        <Label for="exampleEmail" >WO Receipt Status</Label>
                         <Col sm={2}>
                           <Input type="email" name="email" id="exampleEmail" />
                         </Col>
-                        <Label for="exampleEmail" sm={1}> Active </Label>
+                        <Label for="exampleEmail" > Active </Label>
                         <Col sm={2}>
                           <Input type="email" name="email" id="exampleEmail" />
                         </Col>
@@ -702,7 +705,7 @@ export default class Index extends PureComponent {
                         </Col>
                         <Label for="exampleEmail" sm={1}>Safety Time </Label>
                         <Col sm={2}>
-                          <Input type="email" name="email" id="exampleEmail" />
+                          <PickerDate />
                         </Col>
                         <Label for="exampleEmail" sm={1}>Ord Mult</Label>
                         <Col sm={2}>
@@ -792,13 +795,14 @@ export default class Index extends PureComponent {
                     <hr></hr>
                     <Label for="exampleEmail" sm={3}>ส่งรายงานให้แผนก/ฝ่าย</Label>
                     <FormGroup row>
-                      <Label for="exampleEmail" sm={1}>ต้นทุน</Label>
+                      <Label for="exampleEmail">ต้นทุน</Label>
                       <Col sm={2}>
                         <Input type="email" name="email" id="exampleEmail" />
                       </Col>
-                      <Label for="exampleEmail" sm={1}>วันที่</Label>
+                      <Label for="exampleEmail" >วันที่</Label>
                       <Col sm={2}>
-                        <Input type="email" name="email" id="exampleEmail" />
+                      <PickerDate />
+                       
                       </Col>
                     </FormGroup>
                     แนบเอกสาร
@@ -812,9 +816,10 @@ export default class Index extends PureComponent {
                       </Col>
                       <Label for="exampleEmail">Primary</Label>
                       <Label for="exampleEmail" sm={1}>Yes</Label>
-                      <Label for="exampleEmail" sm={1}>Start Date</Label>
+                      <Label for="exampleEmail" >Start Date</Label>
                       <Col sm={2}>
-                        <Input type="email" name="email" id="exampleEmail" />
+                      <PickerDate />
+
                       </Col>
                       <Label for="exampleEmail">Unit Per Hours</Label>
                     </FormGroup>
@@ -825,9 +830,10 @@ export default class Index extends PureComponent {
                       </Col>
                       <Label for="exampleEmail">Primary</Label>
                       <Label for="exampleEmail" sm={1}>No</Label>
-                      <Label for="exampleEmail" sm={1}>Start Date</Label>
+                      <Label for="exampleEmail" >Start Date</Label>
                       <Col sm={2}>
-                        <Input type="email" name="email" id="exampleEmail" />
+                      <PickerDate />
+
                       </Col>
                       <Label for="exampleEmail">Unit Per Hours</Label>
                     </FormGroup>
