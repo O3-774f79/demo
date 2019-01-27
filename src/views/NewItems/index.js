@@ -443,15 +443,15 @@ export default class Index extends PureComponent {
                     </Row>
                     <FormGroup row>
                       <Label for="exampleEmail" sm={1}><Checkbox value="A">No</Checkbox></Label>
-                      <Label for="exampleEmail" >สาเหตุ</Label>
+                      <Label for="exampleEmail" style={{marginLeft:102}}>สาเหตุ</Label>
                       <Col sm={2}>
                         <Input type="email" name="email" id="exampleEmail" />
                       </Col>
                     </FormGroup>
                     <FormGroup row>
-                      <Label for="exampleEmail" sm={1}>ส่งรายงานให้แผนก/ฝ่าย</Label>
-                      <Col sm={2}>
-                        <Input type="email" name="email" id="exampleEmail" />
+                      <Label for="exampleEmail" sm={2}>ส่งรายงานให้แผนก/ฝ่าย</Label>
+                      <Col sm={9}>
+                        <Input type="textarea" name="email" id="exampleEmail" />
                       </Col>
                     </FormGroup>
                     แนบเอกสาร
@@ -506,7 +506,7 @@ export default class Index extends PureComponent {
                   <CardBody>
                     <Form>
                       <FormGroup row>
-                        <Label for="exampleEmail" >Rev</Label>
+                        <Label for="exampleEmail" style={{marginLeft:10}} >Rev</Label>
                         <Col sm={2}>
                           <Input type="email" name="email" id="exampleEmail" />
                         </Col>
@@ -519,12 +519,12 @@ export default class Index extends PureComponent {
                   </CardBody>
                 </Card>
               </TabPane>
-              <TabPane tab={<span>ข้อมูลทางด้านการควบคุมสินค้าคงคล้งและจ้ดส่ง</span>} key="5">
+              <TabPane tab={<span>ข้อมูลทางด้านการควบคุมสินค้าคงคลังและจัดส่ง</span>} key="5">
                 <Card style={{ width: "100%" }}>
                   <CardHeader>
                     <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                       <div>
-                        <strong><h4>ข้อมูลทางด้านการควบคุมสินค้าคงคล้งและจ้ดส่ง</h4></strong>
+                        <strong><h4>ข้อมูลทางด้านการควบคุมสินค้าคงคลังและจัดส่ง</h4></strong>
                       </div>
                       <div>
                         <Button type="primary">ตกลง</Button>
@@ -534,7 +534,7 @@ export default class Index extends PureComponent {
                   <CardBody>
                     <Form>
                       <FormGroup row>
-                        <Label for="exampleEmail" > Lot/Serial Control</Label>
+                        <Label for="exampleEmail" sm={1}> Lot/Serial Control</Label>
                         <Col sm={2}>
                           <Input type="email" name="email" id="exampleEmail" />
                         </Col>
@@ -555,9 +555,10 @@ export default class Index extends PureComponent {
                     </Row>
                     <hr></hr>
                     ส่วนน้าหนักในการส่งสินค้า (FG Product)
+                    <div style={{marginBottom:5}}></div>
                       <Form>
                       <FormGroup row>
-                        <Label for="exampleEmail" >Net Weight</Label>
+                        <Label for="exampleEmail" sm={1} >Net Weight</Label>
                         <Col sm={2}>
                           <Input type="email" name="email" id="exampleEmail" />
                         </Col>
@@ -568,7 +569,7 @@ export default class Index extends PureComponent {
                         <Label for="exampleEmail">(Ship Weight / จำนวนสินค้าต่อหน่วยขาย)</Label>
                       </FormGroup>
                       <FormGroup row>
-                        <Label for="exampleEmail" >Ship Weight</Label>
+                        <Label for="exampleEmail" sm={1}>Ship Weight</Label>
                         <Col sm={2}>
                           <Input type="email" name="email" id="exampleEmail" />
                         </Col>
@@ -597,7 +598,7 @@ export default class Index extends PureComponent {
                   <CardBody>
                     <Form>
                       <FormGroup row>
-                        <Label for="exampleEmail" >WO Receipt Status</Label>
+                        <Label for="exampleEmail" style={{marginLeft: 10}}>WO Receipt Status</Label>
                         <Col sm={2}>
                           <Input type="email" name="email" id="exampleEmail" />
                         </Col>
@@ -793,9 +794,10 @@ export default class Index extends PureComponent {
                       <Label>(อาจเป็น Item ซื้อมาขายไป)</Label>
                     </FormGroup>
                     <hr></hr>
-                    <Label for="exampleEmail" sm={3}>ส่งรายงานให้แผนก/ฝ่าย</Label>
+                    ส่งรายงานให้แผนก/ฝ่าย
+                      <div style={{marginBottom:10}}></div>
                     <FormGroup row>
-                      <Label for="exampleEmail">ต้นทุน</Label>
+                      <Label for="exampleEmail" style={{marginLeft:15}}>ต้นทุน</Label>
                       <Col sm={2}>
                         <Input type="email" name="email" id="exampleEmail" />
                       </Col>
@@ -809,6 +811,7 @@ export default class Index extends PureComponent {
                       <UploadItem />
                       <hr></hr>
                       Production Line (เพิ่ม)
+                      <div style={{marginBottom:10}}></div>
                       <FormGroup row>
                       <Label for="exampleEmail" sm={1}>Production line</Label>
                       <Col sm={2}>

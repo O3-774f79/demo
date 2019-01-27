@@ -86,7 +86,7 @@ export default class Index extends PureComponent {
               <CardBody>     
               <Form>
                       <FormGroup row>
-                        <Label for="exampleEmail">หน่วยงานส่งตัวอย่างเพื่อทดสอบ</Label>
+                        <Label for="exampleEmail" sm={1}>หน่วยงานส่งตัวอย่างเพื่อทดสอบ</Label>
                         <Col sm={3}>
                           <Input type="email" name="email" id="exampleEmail" />
                         </Col>
@@ -100,7 +100,7 @@ export default class Index extends PureComponent {
                         </Col>
                       </FormGroup>
                       <FormGroup row>
-                        <Label for="exampleEmail">ทดสอบเพื่อ</Label>
+                        <Label for="exampleEmail" sm={1}>ทดสอบเพื่อ</Label>
                         <Col sm={3}>
                           <Checkbox value="p">ทดสอบคุณภาพ / การนำไปใช้</Checkbox>
                         </Col>
@@ -114,18 +114,18 @@ export default class Index extends PureComponent {
                         </Col>
                       </FormGroup>
                       <FormGroup row>
-                        <Label for="exampleEmail">ชื่อสินค้า</Label>
+                        <Label for="exampleEmail" sm={1}>ชื่อสินค้า</Label>
                         <Col sm={5}>
                           <Input type="email" name="email" id="exampleEmail" />
                         </Col>
-                        <Label for="exampleEmail" >Item Code</Label>
+                        <Label for="exampleEmail" style={{marginRight:15}}>Item Code</Label>
                         <Col sm={2}>
                           <Input type="email" name="email" id="exampleEmail" />
                         </Col>
                       </FormGroup>
 
                       <FormGroup row>
-                        <Label for="exampleEmail">ชื่อบริษัทที่ส่งทดสอบ</Label>
+                        <Label for="exampleEmail" sm={1}>ชื่อบริษัทที่ส่งทดสอบ</Label>
                         <Col sm={5}>
                           <Input type="email" name="email" id="exampleEmail" />
                         </Col>
@@ -135,7 +135,7 @@ export default class Index extends PureComponent {
                         </Col>
                       </FormGroup>
                       <FormGroup row>
-                        <Label for="exampleEmail">ชื่อทางการค้า(Supplier Item)</Label>
+                        <Label for="exampleEmail" sm={1}>ชื่อทางการค้า  (Supplier Item)</Label>
                         <Col sm={5}>
                           <Input type="email" name="email" id="exampleEmail" />
                         </Col>
@@ -148,50 +148,50 @@ export default class Index extends PureComponent {
                       <hr></hr>
                       <Label style={{marginBottom:10}}>เอกสารแนบประกอบการพิจารณา</Label>
                       <FormGroup row>
-                        <Label for="exampleEmail">Specification</Label>
-                        <Col sm={3}>
+                        <Label for="exampleEmail" sm={1}>Specification</Label>
+                        <Col sm={2}>
                          <Upload />
                         </Col>
-                        <Label for="exampleEmail">MSDS</Label>
-                        <Col sm={3}>
+                        <Label for="exampleEmail" sm={1}>MSDS</Label>
+                        <Col sm={2}>
                         <Upload />
                         </Col>
-                        <Label for="exampleEmail">ผลการวิเคราะห์โลหะหนัก</Label>
-                        <Col sm={3}>
-                        <Upload />
-                        </Col>
-                      </FormGroup>
-                      <FormGroup row>
-                        <Label for="exampleEmail">Halal (ไทย)</Label>
-                        <Col sm={3}>
-                        <Upload />
-                        </Col>
-                        <Label for="exampleEmail">COA</Label>
-                        <Col sm={3}>
-                        <Upload />
-                        </Col>
-                        <Label for="exampleEmail">Product Data Sheet</Label>
-                        <Col sm={3}>
+                        <Label for="exampleEmail" sm={1}>ผลการวิเคราะห์โลหะหนัก</Label>
+                        <Col sm={2}>
                         <Upload />
                         </Col>
                       </FormGroup>
                       <FormGroup row>
-                        <Label for="exampleEmail">รูป Packaging</Label>
-                        <Col sm={3}>
+                        <Label for="exampleEmail" sm={1}>Halal (ไทย)</Label>
+                        <Col sm={2}>
                         <Upload />
                         </Col>
-                        <Label for="exampleEmail">Non-GMOs</Label>
-                        <Col sm={3}>
+                        <Label for="exampleEmail" sm={1}>COA</Label>
+                        <Col sm={2}>
                         <Upload />
                         </Col>
-                        <Label for="exampleEmail">Flow Chart การผลิต</Label>
-                        <Col sm={3}>
+                        <Label for="exampleEmail" sm={1}>Product Data Sheet</Label>
+                        <Col sm={2}>
                         <Upload />
                         </Col>
                       </FormGroup>
                       <FormGroup row>
-                        <Label for="exampleEmail">ผลการตรวจวิเคราะห์โลหะหนัก</Label>                   
-                        <Checkbox value="p">มี</Checkbox>
+                        <Label for="exampleEmail" sm={1}>รูป Packaging</Label>
+                        <Col sm={2}>
+                        <Upload />
+                        </Col>
+                        <Label for="exampleEmail" sm={1}>Non-GMOs</Label>
+                        <Col sm={2}>
+                        <Upload />
+                        </Col>
+                        <Label for="exampleEmail" sm={1}>Flow Chart   การผลิต</Label>
+                        <Col sm={2}>
+                        <Upload />
+                        </Col>
+                      </FormGroup>
+                      <FormGroup row>
+                        <Label for="exampleEmail" sm={1}>ผลการตรวจวิเคราะห์โลหะหนัก</Label>                   
+                        <Checkbox value="p" style={{marginLeft:8}}>มี</Checkbox>
                         <Checkbox value="p">ไม่มี</Checkbox>                       
                         <Label>เนื่องจาก</Label>
                         <Col sm={8}>
@@ -199,15 +199,15 @@ export default class Index extends PureComponent {
                         </Col>
                       </FormGroup>
                       <FormGroup row>
-                        <Label for="exampleEmail">หนังสือรับรองมาตรฐาน</Label>                   
-                        <Col sm={10}>
+                        <Label for="exampleEmail" sm={1}>หนังสือรับรองมาตรฐาน</Label>                   
+                        <Col sm={2}>
                         <Input type="email" name="email" id="exampleEmail" />
                         </Col>
                       </FormGroup>
                       <FormGroup row>
-                        <Label for="exampleEmail">เพิ่มเติม</Label>                   
-                        <Col sm={11}>
-                        <Input type="email" name="email" id="exampleEmail" />
+                        <Label for="exampleEmail" sm={1}>เพิ่มเติม</Label>                   
+                        <Col sm={8}>
+                        <Input type="textarea" name="email" id="exampleEmail" />
                         </Col>
                       </FormGroup>
                   </Form>                
@@ -236,18 +236,18 @@ export default class Index extends PureComponent {
               <CardBody>
               <Form>
                       <FormGroup row>
-                        <Label for="exampleEmail">ฝ่าย </Label>
+                        <Label for="exampleEmail" sm={1}>ฝ่าย </Label>
                         <Col sm={3}>
                           <Input type="email" name="email" id="exampleEmail" />
                         </Col>
-                        <Col sm={4}></Col>
-                        <Label for="exampleEmail" >วันที่รับตัวอย่าง & เอกสารแนบ </Label>
+                        <Col sm={3}></Col>
+                        <Label for="exampleEmail" style={{marginRight:30}}>วันที่รับตัวอย่าง & เอกสารแนบ </Label>
                         <Col sm={2}>
                         <PickerDate />
                         </Col>
                       </FormGroup>
                       <FormGroup row>
-                        <Label for="exampleEmail">วันที่ทำการทดสอบ</Label>
+                        <Label for="exampleEmail" sm={1}>วันที่ทำการทดสอบ</Label>
                         <Col sm={3}>
                         <PickerDate />
                          
@@ -259,7 +259,7 @@ export default class Index extends PureComponent {
                         </Col>
                       </FormGroup>
                       <FormGroup row>
-                        <Label for="exampleEmail">ผลการทดสอบ</Label>                   
+                        <Label for="exampleEmail" sm={1} style={{marginRight:17}}>ผลการทดสอบ</Label>                   
                         <Checkbox value="p">มี</Checkbox>
                         <Checkbox value="p">ไม่มี</Checkbox>                       
                         <Label>เนื่องจาก</Label>
@@ -268,7 +268,7 @@ export default class Index extends PureComponent {
                         </Col>
                       </FormGroup>
                       <FormGroup row>
-                        <Label for="exampleEmail">ข้อเสนอแนะเพิ่มเติม</Label>                   
+                        <Label for="exampleEmail" sm={1}>ข้อเสนอแนะเพิ่มเติม</Label>                   
                         <Col sm={8}>
                         <Input type="email" name="email" id="exampleEmail" />
                         </Col>

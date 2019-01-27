@@ -46,7 +46,7 @@ export default class Index extends PureComponent {
               <Form>
                 <div style={{display:'flex',justifyContent:'space-between'}}>
                 <div><FormGroup row>
-                        <Label for="exampleEmail">จากหน่วยงาน</Label>
+                        <Label for="exampleEmail" style={{marginLeft:15}}>จากหน่วยงาน</Label>
                         <Col sm={8}>
                           <Input type="email" name="email" id="exampleEmail" />
                         </Col>

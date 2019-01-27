@@ -210,7 +210,7 @@ export default class EditableTable extends React.Component {
     return (
       <div>
         <Button onClick={this.handleAdd}  style={{ marginBottom: 16 }}>
-          Add a row
+          Add a PO
         </Button>
         <Table
           components={components}
