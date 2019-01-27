@@ -19,7 +19,7 @@ export default class Warehouse extends PureComponent {
               <Form>
                       <FormGroup row>
                         <Label for="exampleEmail" sm={1}>Warehouse No.*</Label>
-                        <Col sm={2}>
+                        <Col sm={3}>
                           <Input type="email" name="email" id="exampleEmail" />
                         </Col>
                         <Label for="exampleEmail" sm={1} >Picking Area</Label>
@@ -29,7 +29,7 @@ export default class Warehouse extends PureComponent {
                       </FormGroup>
                       <FormGroup row>
                         <Label for="exampleEmail" sm={1}>Placement IND*</Label>
-                        <Col sm={2}>
+                        <Col sm={3}>
                           <Input type="email" name="email" id="exampleEmail" />
                         </Col>
                         <Label for="exampleEmail" sm={1}>Removal IND*</Label>
@@ -39,7 +39,7 @@ export default class Warehouse extends PureComponent {
                       </FormGroup>
                       <FormGroup row>
                         <Label for="exampleEmail" sm={1}>Section IND*</Label>
-                        <Col sm={2}>
+                        <Col sm={3}>
                           <Input type="email" name="email" id="exampleEmail" />
                         </Col>
                         <Label for="exampleEmail" sm={1} >Bulk IND*</Label>
@@ -56,7 +56,7 @@ export default class Warehouse extends PureComponent {
                         <Col sm={1}>
                           <Input type="email" name="email" id="exampleEmail" />
                         </Col>
-                        <Label for="exampleEmail" sm={1} >Allow addition to Stock</Label>
+                        <Label for="exampleEmail" sm={1} style={{marginLeft:110}} >Allow addition to Stock</Label>
                         <Col sm={2}>
                         <Input type="email" name="email" id="exampleEmail" />
                         </Col>     
@@ -67,7 +67,7 @@ export default class Warehouse extends PureComponent {
                       </FormGroup>
                       <FormGroup row>
                         <Label for="exampleEmail" sm={1}>Storage Type</Label>
-                        <Col sm={2}>
+                        <Col sm={3}>
                           <Input type="email" name="email" id="exampleEmail" />
                         </Col>
                         <Label for="exampleEmail" sm={1} ></Label>
@@ -81,7 +81,7 @@ export default class Warehouse extends PureComponent {
                       </FormGroup>
                       <FormGroup row>
                         <Label for="exampleEmail" sm={1}>Maximum Bin Quantity</Label>
-                        <Col sm={2}>
+                        <Col sm={3}>
                           <Input type="email" name="email" id="exampleEmail" />
                         </Col>
                         <Label for="exampleEmail" sm={1} >Minimum Bin Quantity</Label>
