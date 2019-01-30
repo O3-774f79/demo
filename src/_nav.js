@@ -6,6 +6,11 @@ export default {
       icon: 'icon-speedometer',
     },
     {
+      name: 'Employee Self',
+      url: '/emp-self',
+      icon: 'icon-speedometer',
+    },
+    {
       name: 'Inbox',
       url: '/inbox',
       icon: 'icon-drawer'
@@ -32,7 +37,7 @@ export default {
     },
     {
       name: 'Material Maintenance',
-      url: '/Material-Master-Maintenance',
+      url: '/material-master-maintenance',
       icon: 'icon-wrench'
     },
   ],
