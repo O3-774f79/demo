@@ -8,6 +8,7 @@ const Supplier = React.lazy(()=> import('./views/Supplier'))
 const NewItem = React.lazy(()=> import('./views/NewItems'))
 const Material = React.lazy(()=> import('./views/Material'))
 const EmpSelf = React.lazy(()=>import('./views/EmpSelf'))
+const EmpDev = React.lazy(()=>import('./views/EmpDev'))
 
 const Breadcrumbs = React.lazy(() => import('./views/Base/Breadcrumbs'));
 const Cards = React.lazy(() => import('./views/Base/Cards'));
@@ -56,6 +57,7 @@ const routes = [
   { path:  '/product',exact:true,name:'Product',component: Product},
   { path:  '/material-master-maintenance',exact:true,name:'Material-Maintenance',component: Material},
   { path:  '/emp-self',exact:true,name:'Employee-Self',component: EmpSelf},
+  { path:  '/emp-dev',exact:true,name:'Employee-Dev',component: EmpDev},
   
 
   { path: '/dashboard', name: 'Dashboard', component: Dashboard },

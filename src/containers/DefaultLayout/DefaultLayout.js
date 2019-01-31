@@ -41,7 +41,7 @@ class DefaultLayout extends Component {
           </Suspense>
         </AppHeader>
         <div className="app-body">
-          <AppSidebar fixed display="lg">
+          <AppSidebar fixed display="xl">
             <AppSidebarHeader />
             <AppSidebarForm />
             <Suspense>
