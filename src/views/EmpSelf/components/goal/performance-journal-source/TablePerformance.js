@@ -1,7 +1,6 @@
 
 import React,{PureComponent} from 'react';
 import 'antd/dist/antd.css';
-import './index.css';
 import {
   Table, Input, InputNumber, Popconfirm, Form,
 } from 'antd';

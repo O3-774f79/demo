@@ -1,5 +1,7 @@
 import React, { PureComponent } from 'react'
 import {Tabs} from 'antd'
+import ReviewTemplate from './review-template'
+import ReviewType from './review-types'
 const TabPane = Tabs.TabPane
 
 const callback = (key)=>{
@@ -10,9 +12,8 @@ export default class Index extends PureComponent {
           return(
                <div>
                 <Tabs onChange={callback} type="card">
-                    <TabPane tab="Tab 1" key="1">Content of Tab Pane 1</TabPane>
-                    <TabPane tab="Tab 2" key="2">Content of Tab Pane 2</TabPane>
-                    <TabPane tab="Tab 3" key="3">Content of Tab Pane 3</TabPane>
+                    <TabPane tab="Review Template" key="1"><ReviewTemplate /></TabPane>
+                    <TabPane tab="Review Type" key="2"><ReviewType /></TabPane>
                 </Tabs>,
                </div>
           )
