@@ -12,3 +12,7 @@
   border-radius: 4px;
   padding: 4px 11px;
 }
+.avatar-uploader > .ant-upload {
+  width: 128px;
+  height: 128px;
+}

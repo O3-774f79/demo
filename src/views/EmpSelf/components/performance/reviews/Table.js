@@ -3,6 +3,7 @@ import "antd/dist/antd.css";
 import "./index.css";
 import { Table, Input, Button, Popconfirm, Form } from "antd";
 import Modals from './Modals'
+import ModaltTemplate from './ModalFromTemplate'
 const FormItem = Form.Item;
 const EditableContext = React.createContext();
 
@@ -116,54 +117,62 @@ export default class EditableTable extends React.Component {
     super(props);
     this.columns = [
       {
-        title: "name",
-        dataIndex: "name",
+        title: "Description",
+        dataIndex: "description",
         width: "30%",
         editable: true
       },
       {
-        title: "age",
-        dataIndex: "age"
+        title: "Worker",
+        dataIndex: "worker",
+        editable: true
       },
       {
-        title: "address",
-        dataIndex: "address"
+        title: "Review type",
+        dataIndex: "reviewType",
+        editable: true
+      },
+      {
+        title: "Status",
+        dataIndex: "status",
+        editable: true
+      },
+      {
+        title: "Start date",
+        dataIndex: "startdate",
+        editable: true
       },
       {
         title: "operation",
         dataIndex: "operation",
         render: (text, record) =>
-          this.state.dataSource.length >= 1 ? (
-            <Button type="primary"  icon="download" onClick={()=>this.handleModal(record.key, record.name)}>แสดง</Button>
-          ) : null
+          this.state.dataSource.length >= 1 ? ([
+            <Button type="primary"  icon="file" onClick={()=>this.handleModal(record.key, record.name)}></Button>,
+            <Button type="danger"  icon="delete" onClick={()=>this.handleModal(record.key, record.name)}></Button>
+          ]
+            ) : null
       }
     ];
 
     this.state = {
       dataSource: [
         {
-          key: "0",
-          name: "Edward King 0",
-          age: "32",
-          address: "London, Park Lane no. 0"
+          key: "",
+          description: "ทดสอบ",
+          worker: "นาย ทดสอบ ทดสอบ",
+          reviewType: "Coaching",
+          status: "Not Started",
+          startdate: "11 ม.ค. 2562",
         },
-        {
-          key: "1",
-          name: "Edward King 1",
-          age: "32",
-          address: "London, Park Lane no. 1"
-        }
       ],
       count: 2,
       modalDisplay :false,
       nameSelect: "",
-      keySelect: ""
+      keySelect: " "
     };
   }
 
   handleModal = (key,name) => {
-      console.log("key",key)
-      console.log("name",name)
       this.setState({modalDisplay: true,nameSelect: name, keySelect:key})
   }
   handleCancleShow =()=>{
@@ -209,7 +218,6 @@ export default class EditableTable extends React.Component {
     };
     const rowSelection = {
         onChange: (selectedRowKeys, selectedRows) => {
-          console.log(`selectedRowKeys: ${selectedRowKeys}`, 'selectedRows: ', selectedRows);
         }
     }
     const columns = this.columns.map(col => {
@@ -231,16 +239,26 @@ export default class EditableTable extends React.Component {
     return (
       <div>
         <Button
-          onClick={this.handleAdd}
+          onClick={() =>this.handleModal("","")}
           type="primary"
-          style={{ marginBottom: 16 }}
+          style={{ marginBottom: 16}}
+          icon= "plus"
         >
-          Add New
+          Add New Review
+        </Button>
+        <Button
+          onClick={() =>this.handleModal("","New Journal")}
+          type="primary"
+          style={{ marginBottom: 16,marginLeft: 10, backgroundColor:"green"   }}
+          icon= "plus"
+        >
+          Add New Review form template
         </Button>
         <Button
           onClick={this.handleDelete}
           type="danger"
-          style={{ marginBottom: 16 }}
+          style={{ marginBottom: 16,marginLeft:5 }}
+          icon="delete"
         >
           Delete
         </Button>
@@ -252,7 +270,17 @@ export default class EditableTable extends React.Component {
           dataSource={dataSource}
           columns={columns}
         />
-        <Modals visibleParent={this.state.modalDisplay} handleCancleShow={this.handleCancleShow} titleName={this.state.nameSelect} titleKey={this.state.keySelect} />
+        <Modals visibleParent={this.state.modalDisplay} 
+                handleCancleShow={this.handleCancleShow} 
+                titleName={this.state.nameSelect} 
+                titleKey={this.state.keySelect} 
+        />
+        <ModaltTemplate 
+                visibleParent={this.state.modalDisplay} 
+                handleCancleShow={this.handleCancleShow} 
+                titleName={this.state.nameSelect} 
+                titleKey={this.state.keySelect} 
+        />
       </div>
     );
   }
