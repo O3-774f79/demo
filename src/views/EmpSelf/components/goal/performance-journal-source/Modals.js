@@ -30,7 +30,7 @@ export default class Modals extends React.Component {
           width	= {1000}
           style = {{left: 50}}
           visible={visibleParent}
-          title={titleKey + ` : `+ titleName}
+          title={"New Review"}
           onOk={this.handleOk}
           onCancel={this.props.handleCancleShow}
           footer={[

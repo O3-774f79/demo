@@ -116,43 +116,31 @@ export default class EditableTable extends React.Component {
     super(props);
     this.columns = [
       {
-        title: "name",
-        dataIndex: "name",
+        title: "Goal Category",
+        dataIndex: "goalCategory",
         width: "30%",
         editable: true
       },
       {
-        title: "age",
-        dataIndex: "age"
+        title: "Description",
+        dataIndex: "description",
+        editable: true
       },
       {
-        title: "address",
-        dataIndex: "address"
+        title: "Status",
+        dataIndex: "status",
+        editable: true
       },
-      {
-        title: "operation",
-        dataIndex: "operation",
-        render: (text, record) =>
-          this.state.dataSource.length >= 1 ? (
-            <Button type="primary"  icon="download" onClick={()=>this.handleModal(record.key, record.name)}>แสดง</Button>
-          ) : null
-      }
     ];
 
     this.state = {
       dataSource: [
         {
           key: "0",
-          name: "Edward King 0",
-          age: "32",
-          address: "London, Park Lane no. 0"
+          goalCategory: "ทดสอบ",
+          description: "Company",
+          status: "active"
         },
-        {
-          key: "1",
-          name: "Edward King 1",
-          age: "32",
-          address: "London, Park Lane no. 1"
-        }
       ],
       count: 2,
       modalDisplay :false,

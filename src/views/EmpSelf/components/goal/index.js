@@ -20,8 +20,7 @@ export default class index extends PureComponent {
                     <TabPane tab="Goal Groups" key="2"><GoalGroups /></TabPane>
                     <TabPane tab="Measurements" key="3"><Measurements /></TabPane>
                     <TabPane tab="Goal Template" key="4"><GoalTemplate /></TabPane>
-                    <TabPane tab="Performance Journal Source" key="5"><PerformJournalSource /></TabPane>
-                    <TabPane tab="Performance Period" key="6"><PerformPeriod /></TabPane>
+                    <TabPane tab="Performance Period" key="5"><PerformPeriod /></TabPane>
                 </Tabs>,
               </div>
           )

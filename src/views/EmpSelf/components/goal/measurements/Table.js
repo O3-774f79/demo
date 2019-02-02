@@ -3,6 +3,7 @@ import "antd/dist/antd.css";
 import "./index.css";
 import { Table, Input, Button, Popconfirm, Form } from "antd";
 import Modals from './Modals'
+import ModaltTemplate from './ModalFromTemplate'
 const FormItem = Form.Item;
 const EditableContext = React.createContext();
 
@@ -116,59 +117,56 @@ export default class EditableTable extends React.Component {
     super(props);
     this.columns = [
       {
-        title: "name",
-        dataIndex: "name",
+        title: "Measurment",
+        dataIndex: "measurment",
         width: "30%",
         editable: true
       },
       {
-        title: "age",
-        dataIndex: "age"
-      },
-      {
-        title: "address",
-        dataIndex: "address"
+        title: "Measurment",
+        dataIndex: "measurmentType",
+        editable: true
       },
       {
         title: "operation",
         dataIndex: "operation",
         render: (text, record) =>
-          this.state.dataSource.length >= 1 ? (
-            <Button type="primary"  icon="download" onClick={()=>this.handleModal(record.key, record.name)}>แสดง</Button>
-          ) : null
+          this.state.dataSource.length >= 1 ? ([
+            <Button type="primary"  icon="file" onClick={()=>this.handleModal(record.key, record.name)}></Button>,
+            <Button type="danger"  icon="delete" onClick={()=>this.handleModal(record.key, record.name)}></Button>
+          ]
+            ) : null
       }
     ];
 
     this.state = {
       dataSource: [
         {
-          key: "0",
-          name: "Edward King 0",
-          age: "32",
-          address: "London, Park Lane no. 0"
+          key: "",
+          measurment: "ทดสอบ",
+          measurmentType: "Date",
         },
-        {
-          key: "1",
-          name: "Edward King 1",
-          age: "32",
-          address: "London, Park Lane no. 1"
-        }
       ],
       count: 2,
       modalDisplay :false,
+      modalDisplayTemplate :false,
       nameSelect: "",
-      keySelect: ""
+      keySelect: " "
     };
   }
 
   handleModal = (key,name) => {
-      console.log("key",key)
-      console.log("name",name)
       this.setState({modalDisplay: true,nameSelect: name, keySelect:key})
   }
+  handleModalTemplate = (key,name) => {
+    this.setState({modalDisplayTemplate: true,nameSelect: name, keySelect:key})
+}
   handleCancleShow =()=>{
       this.setState({modalDisplay: false})
   }
+  handleCancleShowTemplate =()=>{
+    this.setState({modalDisplayTemplate: false})
+}
   handleDelete = key => {
     const dataSource = [...this.state.dataSource];
     this.setState({ dataSource: dataSource.filter(item => item.key !== key) });
@@ -209,7 +207,6 @@ export default class EditableTable extends React.Component {
     };
     const rowSelection = {
         onChange: (selectedRowKeys, selectedRows) => {
-          console.log(`selectedRowKeys: ${selectedRowKeys}`, 'selectedRows: ', selectedRows);
         }
     }
     const columns = this.columns.map(col => {
@@ -231,18 +228,12 @@ export default class EditableTable extends React.Component {
     return (
       <div>
         <Button
-          onClick={this.handleAdd}
+          onClick={() =>this.handleModal("","")}
           type="primary"
-          style={{ marginBottom: 16 }}
+          style={{ marginBottom: 16}}
+          icon= "plus"
         >
-          Add New
-        </Button>
-        <Button
-          onClick={this.handleDelete}
-          type="danger"
-          style={{ marginBottom: 16 }}
-        >
-          Delete
+          Add New Measurement
         </Button>
         <Table
           components={components}
@@ -252,7 +243,11 @@ export default class EditableTable extends React.Component {
           dataSource={dataSource}
           columns={columns}
         />
-        <Modals visibleParent={this.state.modalDisplay} handleCancleShow={this.handleCancleShow} titleName={this.state.nameSelect} titleKey={this.state.keySelect} />
+        <Modals visibleParent={this.state.modalDisplay} 
+                handleCancleShow={this.handleCancleShow} 
+                titleName={this.state.nameSelect} 
+                titleKey={this.state.keySelect} 
+        />
       </div>
     );
   }

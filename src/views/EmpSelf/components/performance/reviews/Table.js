@@ -167,6 +167,7 @@ export default class EditableTable extends React.Component {
       ],
       count: 2,
       modalDisplay :false,
+      modalDisplayTemplate :false,
       nameSelect: "",
       keySelect: " "
     };
@@ -175,9 +176,15 @@ export default class EditableTable extends React.Component {
   handleModal = (key,name) => {
       this.setState({modalDisplay: true,nameSelect: name, keySelect:key})
   }
+  handleModalTemplate = (key,name) => {
+    this.setState({modalDisplayTemplate: true,nameSelect: name, keySelect:key})
+}
   handleCancleShow =()=>{
       this.setState({modalDisplay: false})
   }
+  handleCancleShowTemplate =()=>{
+    this.setState({modalDisplayTemplate: false})
+}
   handleDelete = key => {
     const dataSource = [...this.state.dataSource];
     this.setState({ dataSource: dataSource.filter(item => item.key !== key) });
@@ -247,7 +254,7 @@ export default class EditableTable extends React.Component {
           Add New Review
         </Button>
         <Button
-          onClick={() =>this.handleModal("","New Journal")}
+          onClick={() =>this.handleModalTemplate("","New Journal")}
           type="primary"
           style={{ marginBottom: 16,marginLeft: 10, backgroundColor:"green"   }}
           icon= "plus"
@@ -276,8 +283,8 @@ export default class EditableTable extends React.Component {
                 titleKey={this.state.keySelect} 
         />
         <ModaltTemplate 
-                visibleParent={this.state.modalDisplay} 
-                handleCancleShow={this.handleCancleShow} 
+                visibleParent={this.state.modalDisplayTemplate} 
+                handleCancleShow={this.handleCancleShowTemplate} 
                 titleName={this.state.nameSelect} 
                 titleKey={this.state.keySelect} 
         />
