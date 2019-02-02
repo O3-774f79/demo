@@ -5,7 +5,7 @@ import GoalGroups from './goal-groups'
 import Measurements from './measurements'
 import GoalTemplate from './goal-template'
 import PerformJournalSource from './performance-journal-source'
-import performPeriod from './performance-period'
+import PerformPeriod from './performance-period'
 
 const TabPane = Tabs.TabPane
 const callback = (key)=> {
@@ -21,7 +21,7 @@ export default class index extends PureComponent {
                     <TabPane tab="Measurements" key="3"><Measurements /></TabPane>
                     <TabPane tab="Goal Template" key="4"><GoalTemplate /></TabPane>
                     <TabPane tab="Performance Journal Source" key="5"><PerformJournalSource /></TabPane>
-                    <TabPane tab="Performance Period" key="6"><performPeriod /></TabPane>
+                    <TabPane tab="Performance Period" key="6"><PerformPeriod /></TabPane>
                 </Tabs>,
               </div>
           )

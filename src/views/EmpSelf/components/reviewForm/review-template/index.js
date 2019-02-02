@@ -1,11 +1,11 @@
 import React, { PureComponent } from 'react'
-
-export default class Index extends PureComponent {
-     render(){
-        return(
-            <div>
-                review template
-            </div>
-        )
-     }
-}
+import Tables from './Table'
+ export default class Index extends PureComponent {
+      render(){
+           return(
+               <React.Fragment>
+                   <Tables />
+               </React.Fragment>
+           )
+      }
+ }
