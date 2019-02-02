@@ -1,18 +1,13 @@
 
-import React,{PureComponent} from 'react';
+import React from 'react';
 import 'antd/dist/antd.css';
+import './index.css';
 import { Modal, Button } from 'antd';
-
-export default class Contents extends PureComponent {
+import Contents from './Constents';
+export default class Modals extends React.Component {
   state = {
     loading: false,
     visible: false,
-  }
-
-  showModal = () => {
-    this.setState({
-      visible: true,
-    });
   }
 
   handleOk = () => {
@@ -27,17 +22,17 @@ export default class Contents extends PureComponent {
   }
 
   render() {
-    const { visible, loading } = this.state;
+    const {  loading } = this.state;
+    const { visibleParent,titleKey,titleName } =this.props
     return (
       <div>
-        <Button type="primary" onClick={this.showModal}>
-          Open Modal with customized footer
-        </Button>
         <Modal
-          visible={visible}
-          title="Title"
+          width	= {1000}
+          style = {{left: 50}}
+          visible={visibleParent}
+          title={titleKey + ` : `+ titleName}
           onOk={this.handleOk}
-          onCancel={this.handleCancel}
+          onCancel={this.props.handleCancleShow}
           footer={[
             <Button key="back" onClick={this.handleCancel}>Return</Button>,
             <Button key="submit" type="primary" loading={loading} onClick={this.handleOk}>
@@ -45,14 +40,14 @@ export default class Contents extends PureComponent {
             </Button>,
           ]}
         >
-          <p>Some contents...</p>
-          <p>Some contents...</p>
-          <p>Some contents...</p>
-          <p>Some contents...</p>
-          <p>Some contents...</p>
+         <Contents />
         </Modal>
       </div>
     );
   }
 }
-          
+const styles ={
+    Modal: {
+        width: '900px'
+    }
+}        

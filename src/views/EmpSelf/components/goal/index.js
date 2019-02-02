@@ -16,12 +16,12 @@ export default class index extends PureComponent {
           return(
               <div>
                 <Tabs onChange={callback} type="card">
-                    <TabPane tab="Goal Category" key="1">Content of Tab Pane 1</TabPane>
-                    <TabPane tab="Goal Groups" key="2">Content of Tab Pane 2</TabPane>
-                    <TabPane tab="Measurements" key="3">Content of Tab Pane 3</TabPane>
-                    <TabPane tab="Goal Template" key="4">Content of Tab Pane 3</TabPane>
-                    <TabPane tab="Performance Journal Source" key="5">Content of Tab Pane 3</TabPane>
-                    <TabPane tab="Performance Period" key="6">Content of Tab Pane 3</TabPane>
+                    <TabPane tab="Goal Category" key="1"><GoalCategory /></TabPane>
+                    <TabPane tab="Goal Groups" key="2"><GoalGroups /></TabPane>
+                    <TabPane tab="Measurements" key="3"><Measurements /></TabPane>
+                    <TabPane tab="Goal Template" key="4"><GoalTemplate /></TabPane>
+                    <TabPane tab="Performance Journal Source" key="5"><PerformJournalSource /></TabPane>
+                    <TabPane tab="Performance Period" key="6"><performPeriod /></TabPane>
                 </Tabs>,
               </div>
           )
