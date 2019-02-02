@@ -12,7 +12,7 @@ const gridStyle = {
   };
 
 export default class  index extends PureComponent { 
-    state = {openConetent: 0}
+    state = {openConetent: 1}
     onHandleClick = (t) =>{
         this.setState({openConetent:t})
     }
@@ -20,7 +20,7 @@ export default class  index extends PureComponent {
          const {openConetent} = this.state
         return(
             <React.Fragment>
-            <Card title="Employee Development" style={{width:"100%",backgroundColor:"#FFFF00"}}>
+            <Card title="Employee Development" style={{width:"100%",backgroundColor:"#FFFF00",marginBottom: 15}}>
             <Card.Grid style={gridStyle} onClick={()=>this.onHandleClick(1)}>Performance</Card.Grid>
             <Card.Grid style={gridStyle} onClick={()=>this.onHandleClick(2)}>Goal</Card.Grid>
             <Card.Grid style={gridStyle} onClick={()=>this.onHandleClick(3)}>Review</Card.Grid>
