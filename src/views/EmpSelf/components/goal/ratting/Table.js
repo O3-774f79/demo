@@ -3,6 +3,7 @@ import "antd/dist/antd.css";
 import "./index.css";
 import { Table, Input, Button, Popconfirm, Form } from "antd";
 import Modals from './Modals'
+import ModaltTemplate from './ModalFromTemplate'
 const FormItem = Form.Item;
 const EditableContext = React.createContext();
 
@@ -116,41 +117,40 @@ export default class EditableTable extends React.Component {
     super(props);
     this.columns = [
       {
-        title: "Test Type",
-        dataIndex: "skillType",
-        width: "20%",
+        title: "Rating",
+        dataIndex: "measurment",
+        width: "30%",
+        editable: true
       },
       {
         title: "Description",
-        dataIndex: "Description",
-        width: "20%",
+        dataIndex: "measurmentType",
+        width: "50%",
+        editable: true
       },
       {
         title: "",
         dataIndex: "operation",
         render: (text, record) =>
           this.state.dataSource.length >= 1 ? ([
-            <Button type="primary"  icon="file" onClick={()=>this.handleModal(record.key, record.title)}></Button>,
-            <Button type="danger"   icon="delete" onClick={()=>this.handleDelete(record.key)}></Button>,
-          ]) : null
+            <Button type="primary"  icon="file" onClick={()=>this.handleModal(record.key, record.name)}></Button>,
+            <Button type="danger"  icon="delete" onClick={()=>this.handleModal(record.key, record.name)}></Button>
+          ]
+            ) : null
       }
     ];
 
     this.state = {
       dataSource: [
-        // {
-        //   key: "123456789",
-        //   person: "นาย ทดสอบ ทดสอบ",
-        //   title: "ทดสอบ",
-        //   journalDate: "5 ม.ค. 2561",
-        //   submitBy: "นาย ทดสอบ ทดสอบ",
-        //   startDate: "15 ม.ค. 2561",
-        //   complateDate:"31 ม.ค. 2561",
-        //   developmentPlan: ""
-        // },
+        {
+          key: "",
+          measurment: "ทดสอบ",
+          measurmentType: "Date",
+        },
       ],
       count: 2,
       modalDisplay :false,
+      modalDisplayTemplate :false,
       nameSelect: "",
       keySelect: " "
     };
@@ -159,9 +159,15 @@ export default class EditableTable extends React.Component {
   handleModal = (key,name) => {
       this.setState({modalDisplay: true,nameSelect: name, keySelect:key})
   }
+  handleModalTemplate = (key,name) => {
+    this.setState({modalDisplayTemplate: true,nameSelect: name, keySelect:key})
+}
   handleCancleShow =()=>{
       this.setState({modalDisplay: false})
   }
+  handleCancleShowTemplate =()=>{
+    this.setState({modalDisplayTemplate: false})
+}
   handleDelete = key => {
     const dataSource = [...this.state.dataSource];
     this.setState({ dataSource: dataSource.filter(item => item.key !== key) });
@@ -223,20 +229,12 @@ export default class EditableTable extends React.Component {
     return (
       <div>
         <Button
-          onClick={() =>this.handleModal("","New Journal")}
+          onClick={() =>this.handleModal("","")}
           type="primary"
-          style={{ marginBottom: 16 }}
+          style={{ marginBottom: 16}}
           icon= "plus"
         >
-          Add New
-        </Button>
-        <Button
-          onClick={this.handleDelete}
-          type="danger"
-          style={{ marginBottom: 16,marginLeft:5 }}
-          icon="delete"
-        >
-          Delete
+          Add New Ratting
         </Button>
         <Table
           components={components}

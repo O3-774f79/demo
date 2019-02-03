@@ -116,43 +116,35 @@ export default class EditableTable extends React.Component {
     super(props);
     this.columns = [
       {
-        title: "name",
-        dataIndex: "name",
+        title: "Review Type",
+        dataIndex: "reviewType",
         width: "30%",
         editable: true
       },
       {
-        title: "age",
-        dataIndex: "age"
+        title: "Description",
+        dataIndex: "description"
       },
       {
-        title: "address",
-        dataIndex: "address"
+        title: "Status of new review",
+        dataIndex: "statusOfNewReview"
       },
       {
-        title: "operation",
-        dataIndex: "operation",
-        render: (text, record) =>
-          this.state.dataSource.length >= 1 ? (
-            <Button type="primary"  icon="download" onClick={()=>this.handleModal(record.key, record.name)}>แสดง</Button>
-          ) : null
-      }
+        title: "Status",
+        dataIndex: "status"
+      },
+      // {
+      //   title: "operation",
+      //   dataIndex: "operation",
+      //   render: (text, record) =>
+      //     this.state.dataSource.length >= 1 ? (
+      //       <Button type="primary"  icon="download" onClick={()=>this.handleModal(record.key, record.name)}>แสดง</Button>
+      //     ) : null
+      // }
     ];
 
     this.state = {
       dataSource: [
-        {
-          key: "0",
-          name: "Edward King 0",
-          age: "32",
-          address: "London, Park Lane no. 0"
-        },
-        {
-          key: "1",
-          name: "Edward King 1",
-          age: "32",
-          address: "London, Park Lane no. 1"
-        }
       ],
       count: 2,
       modalDisplay :false,
@@ -177,10 +169,10 @@ export default class EditableTable extends React.Component {
   handleAdd = () => {
     const { count, dataSource } = this.state;
     const newData = {
-      key: count,
-      name: `Edward King ${count}`,
-      age: 32,
-      address: `London, Park Lane no. ${count}`
+      key: '',
+      name: ``,
+      age: ``,
+      address: ``
     };
     this.setState({
       dataSource: [...dataSource, newData],

@@ -9,6 +9,7 @@ const gridStyle = {
     width: '25%',
     textAlign: 'center',
     cursor: "pointer",
+    backgroundColor: "#99ccff"
   };
 
 export default class  index extends PureComponent { 
@@ -20,7 +21,8 @@ export default class  index extends PureComponent {
          const {openConetent} = this.state
         return(
             <React.Fragment>
-            <Card title="Employee Development" style={{width:"100%",backgroundColor:"#FFFF00",marginBottom: 15}}>
+            <Card title="Employee Development" 
+                style={{width:"100%",marginBottom: 15}}>
             <Card.Grid style={gridStyle} onClick={()=>this.onHandleClick(1)}>Performance</Card.Grid>
             <Card.Grid style={gridStyle} onClick={()=>this.onHandleClick(2)}>Goal</Card.Grid>
             <Card.Grid style={gridStyle} onClick={()=>this.onHandleClick(3)}>Review</Card.Grid>

@@ -6,6 +6,7 @@ import Measurements from './measurements'
 import GoalTemplate from './goal-template'
 import PerformJournalSource from './performance-journal-source'
 import PerformPeriod from './performance-period'
+import Ratting from './ratting'
 
 const TabPane = Tabs.TabPane
 const callback = (key)=> {
@@ -21,6 +22,7 @@ export default class index extends PureComponent {
                     <TabPane tab="Measurements" key="3"><Measurements /></TabPane>
                     <TabPane tab="Goal Template" key="4"><GoalTemplate /></TabPane>
                     <TabPane tab="Performance Period" key="5"><PerformPeriod /></TabPane>
+                    <TabPane tab="Rating" key="6"><Ratting /></TabPane>
                 </Tabs>,
               </div>
           )

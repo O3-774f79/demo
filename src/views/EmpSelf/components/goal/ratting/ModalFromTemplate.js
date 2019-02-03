@@ -2,8 +2,9 @@
 import React from 'react';
 import 'antd/dist/antd.css';
 import './index.css';
-import { Modal, Button } from 'antd';
-import Contents from './Constents';
+import { Modal, Button,DatePicker } from 'antd';
+import { Form, FormGroup, Label, Input,Col } from 'reactstrap';
+import ContentTemplate from './ContentTemplate'
 export default class Modals extends React.Component {
   state = {
     loading: false,
@@ -28,9 +29,9 @@ export default class Modals extends React.Component {
       <div>
         <Modal
           width	= {1000}
-          style = {{left: 50, top:40}}
+          style = {{left: 50}}
           visible={visibleParent}
-          title={`New Goal`}
+          title={"New form  rating"}
           onOk={this.handleOk}
           onCancel={this.props.handleCancleShow}
           footer={[
@@ -40,7 +41,27 @@ export default class Modals extends React.Component {
             </Button>,
           ]}
         >
-         <Contents />
+         <ContentTemplate />
+         <Form>
+        <FormGroup row>
+          <Label for="exampleEmail" sm={2}>Performan period</Label>
+          <Col sm={3}>
+            <Input type="text" name="email" id="exampleEmail" />
+          </Col>
+        </FormGroup>
+        <FormGroup row>
+          <Label for="examplePassword" sm={2}>Start date</Label>
+          <Col sm={10}>
+          <DatePicker  />
+          </Col>
+        </FormGroup>
+        <FormGroup row>
+          <Label for="exampleSelect" sm={2}>End date</Label>
+          <Col sm={10}>
+          <DatePicker  />
+          </Col>
+        </FormGroup>
+        </Form>
         </Modal>
       </div>
     );

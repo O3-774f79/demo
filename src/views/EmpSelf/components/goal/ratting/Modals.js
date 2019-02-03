@@ -28,9 +28,9 @@ export default class Modals extends React.Component {
       <div>
         <Modal
           width	= {1000}
-          style = {{left: 50, top:40}}
+          style = {{left: 50}}
           visible={visibleParent}
-          title={`New Goal`}
+          title={"New Ratting"}
           onOk={this.handleOk}
           onCancel={this.props.handleCancleShow}
           footer={[

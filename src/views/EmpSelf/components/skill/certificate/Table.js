@@ -116,54 +116,47 @@ export default class EditableTable extends React.Component {
     super(props);
     this.columns = [
       {
-        title: "name",
-        dataIndex: "name",
-        width: "30%",
-        editable: true
+        title: "Certifacate Type",
+        dataIndex: "certifacateType",
+        width: "20%",
       },
       {
-        title: "age",
-        dataIndex: "age"
+        title: "Description",
+        dataIndex: "description",
+        width: "20%",
       },
       {
-        title: "address",
-        dataIndex: "address"
-      },
-      {
-        title: "operation",
+        title: "",
         dataIndex: "operation",
         render: (text, record) =>
-          this.state.dataSource.length >= 1 ? (
-            <Button type="primary"  icon="download" onClick={()=>this.handleModal(record.key, record.name)}>แสดง</Button>
-          ) : null
+          this.state.dataSource.length >= 1 ? ([
+            <Button type="primary"  icon="file" onClick={()=>this.handleModal(record.key, record.title)}></Button>,
+            <Button type="danger"   icon="delete" onClick={()=>this.handleDelete(record.key)}></Button>,
+          ]) : null
       }
     ];
 
     this.state = {
       dataSource: [
-        {
-          key: "0",
-          name: "Edward King 0",
-          age: "32",
-          address: "London, Park Lane no. 0"
-        },
-        {
-          key: "1",
-          name: "Edward King 1",
-          age: "32",
-          address: "London, Park Lane no. 1"
-        }
+        // {
+        //   key: "123456789",
+        //   person: "นาย ทดสอบ ทดสอบ",
+        //   title: "ทดสอบ",
+        //   journalDate: "5 ม.ค. 2561",
+        //   submitBy: "นาย ทดสอบ ทดสอบ",
+        //   startDate: "15 ม.ค. 2561",
+        //   complateDate:"31 ม.ค. 2561",
+        //   developmentPlan: ""
+        // },
       ],
       count: 2,
       modalDisplay :false,
       nameSelect: "",
-      keySelect: ""
+      keySelect: " "
     };
   }
 
   handleModal = (key,name) => {
-      console.log("key",key)
-      console.log("name",name)
       this.setState({modalDisplay: true,nameSelect: name, keySelect:key})
   }
   handleCancleShow =()=>{
@@ -209,7 +202,6 @@ export default class EditableTable extends React.Component {
     };
     const rowSelection = {
         onChange: (selectedRowKeys, selectedRows) => {
-          console.log(`selectedRowKeys: ${selectedRowKeys}`, 'selectedRows: ', selectedRows);
         }
     }
     const columns = this.columns.map(col => {
@@ -231,16 +223,18 @@ export default class EditableTable extends React.Component {
     return (
       <div>
         <Button
-          onClick={this.handleAdd}
+          onClick={() =>this.handleModal("","New Journal")}
           type="primary"
           style={{ marginBottom: 16 }}
+          icon= "plus"
         >
           Add New
         </Button>
         <Button
           onClick={this.handleDelete}
           type="danger"
-          style={{ marginBottom: 16 }}
+          style={{ marginBottom: 16,marginLeft:5 }}
+          icon="delete"
         >
           Delete
         </Button>
@@ -252,7 +246,11 @@ export default class EditableTable extends React.Component {
           dataSource={dataSource}
           columns={columns}
         />
-        <Modals visibleParent={this.state.modalDisplay} handleCancleShow={this.handleCancleShow} titleName={this.state.nameSelect} titleKey={this.state.keySelect} />
+        <Modals visibleParent={this.state.modalDisplay} 
+                handleCancleShow={this.handleCancleShow} 
+                titleName={this.state.nameSelect} 
+                titleKey={this.state.keySelect} 
+        />
       </div>
     );
   }

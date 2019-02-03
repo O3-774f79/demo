@@ -28,9 +28,9 @@ export default class Modals extends React.Component {
       <div>
         <Modal
           width	= {1000}
-          style = {{left: 50}}
+          style = {{left: 50, top:40}}
           visible={visibleParent}
-          title={titleKey + ` : `+ titleName}
+          title={`New Certificate Type`}
           onOk={this.handleOk}
           onCancel={this.props.handleCancleShow}
           footer={[

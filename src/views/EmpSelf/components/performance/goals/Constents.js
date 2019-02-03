@@ -16,7 +16,7 @@ export default class  Contents  extends PureComponent{
   render(){
     return(
       <Collapse defaultActiveKey={['1']} onChange={callback}>
-      <Panel header="New Review" key="1">
+      <Panel header="New Goal" key="1">
       <Form>
         <Row form>
           <Col md={7}>
