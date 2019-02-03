@@ -3,6 +3,12 @@ import 'antd/dist/antd.css';
 import { Card, Icon } from 'antd';
 
 const { Meta } = Card;
+const style = {
+  cardContent: {
+      display: 'flex',
+      flexDirection: 'column',
+  }
+}
 export default class PerforGoal extends PureComponent {
     render() {
          return (
@@ -12,8 +18,12 @@ export default class PerforGoal extends PureComponent {
           >
             <Meta
               title="Performance Goal"
-              description="This is the description"
-            />
+              description={<div style={style.cardContent}>
+              <label>4 Not started</label>
+              <label>3 On track</label>
+              <label>0 Needs improvement</label>
+              </div>}
+        />
           </Card>
           )
      }

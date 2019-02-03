@@ -34,6 +34,7 @@ const style = {
 }
 export default class Index extends PureComponent{
     onHandleClick() {
+        
     }
     render(){
         return(          

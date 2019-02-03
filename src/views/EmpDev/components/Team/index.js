@@ -1,17 +1,365 @@
 
 import React,{PureComponent} from 'react';
 import 'antd/dist/antd.css';
-import { Card } from 'antd';
-
+import {  Tabs,Card, Icon, Avatar } from 'antd';
+const TabPane = Tabs.TabPane;
+const { Meta } = Card;
+const gridStyle = {
+  width: '25%',
+  textAlign: 'center',
+  backgroundColor: '#ff3300',
+  cursor: 'pointer',
+  size: 18
+};
 export default class Index extends PureComponent {
      render() {
          return(
-            <div style={{ background: '#ECECEC', padding: '30px' }}>
-            <Card title="Card title" bordered={false} style={{ width: 300 }}>
-              <p>Card content</p>
-              <p>Card content</p>
-              <p>Card content</p>
+            <div style={{padding: '30px' }}>
+            <Card >
+              <Card.Grid style={gridStyle}>Team Performance Journal</Card.Grid>
+              <Card.Grid style={gridStyle}>Team Performance Goals</Card.Grid>
+              <Card.Grid style={gridStyle}>Team Performance Reviews</Card.Grid>
+              <Card.Grid style={gridStyle}>Open Positions</Card.Grid>
+             
             </Card>
+            <Tabs>
+              <TabPane tab="Summary" key="1">
+              <div style={{display: "flex",justifyContent:"space-between"}}>
+              <Card style={{ width: 300, marginTop: 16 }}>
+                <Meta
+                  avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
+                  title="นาย ทดสอบ1 ทดสอบ1"
+                  description={
+                  <div>
+                  <label>Marketing Manager</label>
+                  <br />
+                  <label>Sales & Marketing</label>
+                  </div>
+                  }
+                />
+              </Card>
+              <Card style={{ width: 300, marginTop: 16 }}>
+                <Meta
+                  avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
+                  title="นาย ทดสอบ2 ทดสอบ2"
+                  description={
+                    <div>
+                    <label>Sales Manager</label>
+                    <br />
+                    <label>Sales & Marketing</label>
+                    </div>
+                    }
+                />
+              </Card>
+              <Card style={{ width: 300, marginTop: 16 }}>
+                <Meta
+                  avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
+                  title="นาย ทดสอบ3 ทดสอบ3"
+                  description={
+                    <div>
+                    <label>Sales Manager</label>
+                    <br />
+                    <label>Sales & Marketing</label>
+                    </div>
+                    }
+                />
+              </Card>
+              </div>
+              </TabPane>
+              <TabPane tab="Position" key="2">
+              <div style={{display: "flex",justifyContent:"space-between"}}>
+              <Card style={{ width: 300, marginTop: 16 }}>
+                <Meta
+                  avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
+                  title="นาย ทดสอบ1 ทดสอบ1"
+                  description={
+                  <div>
+                  <label>Marketing Manager</label>
+                  <br />
+                  <label>Sales & Marketing</label>
+                  <hr/>
+                  <label>Years in position: 12.9</label>
+                  <br />
+                  <label>Years of service: 12.9</label>
+                  <br />
+                  <label>Number of previous positions: 0</label>               
+                  </div>
+                  }
+                />
+              </Card>
+              <Card style={{ width: 300, marginTop: 16 }}>
+                <Meta
+                  avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
+                  title="นาย ทดสอบ2 ทดสอบ2"
+                  description={
+                    <div>
+                    <label>Sale Manager</label>
+                    <br />
+                    <label>Sales & Marketing</label>
+                    <hr/>
+                    <label>Years in position: 6.9</label>
+                    <br />
+                    <label>Years of service: 5.1</label>
+                    <br />
+                    <label>Number of previous positions: 1</label>               
+                    </div>
+                    }
+                />
+              </Card>
+              <Card style={{ width: 300, marginTop: 16 }}>
+                <Meta
+                  avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
+                  title="นาย ทดสอบ3 ทดสอบ3"
+                  description={
+                    <div>
+                    <label>Sale Manager</label>
+                    <br />
+                    <label>Sales & Marketing</label>
+                    <hr/>
+                    <label>Years in position: 12.7</label>
+                    <br />
+                    <label>Years of service: 12.7</label>
+                    <br />
+                    <label>Number of previous positions: 0</label>               
+                    </div>
+                    }
+                />
+              </Card>
+              </div>
+              </TabPane>
+              <TabPane tab="Compensation" key="3">
+              <div style={{display: "flex",justifyContent:"space-between"}}>
+              <Card style={{ width: 300, marginTop: 16 }}>
+                <Meta
+                  avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
+                  title="นาย ทดสอบ1 ทดสอบ1"
+                  description={
+                  <div>
+                  <label>Marketing Manager</label>
+                  <br />
+                  <label>Sales & Marketing</label>
+                  <hr/>
+                  <label>Annual salary: 68,310.00</label>
+                  <br />
+                  <label>Last increase amount: 3,160.00</label>
+                  <br />
+                  <label>Last increase percent: 4.85</label>               
+                  </div>
+                  }
+                />
+              </Card>
+              <Card style={{ width: 300, marginTop: 16 }}>
+                <Meta
+                  avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
+                  title="นาย ทดสอบ2 ทดสอบ2"
+                  description={
+                    <div>
+                    <label>Sale Manager</label>
+                    <br />
+                    <label>Sales & Marketing</label>
+                    <hr/>
+                    <label>Annual salary: 84,300.00</label>
+                    <br />
+                    <label>Last increase amount: 2,300.00</label>
+                    <br />
+                    <label>Last increase percent: 2.80</label>               
+                    </div>
+                    }
+                />
+              </Card>
+              <Card style={{ width: 300, marginTop: 16 }}>
+                <Meta
+                  avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
+                  title="นาย ทดสอบ3 ทดสอบ3"
+                  description={
+                    <div>
+                    <label>Sale Manager</label>
+                    <br />
+                    <label>Sales & Marketing</label>
+                    <hr/>
+                    <label>Top balances with activity</label>
+                    <br />
+                    <label>PTO: 0.00 hours</label>
+                    <br />
+                    <label>Sick: 0.00 hours</label>               
+                    </div>
+                    }
+                />
+              </Card>
+              </div>
+              </TabPane>
+              <TabPane tab="Leave and absence" key="4">
+              <div style={{display: "flex",justifyContent:"space-between"}}>
+              <Card style={{ width: 300, marginTop: 16 }}>
+                <Meta
+                  avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
+                  title="นาย ทดสอบ1 ทดสอบ1"
+                  description={
+                  <div>
+                  <label>Marketing Manager</label>
+                  <br />
+                  <label>Sales & Marketing</label>
+                  <hr/>
+                  <label>Top balances with activity</label>
+                    <br />
+                    <label>PTO: 32.00 hours</label>
+                    <br />
+                    <label>Sick: 34.82 hourss</label>               
+                    </div>
+                  }
+                />
+              </Card>
+              <Card style={{ width: 300, marginTop: 16 }}>
+                <Meta
+                  avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
+                  title="นาย ทดสอบ2 ทดสอบ2"
+                  description={
+                    <div>
+                    <label>Sale Manager</label>
+                    <br />
+                    <label>Sales & Marketing</label>
+                    <hr/>
+                    <label>Top balances with activity</label>
+                    <br />
+                    <label>PTO: 147.76 hours</label>
+                    <br />
+                    <label>Sick: 68.00 hours</label>               
+                    </div>
+                    }
+                />
+              </Card>
+              <Card style={{ width: 300, marginTop: 16 }}>
+                <Meta
+                  avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
+                  title="นาย ทดสอบ3 ทดสอบ3"
+                  description={
+                    <div>
+                    <label>Sale Manager</label>
+                    <br />
+                    <label>Sales & Marketing</label>
+                    <hr/>
+                    <label>Annual salary: 94,815.00</label>
+                    <br />
+                    <label>Last increase amount: 4,515.00</label>
+                    <br />
+                    <label>Last increase percent: 5.00</label>               
+                    </div>
+                    }
+                />
+              </Card>
+              </div>
+              </TabPane>
+              <TabPane tab="Performance goal" key="5">
+              <div style={{display: "flex",justifyContent:"space-between"}}>
+              <Card style={{ width: 300, marginTop: 16 }}>
+                <Meta
+                  avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
+                  title="นาย ทดสอบ1 ทดสอบ1"
+                  description={
+                  <div>
+                  <label>Marketing Manager</label>
+                  <br />
+                  <label>Sales & Marketing</label>
+                  <hr/>
+                    <label>Not started: 1</label>
+                    <br />
+                    <label>On track: 1</label>             
+                    </div>
+                  }
+                />
+              </Card>
+              <Card style={{ width: 300, marginTop: 16 }}>
+                <Meta
+                  avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
+                  title="นาย ทดสอบ2 ทดสอบ2"
+                  description={
+                    <div>
+                    <label>Sale Manager</label>
+                    <br />
+                    <label>Sales & Marketing</label>
+                    <hr/>
+                    <label>Not started: 2</label>
+                    <br />
+                    <label>On track: 1</label>             
+                    </div>
+                    }
+                />
+              </Card>
+              <Card style={{ width: 300, marginTop: 16 }}>
+                <Meta
+                  avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
+                  title="นาย ทดสอบ3 ทดสอบ3"
+                  description={
+                    <div>
+                    <label>Sale Manager</label>
+                    <br />
+                    <label>Sales & Marketing</label>
+                    <hr/>
+                    <label>Not started: 1</label>
+                    <br />
+                    <label>On track: 2</label>             
+                    </div>
+                    }
+                />
+              </Card>
+              </div>
+              </TabPane>
+              <TabPane tab="Review" key="6">
+              <div style={{display: "flex",justifyContent:"space-between"}}>
+              <Card style={{ width: 300, marginTop: 16 }}>
+                <Meta
+                  avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
+                  title="นาย ทดสอบ1 ทดสอบ1"
+                  description={
+                  <div>
+                  <label>Marketing Manager</label>
+                  <br />
+                  <label>Sales & Marketing</label>
+                  <hr/>
+                    <label>In progress: 1</label>
+                    <br />
+                    <label>Ready for review: 1</label>             
+                    </div>
+                  }
+                />
+              </Card>
+              <Card style={{ width: 300, marginTop: 16 }}>
+                <Meta
+                  avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
+                  title="นาย ทดสอบ2 ทดสอบ2"
+                  description={
+                    <div>
+                    <label>Sale Manager</label>
+                    <br />
+                    <label>Sales & Marketing</label>
+                    <hr/>
+                    <label>In progress: 2</label>
+                    <br />
+                    <label>Ready for review: 1</label>             
+                    </div>
+                    }
+                />
+              </Card>
+              <Card style={{ width: 300, marginTop: 16 }}>
+                <Meta
+                  avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
+                  title="นาย ทดสอบ3 ทดสอบ3"
+                  description={
+                    <div>
+                    <label>Sale Manager</label>
+                    <br />
+                    <label>Sales & Marketing</label>
+                    <hr/>
+                    <label>In progress: 1</label>
+                    <br />
+                    <label>Ready for review: 2</label>             
+                    </div>
+                    }
+                />
+              </Card>
+              </div>
+              </TabPane>              
+            </Tabs>
           </div>
          )
      }

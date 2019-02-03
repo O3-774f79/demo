@@ -2,17 +2,30 @@
 import React , {PureComponent}from 'react';
 import 'antd/dist/antd.css';
 import './index.css';
-import { Collapse,DatePicker } from 'antd';
+import { Collapse,DatePicker,Icon,Steps } from 'antd';
 import { Col, Row, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 
 const Panel = Collapse.Panel;
-
+const Step = Steps.Step;
 function callback(key) {
   console.log(key);
 }
 export default class  Contents  extends PureComponent{
   render(){
     return(
+      <React.Fragment>
+
+        <Steps style={{marginBottom: 10}}>
+          <Step
+            style={{ color: "#00ff00" }}
+            status="finish"
+            title="User"
+            icon={<Icon type="user" />}
+          />
+          <Step status="wait" title="Review" icon={<Icon type="solution" />} />
+          <Step status="wait" title="Done" icon={<Icon type="smile-o" />} />
+        </Steps>
+
       <Form>
         <Row form>
           <Col md={3}>
@@ -57,6 +70,7 @@ export default class  Contents  extends PureComponent{
           </Col>
         </Row>
       </Form>
+      </React.Fragment>
     )
   }
 }

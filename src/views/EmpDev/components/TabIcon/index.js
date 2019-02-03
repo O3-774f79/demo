@@ -21,12 +21,13 @@ const style = {
      }  
     }
 export default class Index extends PureComponent {
+    start={
+        displayContent:0
+    }
      render() {
         return(
             <Tabs defaultActiveKey="1" onChange={callback}>
             <TabPane tab={<div style={style.iconFormat}><Icon style={style.iconStyle}type="user" /><label style={style.iconText}>Information</label></div>} key="1"><Information /></TabPane>
-            <TabPane tab="Tab 2" key="2">Content of Tab Pane 2</TabPane>
-            <TabPane tab={<p>test</p>} key="3">Content of Tab Pane 3</TabPane>
           </Tabs>
         )
      }

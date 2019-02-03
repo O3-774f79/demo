@@ -4,7 +4,12 @@ import 'antd/dist/antd.css';
 import { Card, Icon, Avatar } from 'antd';
 
 const { Meta } = Card;
-
+const style = {
+  cardContent: {
+      display: 'flex',
+      flexDirection: 'column',
+  }
+}
 export default class Timeoff extends PureComponent {
      render() {
           return(
@@ -13,8 +18,13 @@ export default class Timeoff extends PureComponent {
             actions={[<div><Icon type="right-square" /><label>Request time off</label></div>]}
           >
             <Meta
-              title="Time Off Balances"
-              description="This is the description"
+              title="Time off Balances"
+              description={<div style={style.cardContent}>
+                  <label >PTO</label>
+                  <label>87.76  hours</label>
+                  <label >Sick</label>
+                  <label>56.06  hours</label>
+                  </div>}
             />
           </Card>
           )

@@ -125,10 +125,11 @@ export default class EditableTable extends React.Component {
       {
         title: "Measurment",
         dataIndex: "measurmentType",
+        width: "50%",
         editable: true
       },
       {
-        title: "operation",
+        title: "",
         dataIndex: "operation",
         render: (text, record) =>
           this.state.dataSource.length >= 1 ? ([

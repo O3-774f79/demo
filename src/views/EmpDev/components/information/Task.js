@@ -4,7 +4,12 @@ import 'antd/dist/antd.css';
 import { Card, Icon, Avatar } from 'antd';
 
 const { Meta } = Card;
-
+const style = {
+  cardContent: {
+      display: 'flex',
+      flexDirection: 'column',
+  }
+}
 export default class Task extends PureComponent {
      render() {
           return(
@@ -14,8 +19,11 @@ export default class Task extends PureComponent {
           >
             <Meta
               title="Task"
-              description="This is the description"
-            />
+              description={<div style={style.cardContent}>
+              <label>0 Overdue tasks</label>
+              <label>0 Tasks due today</label>
+              </div>}
+        />
           </Card>
           )
      }

@@ -1,19 +1,20 @@
 export default {
   items: [
     {
-      name: 'Dashboard',
-      url: '/dashboard',
-      icon: 'icon-speedometer',
-    },
-    {
       name: 'Employee Self',
-      url: '/emp-self',
-      icon: 'icon-speedometer',
+      url: '/emp-dev',
+      icon: 'icon-user',
     },
     {
       name: 'Employee Development',
-      url: './emp-dev',
-      icon: 'icon-speedometer'
+      url: './emp-self',
+      icon: 'icon-people'
     },
+    {
+      name: 'Analysis',
+      url: '/dashboard',
+      icon: 'icon-book-open',
+    },
+   
   ],
 };

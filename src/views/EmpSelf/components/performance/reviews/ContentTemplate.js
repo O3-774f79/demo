@@ -2,8 +2,8 @@
 import React,{PureComponent} from 'react';
 import 'antd/dist/antd.css';
 import './index.css';
-import { Table } from 'antd';
-
+import { Table,Steps, Icon } from 'antd';
+const Step = Steps.Step;
 const columns = [{
   title: 'Review template',
   dataIndex: 'reviewTemplate',
@@ -56,6 +56,18 @@ export default class ContentTemplate extends PureComponent {
     render() {
         return(
             <div>
+
+            <Steps style={{marginBottom: 10}}>
+              <Step
+                style={{ color: "#00ff00" }}
+                status="finish"
+                title="User"
+                icon={<Icon type="user" />}
+              />
+              <Step status="wait" title="Review" icon={<Icon type="solution" />} />
+              <Step status="wait" title="Done" icon={<Icon type="smile-o" />} />
+            </Steps>
+
             <Table rowSelection={rowSelection} columns={columns} dataSource={data} size="small" />
             <br />
             <Table rowSelection={rowSelection} columns={columns2} dataSource={data2} size="small"title={() => 'Select Worker'} />

@@ -123,15 +123,20 @@ export default class EditableTable extends React.Component {
       },
       {
         title: "Description",
-        dataIndex: "description"
+        dataIndex: "description",
+        editable: true
+
       },
       {
         title: "Status of new review",
-        dataIndex: "statusOfNewReview"
+        dataIndex: "statusOfNewReview",
+        editable: true
       },
       {
         title: "Status",
-        dataIndex: "status"
+        dataIndex: "status",
+        editable: true
+
       },
       // {
       //   title: "operation",

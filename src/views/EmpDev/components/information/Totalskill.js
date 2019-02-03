@@ -17,9 +17,9 @@ export default class Totalskill extends PureComponent {
             actions={[<div><Icon type="plus" /><label>Add more skills</label></div>]}
           >
             <Meta
-              title="Performance Goal"
+              title="Total Skill"
               description={<div style={style.cardContent}>
-                  <label>5</label>
+                  <label style={{fontSize:50}}>5</label>
                   <label>Most recent update to skills</label>
                   <label>2 มกราคม 2561</label> 
                   </div>}
