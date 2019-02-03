@@ -56,8 +56,8 @@ const routes = [
   { path: '/supplier', exact: true, name: 'Supplier', component: Supplier},
   { path:  '/product',exact:true,name:'Product',component: Product},
   { path:  '/material-master-maintenance',exact:true,name:'Material-Maintenance',component: Material},
-  { path:  '/emp-self',exact:true,name:'Employee-Self',component: EmpSelf},
-  { path:  '/emp-dev',exact:true,name:'Employee-Dev',component: EmpDev},
+  { path:  '/emp-self',exact:true,name:'Employee-Dev',component: EmpSelf},
+  { path:  '/emp-dev',exact:true,name:'Employee-Self',component: EmpDev},
   
 
   { path: '/dashboard', name: 'Dashboard', component: Dashboard },
