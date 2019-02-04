@@ -1,7 +1,10 @@
 
 import React,{PureComponent} from 'react';
 import 'antd/dist/antd.css';
-import {  Tabs,Card, Icon, Avatar } from 'antd';
+import {  Tabs,Card, Icon, Avatar,Modal } from 'antd';
+import Tables from './Tables'
+import NodeTrees from './NodeTrees'
+
 const TabPane = Tabs.TabPane;
 const { Meta } = Card;
 const gridStyle = {
@@ -12,21 +15,55 @@ const gridStyle = {
   size: 18
 };
 export default class Index extends PureComponent {
+  state = { visible: false,visible2:false }
+  onhandleModal= ()=> {
+    this.setState({
+      visible: true,
+    });
+  }
+  handleCancel = (e) => {
+    console.log(e);
+    this.setState({
+      visible: false,
+    });
+  }
+  onhandleClickTree = () => {
+    console.log("te")
+    this.setState({
+      visible2: true,
+    });
+  }
+  handleCancel2 = (e) => {
+    console.log(e);
+    this.setState({
+      visible2: false,
+    });
+  }
      render() {
          return(
             <div style={{padding: '30px' }}>
             <Card >
-              <Card.Grid style={gridStyle}>Team Performance Journal</Card.Grid>
+              <Card.Grid style={gridStyle} onClick={this.onhandleModal}>Team Performance Journal</Card.Grid>
               <Card.Grid style={gridStyle}>Team Performance Goals</Card.Grid>
               <Card.Grid style={gridStyle}>Team Performance Reviews</Card.Grid>
               <Card.Grid style={gridStyle}>Open Positions</Card.Grid>
              
             </Card>
+            <Modal
+          title="Performance Journal"
+          visible={this.state.visible}
+          width= {800}
+          onOk={this.handleOk}
+          onCancel={this.handleCancel}
+          footer={null}
+        >
+          <Tables />
+        </Modal>
             <Tabs>
               <TabPane tab="Summary" key="1">
               <div style={{display: "flex",flexWrap:"wrap"}}>
               <Card style={{ width: 300, marginTop: 16,marginLeft:15,marginRight:15 }} 
-                actions={[<Icon type="mail" />]}
+                actions={[<Icon type="mail" style={{cursor:"pointer"}} onClick={this.onhandleClickTree}/>]}
                 >
                 <Meta
                   avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
@@ -40,6 +77,15 @@ export default class Index extends PureComponent {
                   }
                 />
               </Card>
+              <Modal
+          title="Basic Modal"
+          visible={this.state.visible2}
+          width= {800}
+          onCancel={this.handleCancel2}
+          footer={null}
+        >
+       <NodeTrees />
+        </Modal>
               <Card style={{ width: 300, marginTop: 16,marginLeft:15,marginRight:15 }}>
                 <Meta
                   avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
