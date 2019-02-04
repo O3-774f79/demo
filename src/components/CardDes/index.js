@@ -15,7 +15,8 @@ const style = {
      },
      Card: {
         boxShadow: "0 10px 6px -6px #777",
-        width: 500
+        width: 500,
+        backgroundColor: "#FFFF88",
      }
      
 }

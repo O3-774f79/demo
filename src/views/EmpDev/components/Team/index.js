@@ -7,7 +7,7 @@ const { Meta } = Card;
 const gridStyle = {
   width: '25%',
   textAlign: 'center',
-  backgroundColor: '#ff3300',
+  backgroundColor: '#88DDBB',
   cursor: 'pointer',
   size: 18
 };
@@ -24,8 +24,10 @@ export default class Index extends PureComponent {
             </Card>
             <Tabs>
               <TabPane tab="Summary" key="1">
-              <div style={{display: "flex",justifyContent:"space-between"}}>
-              <Card style={{ width: 300, marginTop: 16 }}>
+              <div style={{display: "flex",flexWrap:"wrap"}}>
+              <Card style={{ width: 300, marginTop: 16,marginLeft:15,marginRight:15 }} 
+                actions={[<Icon type="mail" />]}
+                >
                 <Meta
                   avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
                   title="นาย ทดสอบ1 ทดสอบ1"
@@ -38,7 +40,7 @@ export default class Index extends PureComponent {
                   }
                 />
               </Card>
-              <Card style={{ width: 300, marginTop: 16 }}>
+              <Card style={{ width: 300, marginTop: 16,marginLeft:15,marginRight:15 }}>
                 <Meta
                   avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
                   title="นาย ทดสอบ2 ทดสอบ2"
@@ -51,7 +53,7 @@ export default class Index extends PureComponent {
                     }
                 />
               </Card>
-              <Card style={{ width: 300, marginTop: 16 }}>
+              <Card style={{ width: 300, marginTop: 16,marginLeft:15,marginRight:15 }}>
                 <Meta
                   avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
                   title="นาย ทดสอบ3 ทดสอบ3"
@@ -67,8 +69,8 @@ export default class Index extends PureComponent {
               </div>
               </TabPane>
               <TabPane tab="Position" key="2">
-              <div style={{display: "flex",justifyContent:"space-between"}}>
-              <Card style={{ width: 300, marginTop: 16 }}>
+              <div style={{display: "flex",flexWrap:"wrap"}}>
+              <Card style={{ width: 300, marginTop: 16,marginLeft:15,marginRight:15 }}>
                 <Meta
                   avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
                   title="นาย ทดสอบ1 ทดสอบ1"
@@ -87,7 +89,7 @@ export default class Index extends PureComponent {
                   }
                 />
               </Card>
-              <Card style={{ width: 300, marginTop: 16 }}>
+              <Card style={{ width: 300, marginTop: 16,marginLeft:15,marginRight:15 }}>
                 <Meta
                   avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
                   title="นาย ทดสอบ2 ทดสอบ2"
@@ -106,7 +108,7 @@ export default class Index extends PureComponent {
                     }
                 />
               </Card>
-              <Card style={{ width: 300, marginTop: 16 }}>
+              <Card style={{ width: 300, marginTop: 16,marginLeft:15,marginRight:15 }}>
                 <Meta
                   avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
                   title="นาย ทดสอบ3 ทดสอบ3"
@@ -128,8 +130,8 @@ export default class Index extends PureComponent {
               </div>
               </TabPane>
               <TabPane tab="Compensation" key="3">
-              <div style={{display: "flex",justifyContent:"space-between"}}>
-              <Card style={{ width: 300, marginTop: 16 }}>
+              <div style={{display: "flex",flexWrap:"wrap"}}>
+              <Card style={{ width: 300, marginTop: 16,marginLeft:15,marginRight:15 }}>
                 <Meta
                   avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
                   title="นาย ทดสอบ1 ทดสอบ1"
@@ -148,7 +150,7 @@ export default class Index extends PureComponent {
                   }
                 />
               </Card>
-              <Card style={{ width: 300, marginTop: 16 }}>
+              <Card style={{ width: 300, marginTop: 16,marginLeft:15,marginRight:15 }}>
                 <Meta
                   avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
                   title="นาย ทดสอบ2 ทดสอบ2"
@@ -167,7 +169,7 @@ export default class Index extends PureComponent {
                     }
                 />
               </Card>
-              <Card style={{ width: 300, marginTop: 16 }}>
+              <Card style={{ width: 300, marginTop: 16,marginLeft:15,marginRight:15 }}>
                 <Meta
                   avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
                   title="นาย ทดสอบ3 ทดสอบ3"
@@ -189,8 +191,8 @@ export default class Index extends PureComponent {
               </div>
               </TabPane>
               <TabPane tab="Leave and absence" key="4">
-              <div style={{display: "flex",justifyContent:"space-between"}}>
-              <Card style={{ width: 300, marginTop: 16 }}>
+              <div style={{display: "flex",flexWrap:"wrap"}}>
+              <Card style={{ width: 300, marginTop: 16,marginLeft:15,marginRight:15 }}>
                 <Meta
                   avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
                   title="นาย ทดสอบ1 ทดสอบ1"
@@ -209,7 +211,7 @@ export default class Index extends PureComponent {
                   }
                 />
               </Card>
-              <Card style={{ width: 300, marginTop: 16 }}>
+              <Card style={{ width: 300, marginTop: 16,marginLeft:15,marginRight:15 }}>
                 <Meta
                   avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
                   title="นาย ทดสอบ2 ทดสอบ2"
@@ -228,7 +230,7 @@ export default class Index extends PureComponent {
                     }
                 />
               </Card>
-              <Card style={{ width: 300, marginTop: 16 }}>
+              <Card style={{ width: 300, marginTop: 16,marginLeft:15,marginRight:15 }}>
                 <Meta
                   avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
                   title="นาย ทดสอบ3 ทดสอบ3"
@@ -250,8 +252,8 @@ export default class Index extends PureComponent {
               </div>
               </TabPane>
               <TabPane tab="Performance goal" key="5">
-              <div style={{display: "flex",justifyContent:"space-between"}}>
-              <Card style={{ width: 300, marginTop: 16 }}>
+              <div style={{display: "flex",flexWrap:"wrap"}}>
+              <Card style={{ width: 300, marginTop: 16,marginLeft:15,marginRight:15 }}>
                 <Meta
                   avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
                   title="นาย ทดสอบ1 ทดสอบ1"
@@ -268,7 +270,7 @@ export default class Index extends PureComponent {
                   }
                 />
               </Card>
-              <Card style={{ width: 300, marginTop: 16 }}>
+              <Card style={{ width: 300, marginTop: 16,marginLeft:15,marginRight:15 }}>
                 <Meta
                   avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
                   title="นาย ทดสอบ2 ทดสอบ2"
@@ -285,7 +287,7 @@ export default class Index extends PureComponent {
                     }
                 />
               </Card>
-              <Card style={{ width: 300, marginTop: 16 }}>
+              <Card style={{ width: 300, marginTop: 16,marginLeft:15,marginRight:15 }}>
                 <Meta
                   avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
                   title="นาย ทดสอบ3 ทดสอบ3"
@@ -305,8 +307,8 @@ export default class Index extends PureComponent {
               </div>
               </TabPane>
               <TabPane tab="Review" key="6">
-              <div style={{display: "flex",justifyContent:"space-between"}}>
-              <Card style={{ width: 300, marginTop: 16 }}>
+              <div style={{display: "flex",flexWrap:"wrap"}}>
+              <Card style={{ width: 300, marginTop: 16,marginLeft:15,marginRight:15 }}>
                 <Meta
                   avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
                   title="นาย ทดสอบ1 ทดสอบ1"
@@ -323,7 +325,7 @@ export default class Index extends PureComponent {
                   }
                 />
               </Card>
-              <Card style={{ width: 300, marginTop: 16 }}>
+              <Card style={{ width: 300, marginTop: 16,marginLeft:15,marginRight:15 }}>
                 <Meta
                   avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
                   title="นาย ทดสอบ2 ทดสอบ2"
@@ -340,7 +342,7 @@ export default class Index extends PureComponent {
                     }
                 />
               </Card>
-              <Card style={{ width: 300, marginTop: 16 }}>
+              <Card style={{ width: 300, marginTop: 16,marginLeft:15,marginRight:15 }}>
                 <Meta
                   avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
                   title="นาย ทดสอบ3 ทดสอบ3"

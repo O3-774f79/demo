@@ -38,7 +38,7 @@ class DefaultHeader extends Component {
           </NavItem>
           <div style={{marginRight: 10,frontSize: 30}}>นาย สมชาย สามารถ</div>
         </Nav>
-        <div><Button block color="light"className="btn-pill">ออกจากระบบ</Button></div>
+        {/* <div><Button block color="light"className="btn-pill">ออกจากระบบ</Button></div> */}
         {/* <AppAsideToggler className="d-md-down-none" /> */}
         {/*<AppAsideToggler className="d-lg-none" mobile />*/}
       </React.Fragment>

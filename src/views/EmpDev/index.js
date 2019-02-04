@@ -8,7 +8,7 @@ import Information from './components/information'
 
 const TabPane = Tabs.TabPane;
 const style = { 
-    layoutPage: {display: "flex",justifyContent: "space-between",marginBottom: 10},
+    layoutPage: {display: "flex",justifyContent: "space-evenly",marginBottom: 10},
     Button: {
         width: "100px",
         height: '100px',
@@ -21,7 +21,8 @@ const style = {
     },
     card: {
         boxShadow: "0 10px 6px -6px #777",
-        width: 600,      
+        width: 600,     
+        backgroundColor: "#B9E3AE", 
     }, 
     des: {
         display: 'block',
@@ -38,7 +39,7 @@ const style = {
     }
 }
 export default class Index extends PureComponent {
-    state={openContent :"1",onChange:"1"}
+    state={openContent :"1",onChange:"1",showTeam:false}
      render() {
         const onHandleClick = ()=> {
             this.setState({openContent:"2"})
@@ -96,7 +97,6 @@ export default class Index extends PureComponent {
             <Tabs defaultActiveKey={this.state.openContent} onChange={onHandleChange} activeKey={this.state.openContent}>
             <TabPane tab={<div style={style.iconFormat}><Icon style={style.iconStyle}type="user" /><label style={style.iconText}>Information</label></div>} key="1"><Information /></TabPane>
             <TabPane tab={<div style={style.iconFormat}><Icon style={style.iconStyle}type="user" /><label style={style.iconText}>Team</label></div>} key="2"><Team /></TabPane>
-          
           </Tabs>       
             </div>
           )

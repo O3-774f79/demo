@@ -1,5 +1,10 @@
 import React, { Component, lazy, Suspense } from 'react';
 import { Bar, Line } from 'react-chartjs-2';
+import 'antd/dist/antd.css';
+import './index.css';
+import { Table } from 'antd';
+import LogoPDF from './icon/pdf-96.png'
+import TestExcel from './testExcel'
 import {
   Badge,
   Button,
@@ -18,12 +23,83 @@ import {
   DropdownToggle,
   Progress,
   Row,
-  Table,
+  
 } from 'reactstrap';
+import {Modal} from 'antd'
 import { CustomTooltips } from '@coreui/coreui-plugin-chartjs-custom-tooltips';
 import { getStyle, hexToRgba } from '@coreui/coreui/dist/js/coreui-utilities'
-
+import pdfMake from "pdfmake/build/pdfmake";
+import pdfFonts from "pdfmake/build/vfs_fonts";
+pdfMake.vfs = pdfFonts.pdfMake.vfs;
 const Widget03 = lazy(() => import('../../views/Widgets/Widget03'));
+
+const columns = [{
+  title: 'Skill',
+  dataIndex: 'name',
+}, {
+  title: 'Description',
+  className: 'column-money',
+  dataIndex: 'money',
+},];
+
+const data = [{
+  key: '1',
+  name: 'Skill-1',
+  money: 'Description-1',
+}, {
+  key: '2',
+  name: 'Skill-2',
+  money: 'Description-2',
+}, {
+  key: '3',
+  name: 'Skill-3',
+  money: 'Description-3',
+}, {
+  key: '4',
+  name: 'Skill-4',
+  money: 'Description-4',
+}, {
+  key: '5',
+  name: 'Skill-5',
+  money: 'Description-5',
+}, {
+  key: '6',
+  name: 'Skill-6',
+  money: 'Description-6',
+}, {
+  key: '7',
+  name: 'Skill-7',
+  money: 'Description-7',
+}, {
+  key: '8',
+  name: 'Skill-8',
+  money: 'Description-8',
+}, {
+  key: '9',
+  name: 'Skill-9',
+  money: 'Description-9',
+}, {
+  key: '10',
+  name: 'Skill-10',
+  money: 'Description-10',
+}, {
+  key: '11',
+  name: 'Skill-11',
+  money: 'Description-11',
+}, {
+  key: '12',
+  name: 'Skill-12',
+  money: 'Description-12',
+}, {
+  key: '13',
+  name: 'Skill-13',
+  money: 'Description-13',
+}, {
+  key: '14',
+  name: 'Skill-14',
+  money: 'Description-14',
+},
+];
 
 const brandPrimary = getStyle('--primary')
 const brandSuccess = getStyle('--success')
@@ -451,7 +527,11 @@ const mainChartOpts = {
     },
   },
 };
-
+const style = {
+   cardChart:{
+      cursor: "pointer"
+   }
+}
 class Dashboard extends Component {
   constructor(props) {
     super(props);
@@ -462,6 +542,7 @@ class Dashboard extends Component {
     this.state = {
       dropdownOpen: false,
       radioSelected: 2,
+      visible: false
     };
   }
 
@@ -478,30 +559,47 @@ class Dashboard extends Component {
   }
 
   loading = () => <div className="animated fadeIn pt-1 text-center">Loading...</div>
+  handleDisplaymodal=()=> {
+     console.log("test")
+     this.setState({visible:true})
+  }
+  showModal = () => {
+    this.setState({
+      visible: true,
+    });
+  }
 
+  handleOk = (e) => {
+    console.log(e);
+    this.setState({
+      visible: false,
+    });
+  }
+
+  handleCancel = (e) => {
+    console.log(e);
+    this.setState({
+      visible: false,
+    });
+  }
+  printPDF = () =>{
+      var docDefinition = {
+        content: [
+          { text: 'test', fontSize: 15 },
+        ],
+      };
+      pdfMake.createPdf(docDefinition).download()
+  }
   render() {
 
     return (
       <div className="animated fadeIn">
         <Row>
           <Col xs="12" sm="6" lg="3">
-            <Card className="text-white bg-info">
+            <Card className="text-white bg-info" style={style.cardChart} onClick={this.handleDisplaymodal}>
               <CardBody className="pb-0">
-                <ButtonGroup className="float-right">
-                  <ButtonDropdown id='card1' isOpen={this.state.card1} toggle={() => { this.setState({ card1: !this.state.card1 }); }}>
-                    <DropdownToggle caret className="p-0" color="transparent">
-                      <i className="icon-settings"></i>
-                    </DropdownToggle>
-                    <DropdownMenu right>
-                      <DropdownItem>Action</DropdownItem>
-                      <DropdownItem>Another action</DropdownItem>
-                      <DropdownItem disabled>Disabled action</DropdownItem>
-                      <DropdownItem>Something else here</DropdownItem>
-                    </DropdownMenu>
-                  </ButtonDropdown>
-                </ButtonGroup>
-                <div className="text-value">150</div>
-                <div>skill</div>
+                <div className="text-value">15</div>
+                <div>Skill</div>
               </CardBody>
               <div className="chart-wrapper mx-3" style={{ height: '70px' }}>
                 <Line data={cardChartData2} options={cardChartOpts2} height={70} />
@@ -509,21 +607,32 @@ class Dashboard extends Component {
             </Card>
           </Col>
 
+          <Modal
+          title="Skill"
+          width= {950}
+          style={{ left: 40,top:50 }}
+          footer={null}
+          visible={this.state.visible}
+          onCancel={this.handleCancel}
+        >
+        <div style={{backgroundColor:"#A3E7D8",height:40,marginBottom:10,display:"flex",justifyContent:"space-between"}}>
+            <div style={{fontSize:20,marginLeft:10}}>Skill list</div>
+            <div style={{marginRight:10}}>
+              <img src={LogoPDF} style={{height:28,width:28,cursor:"pointer"}} onClick={this.printPDF}/>
+              <TestExcel />
+              </div>
+            </div>
+            <Table
+              columns={columns}
+              dataSource={data}
+              size="small"
+              bordered
+            />,
+        </Modal>
+
           <Col xs="12" sm="6" lg="3">
             <Card className="text-white bg-primary">
               <CardBody className="pb-0">
-                <ButtonGroup className="float-right">
-                  <Dropdown id='card2' isOpen={this.state.card2} toggle={() => { this.setState({ card2: !this.state.card2 }); }}>
-                    <DropdownToggle className="p-0" color="transparent">
-                      <i className="icon-location-pin"></i>
-                    </DropdownToggle>
-                    <DropdownMenu right>
-                      <DropdownItem>Action</DropdownItem>
-                      <DropdownItem>Another action</DropdownItem>
-                      <DropdownItem>Something else here</DropdownItem>
-                    </DropdownMenu>
-                  </Dropdown>
-                </ButtonGroup>
                 <div className="text-value">20</div>
                 <div>Employee LV.1</div>
               </CardBody>
