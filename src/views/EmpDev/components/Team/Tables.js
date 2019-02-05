@@ -83,9 +83,19 @@ export default class EditableTable extends React.Component {
       },
       {
         title: 'KPI1',
-        dataIndex: 'age',
-        width: '15%',
         editable: true,
+        children: [{
+          title: 'Empoyee',
+          dataIndex: 'age',
+        }, {
+          title: 'Manager',
+          dataIndex: 'age',
+          render:() => {
+            return(
+              <InputNumber />
+            )           
+          }
+        }],
       },
       {
         title: 'KPI2',
@@ -134,7 +144,7 @@ export default class EditableTable extends React.Component {
                   </Popconfirm>
                 </span>
               ) : (
-                <Button onClick={() => this.edit(record.key)}>Edit</Button>
+                <Button>Save</Button>
               )}
             </div>
           );
@@ -205,6 +215,7 @@ export default class EditableTable extends React.Component {
         dataSource={this.state.data}
         columns={columns}
         size="small"
+        bordered
         rowClassName="editable-row"
       />
     );

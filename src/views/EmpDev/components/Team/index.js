@@ -10,7 +10,7 @@ const { Meta } = Card;
 const gridStyle = {
   width: '25%',
   textAlign: 'center',
-  backgroundColor: '#88DDBB',
+  backgroundColor: '#D0B3E1',
   cursor: 'pointer',
   size: 18
 };
@@ -63,7 +63,7 @@ export default class Index extends PureComponent {
               <TabPane tab="Summary" key="1">
               <div style={{display: "flex",flexWrap:"wrap"}}>
               <Card style={{ width: 300, marginTop: 16,marginLeft:15,marginRight:15 }} 
-                actions={[<Icon type="mail" style={{cursor:"pointer"}} onClick={this.onhandleClickTree}/>]}
+                actions={[<Icon type="team" style={{cursor:"pointer"}} onClick={this.onhandleClickTree}/>]}
                 >
                 <Meta
                   avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
@@ -78,7 +78,6 @@ export default class Index extends PureComponent {
                 />
               </Card>
               <Modal
-          title="Basic Modal"
           visible={this.state.visible2}
           width= {800}
           onCancel={this.handleCancel2}

@@ -22,7 +22,7 @@ const style = {
     card: {
         boxShadow: "0 10px 6px -6px #777",
         width: 600,     
-        backgroundColor: "#B9E3AE", 
+        backgroundColor: "#F9A484", 
     }, 
     des: {
         display: 'block',
@@ -96,7 +96,7 @@ export default class Index extends PureComponent {
             </div>
             <Tabs defaultActiveKey={this.state.openContent} onChange={onHandleChange} activeKey={this.state.openContent}>
             <TabPane tab={<div style={style.iconFormat}><Icon style={style.iconStyle}type="user" /><label style={style.iconText}>Information</label></div>} key="1"><Information /></TabPane>
-            <TabPane tab={<div style={style.iconFormat}><Icon style={style.iconStyle}type="user" /><label style={style.iconText}>Team</label></div>} key="2"><Team /></TabPane>
+            <TabPane tab={<div style={style.iconFormat}></div>} key="2"><Team /></TabPane>
           </Tabs>       
             </div>
           )
