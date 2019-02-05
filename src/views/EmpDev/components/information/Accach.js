@@ -15,10 +15,9 @@ export default class Accach extends PureComponent {
           return(
             <Card
             style={{ width: 300, marginRight:15, marginLeft:15, marginBottom:15,height:200 }}
-            actions={[<div><Icon type="right-square" /><label>Attachments</label></div>]}
           >
             <Meta
-              title="Accachment"
+              title="Attachments"
               description={<div style={style.cardContent}>
                   <label style={{fontSize:50}}>0</label>
                   </div>}
