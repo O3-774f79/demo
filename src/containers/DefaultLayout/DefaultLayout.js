@@ -50,9 +50,9 @@ class DefaultLayout extends Component {
             <AppSidebarFooter />
             <AppSidebarMinimizer />
           </AppSidebar>
-          <main className="main">
-            <AppBreadcrumb appRoutes={routes}/>
-            <Container fluid style={{backgroundColor:"#e6f7ff"}}>
+          <main className="main"  style={{backgroundColor:"#e6f7ff"}}>
+            {/* <AppBreadcrumb appRoutes={routes}/> */}
+            <Container fluid>
               <Suspense fallback={this.loading()}>
                 <Switch>
                   {routes.map((route, idx) => {
