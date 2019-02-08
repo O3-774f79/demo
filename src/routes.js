@@ -1,6 +1,7 @@
 import React from 'react';
 import DefaultLayout from './containers/DefaultLayout';
 
+const Dashboard = React.lazy(() => import('./views/Dashboard'));
 const Inbox = React.lazy(() => import('./views/Inbox'))
 const PO = React.lazy(()=> import('./views/PO'))
 const Product = React.lazy(() => import('./views/Product'))
@@ -9,6 +10,7 @@ const NewItem = React.lazy(()=> import('./views/NewItems'))
 const Material = React.lazy(()=> import('./views/Material'))
 const EmpSelf = React.lazy(()=>import('./views/EmpSelf'))
 const EmpDev = React.lazy(()=>import('./views/EmpDev'))
+const Kpi = React.lazy(()=> import('./views/Kpi'))
 
 const Breadcrumbs = React.lazy(() => import('./views/Base/Breadcrumbs'));
 const Cards = React.lazy(() => import('./views/Base/Cards'));
@@ -32,7 +34,6 @@ const ButtonDropdowns = React.lazy(() => import('./views/Buttons/ButtonDropdowns
 const ButtonGroups = React.lazy(() => import('./views/Buttons/ButtonGroups'));
 const Buttons = React.lazy(() => import('./views/Buttons/Buttons'));
 const Charts = React.lazy(() => import('./views/Charts'));
-const Dashboard = React.lazy(() => import('./views/Dashboard'));
 const CoreUIIcons = React.lazy(() => import('./views/Icons/CoreUIIcons'));
 const Flags = React.lazy(() => import('./views/Icons/Flags'));
 const FontAwesome = React.lazy(() => import('./views/Icons/FontAwesome'));
@@ -58,6 +59,7 @@ const routes = [
   { path:  '/material-master-maintenance',exact:true,name:'Material-Maintenance',component: Material},
   { path:  '/emp-self',exact:true,name:'Employee-Dev',component: EmpSelf},
   { path:  '/emp-dev',exact:true,name:'Employee-Self',component: EmpDev},
+  { path:  '/kpi',exact:true,name:'Organization-KPI',component: Kpi},
   
 
   { path: '/dashboard', name: 'Dashboard', component: Dashboard },
