@@ -37,6 +37,12 @@ const columns2 = [{
     key: 'md3',
     render: () => (
         <Ratelist />),
+  },{
+    title: 'Final',
+    dataIndex: 'final',
+    key: 'final',
+    render: () => (
+        <Ratelist />),
   },];
 
 
