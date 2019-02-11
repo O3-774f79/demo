@@ -15,10 +15,6 @@ const style = {
         fontSize: 60,
         marginLeft:20
     },
-    box: {
-        // padding: "7px 7px 7px 7px",
-        // marginLeft: 100,
-    },
     card: {
         boxShadow: "0 10px 6px -6px #777",
         width: 600,     
@@ -33,10 +29,16 @@ const style = {
         display:"flex",
         flexDirection: 'column',        
     },
+    calendarTextForIconTeam:{
+        width: "100px",
+        height: '100px',
+        fontSize: 60,       
+    },
     calendarBtn:{
             width: "100px",
             height: '100px',
             marginLeft:20,
+            marginTop: 5
     }
 }
 export default class Index extends PureComponent {
@@ -52,9 +54,8 @@ export default class Index extends PureComponent {
           return( 
             <div>
             <div style={style.layoutPage}>
-                <ProfileCard />
                 
-            <Card
+            {/* <Card
               style={style.card}
             >
             <Row>
@@ -94,13 +95,66 @@ export default class Index extends PureComponent {
             <label style={style.des}>Next Scheduled Review</label>
             </Col>
             </Row>  
-            </Card>     
+            </Card>      */}
             </div>
-            <Tabs defaultActiveKey={this.state.openContent} onChange={onHandleChange} activeKey={this.state.openContent}>
-            <TabPane tab={<div style={style.iconFormat}><Icon style={style.iconStyle}type="user" /><label style={style.iconText}>Information</label></div>} key="1"><Information /></TabPane>
-            <TabPane tab={<div style={style.iconFormat}></div>} key="2"><Team /></TabPane>
-          </Tabs>       
+            <div style={{display:"flex",justifyContent:"space-between",marginTop:30}}>
+            <div style={{flexGrow:1, marginRight:10}}>
+            <ProfileCard />
+                <Card >
+                <Button style={style.calendarBtn}>
+                    <div style={style.calendarText}>
+                    <label>waiting </label>
+                    for design
+                    </div>
+                </Button>
+                <Button style={style.calendarBtn}>
+                    <div style={style.calendarText}>
+                    <label>waiting </label>
+                    for design
+                    </div>
+                </Button>
+                <Button style={style.calendarBtn}>
+                    <div style={style.calendarText}>
+                    <label>waiting </label>
+                    for design
+                    </div>
+                </Button>
+                <Button style={style.calendarBtn}>
+                    <div style={style.calendarText}>
+                    <label>waiting </label>
+                    for design
+                    </div>
+                </Button>
+                <Button style={style.calendarBtn}>
+                    <div style={style.calendarText}>
+                    <label>waiting </label>
+                    for design
+                    </div>
+                </Button>
+                <Button style={style.calendarBtn}>
+                    <div style={style.calendarText}>
+                    <label>waiting </label>
+                    for design
+                    </div>
+                </Button>
+                <Button style={style.calendarBtn} onClick={onHandleClick}>
+                <div style={{display:"flex",justifyContent:"center"}}>
+                <Icon type="team" style={style.calendarTextForIconTeam}/>
+                </div>
+                Team
+                </Button>
+                </Card>
             </div>
+           <div style={{flexGrow:1}}>
+               <Card>
+                <Tabs defaultActiveKey={this.state.openContent} onChange={onHandleChange} activeKey={this.state.openContent}>
+                <TabPane tab={<div style={style.iconFormat}><Icon style={style.iconStyle}type="user" /><label style={style.iconText}>Information</label></div>} key="1"><Information /></TabPane>
+                <TabPane tab={<div style={style.iconFormat}></div>} key="2"><Team /></TabPane>
+                </Tabs>   
+                </Card>
+            </div>    
+          </div>    
+          </div>    
           )
      }
 }

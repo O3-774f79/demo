@@ -15,8 +15,9 @@ const style = {
      },
      Card: {
         boxShadow: "0 10px 6px -6px #777",
-        width: 500,
-        backgroundColor: "#FFFF88",
+        width: 800,
+        // backgroundColor: "#FFFF88",
+        marginBottom: 20
      }
      
 }
