@@ -43,13 +43,13 @@ export default class Index extends PureComponent {
          return(
             <div style={{padding: '30px' }}>
             <Card >
-              <Card.Grid style={gridStyle} onClick={this.onhandleModal}>Team Performance Journal</Card.Grid>
-              <Card.Grid style={gridStyle}>Team Performance Goals</Card.Grid>
-              <Card.Grid style={gridStyle}>Team Performance Reviews</Card.Grid>
-              <Card.Grid style={gridStyle}>Open Positions</Card.Grid>
+              <Card.Grid style={gridStyle} onClick={this.onhandleModal}>Team Performance Journal (waiting for design)</Card.Grid>
+              <Card.Grid style={gridStyle}>Team Performance Goals (waiting for design)</Card.Grid>
+              <Card.Grid style={gridStyle}>Team Performance Reviews (waiting for design)</Card.Grid>
+              <Card.Grid style={gridStyle}>Open Positions (waiting for design)</Card.Grid>
              
             </Card>
-            <Modal
+            {/* <Modal
           title="Performance Journal"
           visible={this.state.visible}
           width= {800}
@@ -58,7 +58,7 @@ export default class Index extends PureComponent {
           footer={null}
         >
           <Tables />
-        </Modal>
+        </Modal> */}
             <Tabs>
               <TabPane tab="Summary" key="1">
               <div style={{display: "flex",flexWrap:"wrap"}}>

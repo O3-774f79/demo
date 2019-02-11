@@ -54,52 +54,10 @@ export default class Index extends PureComponent {
           return( 
             <div>
             <div style={style.layoutPage}>
-                
-            {/* <Card
-              style={style.card}
-            >
-            <Row>
-            <Col span={6}>
-            <Button style={style.Button}>1</Button>
-            </Col>
-            <Col span={6}>            
-            <Button style={style.Button}>3</Button>
-            </Col>
-            <Col span={6}>            
-            <Button style={style.Button} onClick={onHandleClick}>
-            <Icon type="team" style={{marginBottom: 10}}/>
-            </Button>
-            </Col>
-            <Col span={6}>            
-            <Button style={style.calendarBtn}>
-            <div style={style.calendarText}>
-            <label>มกราคม,2562</label>
-            <label style={{fontSize: 30}}>28</label>
-            <label>วันจันทร์</label>
-            </div>
-            </Button>
-            </Col>
-            </Row>
-
-            <Row>
-            <Col span={6}>
-            <label style={style.des}>Work item assgined to me</label>
-            </Col>
-            <Col span={6}>            
-            <label style={style.des}>Questionnaires assigned to me</label>
-            </Col>
-            <Col span={6}>            
-            <label style={style.des}>Team</label>
-            </Col>
-            <Col span={6}>            
-            <label style={style.des}>Next Scheduled Review</label>
-            </Col>
-            </Row>  
-            </Card>      */}
             </div>
             <div style={{display:"flex",justifyContent:"space-between",marginTop:30}}>
             <div style={{flexGrow:1, marginRight:10,flexWrap:"wrap"}}>
-            <ProfileCard />
+            <ProfileCard position={"General Manager"}/>
                 <Card style={{backgroundColor:"#f5f5ef"}}>
                 <Button style={style.calendarBtn}>
                     <div style={style.calendarText}>

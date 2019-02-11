@@ -15,7 +15,7 @@ const style = {
      },
      Card: {
         boxShadow: "0 10px 6px -6px #777",
-        width: 800,
+        width: 400,
         backgroundColor:"#f5f5ef",
         marginBottom: 20
      }
@@ -32,7 +32,7 @@ export default class Index extends PureComponent{
               <Meta
                 avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" style={style.ImageProfile}/>}
                 title="นาย ทดสอบ ทดสอบ"
-                description={<div><p>Position: Developer</p><p>Company: Leaderplanet</p></div>}
+                description={<div><p>Position: {this.props.position}</p><p>Company: Leaderplanet</p></div>}
               />
             </Card>     
         )

@@ -14,7 +14,7 @@ export default class Accach extends PureComponent {
      render() {
           return(
             <Card
-            style={{ width: 300, marginRight:15, marginLeft:15, marginBottom:15,height:200 }}
+            style={{ width: 250, marginRight:15, marginLeft:15, marginBottom:15,height:200 }}
           >
             <Meta
               title="Attachments"

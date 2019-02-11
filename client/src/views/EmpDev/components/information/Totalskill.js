@@ -13,8 +13,8 @@ export default class Totalskill extends PureComponent {
     render() {
          return (
             <Card
-            style={{ width: 300, marginRight:15, marginLeft:15, marginBottom:15, height:260 }}
-            actions={[<div><Icon type="plus" /><label>Add more skills</label></div>]}
+            style={{ width: 250, marginRight:15, marginLeft:15, marginBottom:15, height:260 }}
+            actions={[<div><Icon type="plus" /><label>Add more skills(Waiting for design)</label></div>]}
           >
             <Meta
               title="Total Skill"

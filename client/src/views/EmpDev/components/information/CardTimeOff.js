@@ -14,8 +14,8 @@ export default class Timeoff extends PureComponent {
      render() {
           return(
             <Card
-            style={{ width: 300, marginRight:15, marginLeft:15, marginBottom:15,height:240 }}
-            actions={[<div><Icon type="right-square" /><label>Request time off</label></div>]}
+            style={{ width: 250, marginRight:15, marginLeft:15, marginBottom:15,height:240 }}
+            actions={[<div><Icon type="right-square" /><label>Request time off(Waiting for design)</label></div>]}
           >
             <Meta
               title="Time off Balances"
