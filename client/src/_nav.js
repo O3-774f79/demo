@@ -5,18 +5,6 @@ export default {
       url: '/dashboard',
       icon: 'icon-book-open',
     },
-    // {
-
-    // name: 'Emp',
-    // url: '/base',
-    // icon: 'icon-user',
-    // children: [
-    //   {
-    //     name: 'Employee Self',
-    //     url: '/emp-dev',
-    //     icon: 'icon-user',
-    //   },
-    // ]},
     {
       name: 'Organization KPIs',
       url: '/kpi',
@@ -31,6 +19,11 @@ export default {
       name: 'Employee Self',
       url: '/emp-dev',
       icon: 'icon-user',
+    },
+    {
+      name: 'Employee Self(Mgr)',
+      url: '/emp-mgr-self',
+      icon: 'icon-people'
     },
     {
       name: 'Employee Development',

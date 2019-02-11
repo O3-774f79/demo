@@ -1,49 +1,17 @@
 
 import React,{PureComponent} from 'react';
 import 'antd/dist/antd.css';
-import { Table, Pagination, Input } from 'antd';
+import { Table, Pagination, Input, Card } from 'antd';
 
-import './index.css';
+//import './index.css';
 import Ratelist from './Ratelist';
 
 
 const { Column, ColumnGroup } = Table;
 
-const columns2 = [{
-    title: 'ปัจจัยประเมิณ',
-    dataIndex: 'content',
-    key: 'content',
-    
-  }, {
-    title: 'ประเมิณ',
-    dataIndex: 'rate',
-    key: 'rate',
-    
-  },{
-    title: 'MD1',
-    dataIndex: 'md1',
-    key: 'md1',
-    render: () => (
-        <Ratelist />),
-  },{
-    title: 'MD2',
-    dataIndex: 'md2',
-    key: 'md2',
-    render: () => (
-        <Ratelist />),
-  },{
-    title: 'MD3',
-    dataIndex: 'md3',
-    key: 'md3',
-    render: () => (
-        <Ratelist />),
-  },];
 
 
-
-
-
-export default class Showtable extends PureComponent{
+export default class MDtable extends PureComponent{
 
     state = {
         
@@ -179,15 +147,61 @@ export default class Showtable extends PureComponent{
                 md2:'',
                 md3:'',
           },],
+          col1:[{
+            title: 'ปัจจัยประเมิณ',
+            dataIndex: 'content',
+            key: 'content',
+            
+          }, {
+            title: 'ประเมิณ',
+            dataIndex: 'rate',
+            key: 'rate',
+          },{
+            title: 'MD1',
+            dataIndex: 'md1',
+            key: 'md1',
+            render: () => (
+                <Ratelist />),
+         
+          },{
+            title: 'MD2',
+            dataIndex: 'md2',
+            key: 'md2',
+            render: () => (
+                <Ratelist />),
+         
+          },{
+            title: 'MD3',
+            dataIndex: 'md3',
+            key: 'md3',
+            render: () => (
+                <Ratelist />),
+          
+          },{
+            title: 'Final',
+            dataIndex: 'final',
+            key: 'final',
+            
+          },
+        ]
     }
 
        
     render(){
         return(
             <div style={{marginTop:20}}>
-
-            <Table columns={columns2} dataSource={this.state.data2} pagination={false} />
+<Card
+      
+      style={{ width: "100%" }}
+    >
     
+            <Table 
+            bordered={true}
+            size="small" 
+            columns={this.state.col1} 
+            dataSource={this.state.data2}
+            pagination={false} />
+            </Card>
             </div>
         )
     }

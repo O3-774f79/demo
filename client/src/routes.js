@@ -12,6 +12,8 @@ const EmpSelf = React.lazy(()=>import('./views/EmpSelf'))
 const EmpDev = React.lazy(()=>import('./views/EmpDev'))
 const Kpi = React.lazy(()=> import('./views/Kpi'))
 const TotalScore = React.lazy(()=> import('./views/Summry'))
+const EmpSelfMgr = React.lazy(()=> import('./views/EmpSelfMgr'))
+// const Graph = React.lazy(() => import('./views/Graph'))
 
 const Breadcrumbs = React.lazy(() => import('./views/Base/Breadcrumbs'));
 const Cards = React.lazy(() => import('./views/Base/Cards'));
@@ -62,9 +64,11 @@ const routes = [
   { path:  '/emp-dev',exact:true,name:'Employee-Self',component: EmpDev},
   { path:  '/kpi',exact:true,name:'Organization-KPI',component: Kpi},
   { path: '/summry',exact: true,name: 'Summry', component: TotalScore},
+  { path: '/emp-mgr-self',exact: true,name: 'Employee-MGR-Self', component: EmpSelfMgr},
 
 
   { path: '/dashboard', name: 'Dashboard', component: Dashboard },
+  
   { path: '/theme', exact: true, name: 'Theme', component: Colors },
   { path: '/theme/colors', name: 'Colors', component: Colors },
   { path: '/theme/typography', name: 'Typography', component: Typography },
