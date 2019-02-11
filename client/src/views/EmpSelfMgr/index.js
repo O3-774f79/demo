@@ -78,21 +78,8 @@ export default class Index extends PureComponent {
                     </div>
                 </Button>
                 <Button style={style.calendarBtn}>
-                    <div style={style.calendarText}>
-                    <label>waiting </label>
-                    for design
-                    </div>
-                </Button>
-                <Button style={style.calendarBtn}>
-                    <div style={style.calendarText}>
-                    <label>waiting </label>
-                    for design
-                    </div>
-                </Button>
-                <Button style={style.calendarBtn}>
-                    <div style={style.calendarText}>
-                    <label>waiting </label>
-                    for design
+                    <div style={{display:"flex",justifyContent:"center"}}>
+                    <Icon type="solution" style={style.calendarTextForIconTeam}/>
                     </div>
                 </Button>
                 <Button style={style.calendarBtn} onClick={onHandleClick}>
