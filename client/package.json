@@ -38,6 +38,7 @@
     "react-select": "^2.3.0",
     "react-test-renderer": "^16.7.0",
     "reactstrap": "^7.0.2",
+    "recharts": "^1.4.2",
     "simple-line-icons": "^2.4.1"
   },
   "devDependencies": {

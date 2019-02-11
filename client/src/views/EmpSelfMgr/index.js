@@ -5,7 +5,7 @@ import TabIcon from './components/TabIcon'
 import 'antd/dist/antd.css';
 import { Card, Button,Row,Col,Icon,Tabs } from 'antd';
 import Information from './components/information'
-
+import MDTetable from '../MDratetable'
 const TabPane = Tabs.TabPane;
 const style = { 
     layoutPage: {display: "flex",flexWrap:"wrap",marginBottom: 10 ,marginTop:10},
@@ -32,7 +32,7 @@ const style = {
     calendarTextForIconTeam:{
         width: "100px",
         height: '100px',
-        fontSize: 60,       
+        fontSize: 60, 
     },
     calendarBtn:{
             width: "100px",
@@ -50,6 +50,9 @@ export default class Index extends PureComponent {
         }
         const onHandleChange = ()=>{
             this.setState({openContent: this.state.onChange})
+        }
+        const _onHandleClick = ()=> {
+            console.log("test")
         }
           return( 
             <div>
@@ -77,11 +80,12 @@ export default class Index extends PureComponent {
                     for design
                     </div>
                 </Button>
-                <Button style={style.calendarBtn}>
+                <Button style={style.calendarBtn} onClick={_onHandleClick}>
                     <div style={{display:"flex",justifyContent:"center"}}>
                     <Icon type="solution" style={style.calendarTextForIconTeam}/>
                     </div>
                 </Button>
+                <MDTetable />
                 <Button style={style.calendarBtn} onClick={onHandleClick}>
                 <div style={{display:"flex",justifyContent:"center"}}>
                 <Icon type="team" style={style.calendarTextForIconTeam}/>
