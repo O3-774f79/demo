@@ -31,7 +31,7 @@ export default class Index extends PureComponent{
             >
               <Meta
                 avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" style={style.ImageProfile}/>}
-                title="นาย ทดสอบ ทดสอบ"
+                title={this.props.Name}
                 description={<div><p>Position: {this.props.position}</p><p>Company: Leaderplanet</p></div>}
               />
             </Card>     

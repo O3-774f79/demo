@@ -96,7 +96,7 @@ export default class Index extends PureComponent {
             </div>
             <div style={{display:"flex",justifyContent:"space-between",marginTop:30}}>
             <div style={{flexGrow:1, marginRight:10,flexWrap:"wrap"}}>
-            <ProfileCard position={"General Manager"}/>
+            <ProfileCard position={"General Manager"} Name={"Somsunh Somburanayut"}/>
                 <Card style={{backgroundColor:"#f5f5ef"}}>
                 <Button style={style.calendarBtn} onClick={_onHandleClick}>
                     <div style={{display:"flex",justifyContent:"center"}}>

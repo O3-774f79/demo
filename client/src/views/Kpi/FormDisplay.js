@@ -13,6 +13,7 @@ export default class FormDisplay extends React.Component {
   state = {
     loading: false,
     visible: false,
+    dataMea: []
   }
 
   handleOk = () => {
@@ -25,7 +26,10 @@ export default class FormDisplay extends React.Component {
   handleCancel = () => {
     this.setState({ visible: false });
   }
-
+  componentDidMount(){
+    this.setState({dataMea:this.props.record.dataType})
+    console.log(this.props.record.dataType)
+  }
   render() {
     return (
       <div>
@@ -93,7 +97,7 @@ export default class FormDisplay extends React.Component {
                 </Form>
                 </Panel>
                 <Panel header="Measurements" key="2">
-                <Measurements />
+                <Measurements dataMea={this.state.dataMea}/>
                 </Panel>
                 <Panel header="Activities" key="3" >
                 <Activities />

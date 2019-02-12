@@ -124,27 +124,19 @@ export default class EditableTable extends React.Component {
       title: 'Target',
       dataIndex: 'Target',
       editable: true,
-
-    }, {
-      title: 'Currency',
-      dataIndex: 'Currency',
-      editable: true,
-    },
+    }, 
     {
-      title: 'Actual',
-      dataIndex: 'Actual',
-      editable: true,
-    },
-    {
-      title: 'Stretch goal',
-      dataIndex: 'StretchGoal',
+      title: 'Percent',
+      dataIndex: 'Percent',
       editable: true,
     },
   
   ];
 
     this.state = {
-      dataSource: [],
+      dataSource: [
+        
+      ],
       count: 2,
     };
   }
@@ -211,7 +203,7 @@ export default class EditableTable extends React.Component {
           components={components}
           rowClassName={() => 'editable-row'}
           bordered
-          dataSource={dataSource}
+          dataSource={this.props.dataMea}
           columns={columns}
         />
       </div>

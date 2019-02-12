@@ -122,13 +122,14 @@ export default class EditableTable extends React.Component {
     super(props);
     this.columns = [
     {
-        title: 'Name',
-        dataIndex: 'Name',
-    },
-    {
       title: 'Goal Catagory',
       dataIndex: 'GoalCatagory',
-    }, {
+    },
+    {
+      title: 'Percent',
+      dataIndex: 'Percent',
+    },
+     {
       title: 'Start Date',
       dataIndex: 'StartDate',
     }, {
@@ -160,16 +161,19 @@ export default class EditableTable extends React.Component {
         GoalCatagory: 'Result(What To Do)',
         StartDate: '01.01.2019',
         EndDate: '30.06.2014',
-        Status: 'Not Start'
+        Status: 'Not Start',
+        dataType: [{
+          Measurement:"ปริมาณของงาน",
+          Target: "ผู้ปฏิบัติงาน",
+          Percent: "25%",
+          },
+        {
+          Measurement:"คุณภาพงาน",
+          Target: "ผู้ปฏิบัติงาน",
+          Percent: "30%"
+        }]     
       },
-      {
-        key: '1',
-        Name:'คุณภาพของงาน',
-        GoalCatagory: 'Result(What To Do0',
-        StartDate: '01.01.2019',
-        EndDate: '30.06.2014',
-        Status: 'Not Start'
-      },
+      
     //   {
     //     key: '2',
     //     Name:'การทำงานเชิงกลยุทธ์',
@@ -184,7 +188,27 @@ export default class EditableTable extends React.Component {
         GoalCatagory: 'Method(How To Do)-Behavior',
         StartDate: '01.01.2019',
         EndDate: '30.06.2014',
-        Status: 'Not Start'
+        Status: 'Not Start',
+        dataType: [{
+          Measurement:"การวางแผนและการจัดลำดับความสำคัญของงาน",
+          Target: "ผู้ปฏิบัติงาน",
+          Percent: "5%",
+          },
+        {
+          Measurement:"การแก้ไขปัญหาและการตัดสินใจ",
+          Target: "ผู้ปฏิบัติงาน",
+          Percent: "10%"
+        },
+        {
+          Measurement:"การติดต่อสื่อสารและการประสานงาน",
+          Target: "ผู้ปฏิบัติงาน",
+          Percent: "5%"
+        },
+        {
+          Measurement:"การพัฒนาตนเอง",
+          Target: "ผู้ปฏิบัติงาน",
+          Percent: "5%"
+        }]    
       },
     //   {
     //     key: '4',
@@ -202,14 +226,7 @@ export default class EditableTable extends React.Component {
     //     EndDate: '30.06.2014',
     //     Status: 'Not Start'
     //   },
-      {
-        key: '6',
-        Name:'การแก้ไขปัญหาและการตัดสินใจ',
-        GoalCatagory: 'Method(How To Do)-Behavior',
-        StartDate: '01.01.2019',
-        EndDate: '30.06.2014',
-        Status: 'Not Start'
-      },
+      
     //   {
     //     key: '7',
     //     Name:'ความคิดริเริ่มสามารถนำมาพัฒนาปรับปรุงระบบงาน',
@@ -218,14 +235,7 @@ export default class EditableTable extends React.Component {
     //     EndDate: '30.06.2014',
     //     Status: 'Not Start'
     //   },
-      {
-        key: '8',
-        Name:'การติดต่อสื่อสารและการประสานงาน',
-        GoalCatagory: 'Method(How To Do)-Behavior',
-        StartDate: '01.01.2019',
-        EndDate: '30.06.2014',
-        Status: 'Not Start'
-      },
+     
     //   {
     //     key: '9',
     //     Name:'การพัฒนาผู้ใต้บังคับบัญชา',
@@ -234,46 +244,36 @@ export default class EditableTable extends React.Component {
     //     EndDate: '30.06.2014',
     //     Status: 'Not Start'
     //   },
-      {
-        key: '10',
-        Name:'การพัฒนาตนเอง',
-        GoalCatagory: 'Method(How To Do)-Behavior',
-        StartDate: '01.01.2019',
-        EndDate: '30.06.2014',
-        Status: 'Not Start'
-      },
+      
       {
         key: '11',
         Name:'Family',
         GoalCatagory: 'Singha Way(How todo)-Core Value',
         StartDate: '01.01.2019',
         EndDate: '30.06.2014',
-        Status: 'Not Start'
+        Status: 'Not Start',
+        dataType: [{
+          Measurement:"Family",
+          Target: "ผู้ปฏิบัติงาน",
+          Percent: "5%",
+          },
+        {
+          Measurement:"Courage",
+          Target: "ผู้ปฏิบัติงาน",
+          Percent: "5%"
+        },
+        {
+          Measurement:"Premium Quality",
+          Target: "ผู้ปฏิบัติงาน",
+          Percent: "5%"
+        },
+        {
+          Measurement:"Hapiness",
+          Target: "ผู้ปฏิบัติงาน",
+          Percent: "5%"
+        }]   
       },
-      {
-        key: '12',
-        Name:'Courage',
-        GoalCatagory: 'Singha Way(How todo)-Core Value',
-        StartDate: '01.01.2019',
-        EndDate: '30.06.2014',
-        Status: 'Not Start'
-      },
-      {
-        key: '13',
-        Name:'Premium Quality',
-        GoalCatagory: 'Singha Way(How todo)-Core Value',
-        StartDate: '01.01.2019',
-        EndDate: '30.06.2014',
-        Status: 'Not Start'
-      },
-      {
-        key: '14',
-        Name:'Hapiness',
-        GoalCatagory: 'Singha Way(How todo)-Core Value',
-        StartDate: '01.01.2019',
-        EndDate: '30.06.2014',
-        Status: 'Not Start'
-      },
+      
     ],
       count: 2,
     };
@@ -285,7 +285,6 @@ export default class EditableTable extends React.Component {
   }
   _handleIconCLick = (record) => {
     console.log("record", record)
-    console.log("level",this.props.TableLevel)
     this.setState({visibleParent:true,DataInTable: record})
   }
   _Cancle = ()=> {

@@ -10,14 +10,7 @@ import Ratelist1 from './Ratelist1';
 
 const { Column, ColumnGroup } = Table;
 
-const comment = {
-  date: new Date(),
-  text: 'I hope you enjoy learning React!',
-  author: {
-    name: 'Hello Kitty',
-    avatarUrl: 'https://placekitten.com/g/64/64',
-  },
-};
+
 
 export default class Finaltable extends PureComponent{
 
