@@ -126,11 +126,6 @@ export default class EditableTable extends React.Component {
         width: "15%",
       },
       {
-        title: "Level",
-        width: "5%",
-        dataIndex: "level",
-      },
-      {
         title: "Goal category",
         dataIndex: "goalCategory"
       },
@@ -164,10 +159,90 @@ export default class EditableTable extends React.Component {
       dataSource: [
         {
           key: "",
-          name: "ทดสอบ",
-          worker: "นาย ทดสอบ ทดสอบ",
-          level: "Individual",
-          goalCategory: "Sale",
+          name: "นาย สามารถ สมบัตร",
+          worker: "นาย เอก สมหมาย",
+          level: "ปฏิบัติงาน",
+          goalCategory: "Result",
+          startDate: "15 ม.ค. 2561",
+          endDate:"31 ม.ค. 2561",
+          status: "On track"
+        },
+        {
+          key: "",
+          name: "นาย สามารถ สมบัตร",
+          worker: "นาย เอก สมหมาย",
+          level: "ปฏิบัติงาน",
+          goalCategory: "Method",
+          startDate: "15 ม.ค. 2561",
+          endDate:"31 ม.ค. 2561",
+          status: "On track"
+        },
+        {
+          key: "",
+          name: "นาย สามารถ สมบัตร",
+          worker: "นาย เอก สมหมาย",
+          level: "ปฏิบัติงาน",
+          goalCategory: "Singha Way",
+          startDate: "15 ม.ค. 2561",
+          endDate:"31 ม.ค. 2561",
+          status: "On track"
+        },
+        {
+          key: "",
+          name: "นาย สามารถ สมบัตร",
+          worker: "นาย สมคิด อาจหาญ",
+          level: "ปฏิบัติงาน",
+          goalCategory: "Result",
+          startDate: "15 ม.ค. 2561",
+          endDate:"31 ม.ค. 2561",
+          status: "On track"
+        },
+        {
+          key: "",
+          name: "นาย สามารถ สมบัตร",
+          worker: "นาย สมคิด อาจหาญ",
+          level: "ปฏิบัติงาน",
+          goalCategory: "Method",
+          startDate: "15 ม.ค. 2561",
+          endDate:"31 ม.ค. 2561",
+          status: "On track"
+        },
+        {
+          key: "",
+          name: "นาย สามารถ สมบัตร",
+          worker: "นาย สมคิด อาจหาญ",
+          level: "ปฏิบัติงาน",
+          goalCategory: "Singha Way",
+          startDate: "15 ม.ค. 2561",
+          endDate:"31 ม.ค. 2561",
+          status: "On track"
+        },
+        {
+          key: "",
+          name: "นาย สามารถ สมบัตร",
+          worker: "นาย ปราการ ใจกล้า",
+          level: "ปฏิบัติงาน",
+          goalCategory: "Result",
+          startDate: "15 ม.ค. 2561",
+          endDate:"31 ม.ค. 2561",
+          status: "On track"
+        },
+        {
+          key: "",
+          name: "นาย สามารถ สมบัตร",
+          worker: "นาย ปราการ ใจกล้า",
+          level: "ปฏิบัติงาน",
+          goalCategory: "Method",
+          startDate: "15 ม.ค. 2561",
+          endDate:"31 ม.ค. 2561",
+          status: "On track"
+        },        
+        {
+          key: "",
+          name: "นาย สามารถ สมบัตร",
+          worker: "นาย ปราการ ใจกล้า",
+          level: "ปฏิบัติงาน",
+          goalCategory: "Singha Way",
           startDate: "15 ม.ค. 2561",
           endDate:"31 ม.ค. 2561",
           status: "On track"

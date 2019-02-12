@@ -127,6 +127,11 @@ export default class EditableTable extends React.Component {
         editable: true
       },
       {
+        title: "Job",
+        dataIndex: "workertype",
+        editable: true
+      },
+      {
         title: "Status",
         dataIndex: "status",
         editable: true
@@ -137,8 +142,23 @@ export default class EditableTable extends React.Component {
       dataSource: [
         {
           key: "0",
-          goalCategory: "ทดสอบ",
-          description: "Company",
+          goalCategory: "Result",
+          description: "What to do",
+          workertype: "ผู้ปฏิบัติงาน",
+          status: "active"
+        },
+        {
+          key: "0",
+          goalCategory: "Method",
+          description: "How to do Behavior",
+          workertype: "ผู้ปฏิบัติงาน",
+          status: "active"
+        },
+        {
+          key: "0",
+          goalCategory: "Singha Way",
+          description: "How to do Core Values",
+          workertype: "ผู้ปฏิบัติงาน",
           status: "active"
         },
       ],
@@ -215,7 +235,6 @@ export default class EditableTable extends React.Component {
         })
       };
     });
-    
     return (
       <div>
         <Button

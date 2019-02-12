@@ -159,10 +159,40 @@ export default class EditableTable extends React.Component {
       dataSource: [
         {
           key: "123456789",
-          person: "นาย ทดสอบ ทดสอบ",
-          title: "ทดสอบ",
+          person: "นาย เอก สมหมาย",
+          title: "Developer",
           journalDate: "5 ม.ค. 2561",
-          submitBy: "นาย ทดสอบ ทดสอบ",
+          submitBy: "นาย สามารถ สมบัตร",
+          startDate: "15 ม.ค. 2561",
+          complateDate:"31 ม.ค. 2561",
+          developmentPlan: ""
+        },
+        {
+          key: "123456789",
+          person: "นาย สมคิด อาจหาญ",
+          title: "Developer",
+          journalDate: "5 ม.ค. 2561",
+          submitBy: "นาย สามารถ สมบัตร",
+          startDate: "15 ม.ค. 2561",
+          complateDate:"31 ม.ค. 2561",
+          developmentPlan: ""
+        },
+        {
+          key: "123456789",
+          person: "นาย ปราการ ใจกล้า",
+          title: "Developer",
+          journalDate: "5 ม.ค. 2561",
+          submitBy: "นาย สามารถ สมบัตร",
+          startDate: "15 ม.ค. 2561",
+          complateDate:"31 ม.ค. 2561",
+          developmentPlan: ""
+        },
+        {
+          key: "123456789",
+          person: "นาย กิจการ รุ่งเรือง",
+          title: "Developer",
+          journalDate: "5 ม.ค. 2561",
+          submitBy: "นาย สามารถ สมบัตร",
           startDate: "15 ม.ค. 2561",
           complateDate:"31 ม.ค. 2561",
           developmentPlan: ""

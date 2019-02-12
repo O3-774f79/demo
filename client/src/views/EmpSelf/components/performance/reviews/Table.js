@@ -158,8 +158,32 @@ export default class EditableTable extends React.Component {
       dataSource: [
         {
           key: "",
-          description: "ทดสอบ",
-          worker: "นาย ทดสอบ ทดสอบ",
+          description: "edit flow for work",
+          worker: "นาย สมคิด อาจหาญ",
+          reviewType: "Coaching",
+          status: "Not Started",
+          startdate: "11 ม.ค. 2562",
+        },
+        {
+          key: "",
+          description: "edit flow for work",
+          worker: "นาย ปราการ ใจกล้า",
+          reviewType: "Coaching",
+          status: "Not Started",
+          startdate: "11 ม.ค. 2562",
+        },
+        {
+          key: "",
+          description: "edit flow for workบ",
+          worker: "นาย เอก สมหมาย",
+          reviewType: "Coaching",
+          status: "Not Started",
+          startdate: "11 ม.ค. 2562",
+        },
+        {
+          key: "",
+          description: "edit flow for work",
+          worker: "นาย กิจการ รุ่งเรือง",
           reviewType: "Coaching",
           status: "Not Started",
           startdate: "11 ม.ค. 2562",
@@ -276,6 +300,7 @@ export default class EditableTable extends React.Component {
           bordered
           dataSource={dataSource}
           columns={columns}
+          size="small"
         />
         <Modals visibleParent={this.state.modalDisplay} 
                 handleCancleShow={this.handleCancleShow} 

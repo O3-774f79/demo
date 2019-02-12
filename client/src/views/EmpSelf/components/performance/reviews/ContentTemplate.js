@@ -16,14 +16,15 @@ const columns = [{
 }];
 const data = [{
   key: '1',
-  reviewTemplate: 'ทดสอบ',
-  description: "ทดสอบ",
-  reviewType: 'Development',
-}, {
+  reviewTemplate: 'KPI',
+  description: "การประเมิน kpi ครั้งที่ 1",
+  reviewType: 'Coaching',
+}, 
+{
     key: '2',
-    reviewTemplate: 'ทดสอบ',
-    description: "ทดสอบ",
-    reviewType: 'Development',
+    reviewTemplate: 'KPI',
+    description: "การประเมิน kpi ครั้งที่ 2",
+    reviewType: 'Coaching',
 },];
 const columns2 = [{
     title: 'Name',
@@ -34,13 +35,24 @@ const columns2 = [{
   }];
   const data2 = [{
     key: '1',
-    name: 'นาย สามารถ สมบัตร',
+    name: 'นาย เอก สมหมาย',
     personalNumber: "0001",
   }, {
     key: '2',
-    name: 'นาย สมบัตร สามารถ',
+    name: 'นาย สมคิด อาจหาญ',
     personalNumber: "0002",
-  },];
+  },
+  {
+    key: '3',
+    name: 'นาย ปราการ ใจกล้า',
+    personalNumber: "0003",
+  },
+  {
+    key: '4',
+    name: 'นาย กิจการ รุ่งเรือง',
+    personalNumber: "0004",
+  },
+];
   
 // rowSelection object indicates the need for row selection
 const rowSelection = {

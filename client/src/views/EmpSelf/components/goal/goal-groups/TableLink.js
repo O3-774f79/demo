@@ -139,7 +139,12 @@ export default class EditableTable extends React.Component {
   ];
 
     this.state = {
-      dataSource: [],
+      dataSource: [{
+        groupName: "KPI",
+        description: "ตัวชี้วัด",
+        job: "ผู้ปฏิบัติงาน",
+        department: "หน่วยธุรการ"
+      }],
       count: 2,
     };
   }

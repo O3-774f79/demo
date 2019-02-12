@@ -21,6 +21,7 @@ export default class  index extends PureComponent {
          const {openConetent} = this.state
         return(
             <React.Fragment>
+            <Card>
             <Card title="Employee Development" 
                 style={{width:"100%",marginBottom: 15}}>
             <Card.Grid style={gridStyle} onClick={()=>this.onHandleClick(1)}>Performance</Card.Grid>
@@ -41,7 +42,8 @@ export default class  index extends PureComponent {
                     default:
                         return null;
                     }
-                })()}      
+                })()} 
+                </Card>     
           </React.Fragment>
         )
     }
