@@ -38,6 +38,7 @@ export default class PerformanceTable extends PureComponent {
           visible={this.state.visible}
           onOk={this.handleOk}
           onCancel={this.handleCancel}
+          width='70%'
         >
         <PGTable />
         </Modal>

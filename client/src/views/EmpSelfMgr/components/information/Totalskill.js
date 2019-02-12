@@ -14,7 +14,7 @@ export default class Totalskill extends PureComponent {
          return (
             <Card
             style={{ width: 300, marginRight:15, marginLeft:15, marginBottom:15, height:260 }}
-            actions={[<div><Icon type="plus" /><label>Add more skills</label></div>]}
+          //   actions={[<div><Icon type="plus" /><label>Add more skills</label></div>]}
           >
             <Meta
               title="Total Skill"

@@ -1,7 +1,8 @@
+
 import React ,{PureComponent} from 'react'
-import EMPtable from './EMPtable';
 import { Modal, Button, } from 'antd';
-export default class Buttonmodal extends PureComponent {
+import List3 from './List3';
+export default class index extends PureComponent {
 
 state = { visible: false,
           title1:"แบบประเมิณครั้งที่1" 
@@ -29,24 +30,24 @@ state = { visible: false,
 
      render() {
           return(
-               <div>
-                    <Button type="primary" onClick={this.showModal}>
-          Open
-        </Button>
-        <Modal
-        style={{marginLeft:"20%"}}
-          width="70%"
-          title={this.state.title1}
-          visible={this.state.visible}
-          onOk={this.handleOk}
-          onCancel={this.handleCancel}
-        >
+        //        <div>
+        //             <Button type="primary" onClick={this.showModal}>
+        //   Open
+        // </Button>
+        // <Modal
+        // style={{marginLeft:"20%"}}
+        //   width="70%"
+        //   title={this.state.title1}
+        //   visible={this.state.visible}
+        //   onOk={this.handleOk}
+        //   onCancel={this.handleCancel}
+        // >
 
-        <EMPtable />
-        </Modal>
+        <List3 />
+        // </Modal>
 
                     
-              </div>
+        //       </div>
           )
      }
 }

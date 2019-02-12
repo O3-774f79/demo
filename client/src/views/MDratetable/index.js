@@ -1,12 +1,13 @@
 
 
 import React ,{PureComponent} from 'react'
-import MDtable from './MDtable';
 import { Modal, Button, } from 'antd';
+import List2 from './List2';
+import MDtable from './MDtable'
 export default class index extends PureComponent {
 
 state = { visible: false,
-          title1:"แบบประเมิณครั้งที่1" 
+          title1:"รายชื่อผู้รับการประเมิณ" 
           }
 
   showModal = () => {
@@ -32,8 +33,8 @@ state = { visible: false,
      render() {
           return(
                <div>
-                    <Button type="primary" onClick={this.showModal}>
-          Open Modal
+                    {/* <Button type="primary" onClick={this.showModal}>
+          Open
         </Button>
         <Modal
         style={{marginLeft:"20%"}}
@@ -42,10 +43,9 @@ state = { visible: false,
           visible={this.state.visible}
           onOk={this.handleOk}
           onCancel={this.handleCancel}
-        >
-
+        > */}
         <MDtable />
-        </Modal>
+        {/* </Modal> */}
 
                     
               </div>

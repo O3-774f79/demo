@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from "Recharts"
+import {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'recharts'
 export default class Graphs extends PureComponent {
     state = {
          data:[

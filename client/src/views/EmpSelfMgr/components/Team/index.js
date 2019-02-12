@@ -83,8 +83,8 @@ export default class Index extends PureComponent {
           onCancel={this.handleCancel2}
           footer={null}
         >
-       {/* <NodeTrees /> */}
-       <Tables />
+       <NodeTrees />
+       {/* <Tables /> */}
         </Modal>
               <Card style={{ width: 300, marginTop: 16,marginLeft:15,marginRight:15 }}>
                 <Meta

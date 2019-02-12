@@ -1,7 +1,7 @@
 import React ,{PureComponent} from 'react'
-import EMPtable from './EMPtable';
 import { Modal, Button, } from 'antd';
-export default class Buttonmodal extends PureComponent {
+import MDtable from './MDtable';
+export default class Buttonmodal2 extends PureComponent {
 
 state = { visible: false,
           title1:"แบบประเมิณครั้งที่1" 
@@ -42,7 +42,7 @@ state = { visible: false,
           onCancel={this.handleCancel}
         >
 
-        <EMPtable />
+        <MDtable />
         </Modal>
 
                     

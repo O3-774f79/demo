@@ -15,7 +15,7 @@ export default class Task extends PureComponent {
           return(
             <Card
             style={{ width: 300, marginRight:15, marginLeft:15, marginBottom:15, height: 150  }}
-            actions={[<div><Icon type="right-square" /><label>View Task</label></div>]}
+            // actions={[<div><Icon type="right-square" /><label>View Task</label></div>]}
           >
             <Meta
               title="Task"

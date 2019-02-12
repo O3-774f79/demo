@@ -5,16 +5,11 @@ export default {
       url: '/dashboard',
       icon: 'icon-book-open',
     },
-    {
-      name: 'Organization KPIs',
-      url: '/kpi',
-      icon: 'icon-paper'
-    },
-    {
-      name: 'Summary',
-      url: '/summry',
-      icon: 'icon-paper'
-    },
+    // {
+    //   name: 'Organization KPIs',
+    //   url: '/kpi',
+    //   icon: 'icon-paper'
+    // },
     {
       name: 'Employee Self',
       url: '/emp-dev',
@@ -30,8 +25,5 @@ export default {
       url: '/emp-self',
       icon: 'icon-people'
     },
-   
-    
-   
   ],
 }

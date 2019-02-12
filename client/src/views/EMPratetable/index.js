@@ -31,7 +31,7 @@ state = { visible: false,
           return(
                <div>
                     <Button type="primary" onClick={this.showModal}>
-          Open Modal
+          Open
         </Button>
         <Modal
         style={{marginLeft:"20%"}}

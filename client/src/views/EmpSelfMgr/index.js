@@ -3,9 +3,12 @@ import ProfileCard from '../../components/CardDes'
 import Team from './components/Team'
 import TabIcon from './components/TabIcon'
 import 'antd/dist/antd.css';
-import { Card, Button,Row,Col,Icon,Tabs } from 'antd';
+import { Card, Button,Row,Col,Icon,Tabs,Modal } from 'antd';
 import Information from './components/information'
 import MDTetable from '../MDratetable'
+import Graph from '../Graph'
+import Summary from '../Kpi'
+import FinalTable from '../Finalratetable'
 const TabPane = Tabs.TabPane;
 const style = { 
     layoutPage: {display: "flex",flexWrap:"wrap",marginBottom: 10 ,marginTop:10},
@@ -42,7 +45,33 @@ const style = {
     }
 }
 export default class Index extends PureComponent {
-    state={openContent :"1",onChange:"1",showTeam:false}
+    state={openContent :"1",onChange:"1",showTeam:false,visible: false,visible2: false }
+            handleOk = (e) => {
+                console.log(e);
+                this.setState({
+                visible: false,
+                });
+            }
+
+            handleCancel = (e) => {
+                console.log(e);
+                this.setState({
+                visible: false,
+                });
+            }
+            handleOk2 = (e) => {
+                console.log(e);
+                this.setState({
+                visible2: false,
+                });
+            }
+
+            handleCancel2 = (e) => {
+                console.log(e);
+                this.setState({
+                visible2: false,
+                });
+            }
      render() {
         const onHandleClick = ()=> {
             this.setState({openContent:"2"})
@@ -52,7 +81,14 @@ export default class Index extends PureComponent {
             this.setState({openContent: this.state.onChange})
         }
         const _onHandleClick = ()=> {
-            console.log("test")
+            this.setState({
+                visible: true,
+                });
+        }
+        const _onHandleClick2 = ()=> {
+            this.setState({
+                visible2: true,
+                });
         }
           return( 
             <div>
@@ -62,36 +98,44 @@ export default class Index extends PureComponent {
             <div style={{flexGrow:1, marginRight:10,flexWrap:"wrap"}}>
             <ProfileCard position={"General Manager"}/>
                 <Card style={{backgroundColor:"#f5f5ef"}}>
-                <Button style={style.calendarBtn}>
-                    <div style={style.calendarText}>
-                    <label>waiting </label>
-                    for design
-                    </div>
-                </Button>
-                <Button style={style.calendarBtn}>
-                    <div style={style.calendarText}>
-                    <label>waiting </label>
-                    for design
-                    </div>
-                </Button>
-                <Button style={style.calendarBtn}>
-                    <div style={style.calendarText}>
-                    <label>waiting </label>
-                    for design
-                    </div>
-                </Button>
                 <Button style={style.calendarBtn} onClick={_onHandleClick}>
                     <div style={{display:"flex",justifyContent:"center"}}>
                     <Icon type="solution" style={style.calendarTextForIconTeam}/>
                     </div>
+                    Review
                 </Button>
-                <MDTetable />
+                <Modal
+                    title=""
+                    visible={this.state.visible}
+                    onOk={this.handleOk}
+                    onCancel={this.handleCancel}
+                    width={800}
+                    >
+                    {/* <Graph />
+                    <MDTetable /> */}
+                    <FinalTable />
+                    </Modal>
                 <Button style={style.calendarBtn} onClick={onHandleClick}>
                 <div style={{display:"flex",justifyContent:"center"}}>
                 <Icon type="team" style={style.calendarTextForIconTeam}/>
                 </div>
                 Team
                 </Button>
+                <Button style={style.calendarBtn} onClick={_onHandleClick2}>
+                    <div style={{display:"flex",justifyContent:"center"}}>
+                    <Icon type="contacts" style={style.calendarTextForIconTeam}/>
+                    </div>
+                    Review Goal
+                </Button>
+                <Modal
+                    title=""
+                    visible={this.state.visible2}
+                    onOk={this.handleOk2}
+                    onCancel={this.handleCancel2}
+                    width={900}
+                    >
+                    <Summary />
+                    </Modal>
                 </Card>
             </div>
            <div style={{flexGrow:1}}>

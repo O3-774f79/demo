@@ -1,10 +1,11 @@
 import React ,{PureComponent} from 'react'
-import EMPtable from './EMPtable';
 import { Modal, Button, } from 'antd';
-export default class Buttonmodal extends PureComponent {
+import List3 from './List3';
+import Finaltable from './Finaltable';
+
+export default class Buttonmodal3 extends PureComponent {
 
 state = { visible: false,
-          title1:"แบบประเมิณครั้งที่1" 
           }
 
   showModal = () => {
@@ -36,13 +37,12 @@ state = { visible: false,
         <Modal
         style={{marginLeft:"20%"}}
           width="70%"
-          title={this.state.title1}
           visible={this.state.visible}
           onOk={this.handleOk}
           onCancel={this.handleCancel}
         >
 
-        <EMPtable />
+        <Finaltable />
         </Modal>
 
                     

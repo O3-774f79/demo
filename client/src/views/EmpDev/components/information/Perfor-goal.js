@@ -1,7 +1,7 @@
 import React ,{PureComponent} from 'react' 
 import 'antd/dist/antd.css';
 import { Card, Icon,Modal,Button } from 'antd';
-import Emprate from '../../../EMPratetable/'
+import Emprate from '../../../EMPratetable/EMPtable'
 const { Meta } = Card;
 const style = {
   cardContent: {
@@ -47,16 +47,16 @@ export default class PerforGoal extends PureComponent {
               </div>}
           />
              <Modal
-        style={{marginLeft:"20%"}}
-          width="70%"
-          title={this.state.title1}
-          visible={this.state.visible}
-          onOk={this.handleOk}
-          onCancel={this.handleCancel}
-        >
+              style={{marginLeft:"20%"}}
+                width="70%"
+                title={this.state.title1}
+                visible={this.state.visible}
+                onOk={this.handleOk}
+                onCancel={this.handleCancel}
+              >
 
-        <Emprate />
-        </Modal>
+            <Emprate />
+            </Modal>
           </Card>
        
           )
