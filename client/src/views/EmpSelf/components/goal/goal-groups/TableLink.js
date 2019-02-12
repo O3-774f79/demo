@@ -134,10 +134,8 @@ export default class EditableTable extends React.Component {
       title: 'Department',
       dataIndex: 'department',
       editable: true,
-    },
-  
+    }, 
   ];
-
     this.state = {
       dataSource: [{
         groupName: "KPI",

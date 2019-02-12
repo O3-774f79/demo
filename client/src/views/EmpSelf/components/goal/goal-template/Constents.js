@@ -28,38 +28,22 @@ export default class  Contents  extends PureComponent{
               <Step status="wait" title="Review" icon={<Icon type="solution" />} />
               <Step status="wait" title="Done" icon={<Icon type="smile-o" />} />
             </Steps>
-      <Collapse defaultActiveKey={['1']} onChange={callback}>
-      <Panel header="General" key="1">
+      {/* <Collapse defaultActiveKey={['1']} onChange={callback}>
+      <Panel header="General" key="1"> */}
       <Form>
-        <Row form>
-          <Col md={7}>
-            <FormGroup>
-              <Label for="exampleEmail">Name</Label>
-              <Input type="text" name="email" id="exampleEmail"  />
-            </FormGroup>
-          </Col>
-          <Col md={3}>
-            <FormGroup>
-              <Label for="exampleEmail">Status</Label>
-              <CustomInput type="switch" id="exampleCustomSwitch" name="customSwitch" />
-            </FormGroup>
-          </Col>
-        </Row>
-        <FormGroup>
-          <Label for="exampleAddress">Overview</Label>
-          <Input type="textarea" name="address" id="exampleAddress" />
-        </FormGroup>
-        <Row form>
+      <Row form>
           <Col md={4}>
             <FormGroup>
-              <Label for="exampleCity">Level</Label>
+              <Label for="exampleCity">Name</Label>
               <Input type="text" name="city" id="exampleCity"/>
             </FormGroup>
           </Col>
+        </Row>
+        <Row form>
           <Col md={4}>
             <FormGroup>
-              <Label for="exampleState">Goal Category</Label>
-              <Input type="text" name="state" id="exampleState"/>
+              <Label for="exampleCity">Goal Group</Label>
+              <Input type="text" name="city" id="exampleCity"/>
             </FormGroup>
           </Col>
           <Col md={4}>
@@ -78,32 +62,12 @@ export default class  Contents  extends PureComponent{
           </Col>
           <Col md={3}>
             <FormGroup>
-              <Label for="DateComplate">End date</Label>
-              <DatePicker />           
-          </FormGroup>
-          </Col>
-          <Col md={3}>
-            <FormGroup>
               <Label for="DateFinish">Date finish</Label>
               <DatePicker />           
           </FormGroup>
           </Col>
-          <Col md={3}>
-            <FormGroup>
-              <Label for="Submitted">Percent complate</Label>
-              <Input type="text" name="state" id="Submitted"/>
-            </FormGroup>  
-          </Col>
         </Row>
       </Form>
-      </Panel>
-      <Panel header="Measurements" key="2">
-      <TableLink />
-      </Panel>
-      <Panel header="Activities" key="3" >
-      <TableLink2 />
-      </Panel>
-    </Collapse>
     </React.Fragment>
       
     )

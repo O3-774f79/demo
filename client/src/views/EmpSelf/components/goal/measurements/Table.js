@@ -144,8 +144,73 @@ export default class EditableTable extends React.Component {
       dataSource: [
         {
           key: "",
-          measurment: "ทดสอบ",
-          measurmentType: "Date",
+          measurment: "ปริมาณงาน",
+          measurmentType: "Result",
+        },
+        {
+          key: "",
+          measurment: "คุณภาพงาน",
+          measurmentType: "Result",
+        },
+        {
+          key: "",
+          measurment: "การทำงานเชิง กลยุทธ์",
+          measurmentType: "Behavior",
+        },
+        {
+          key: "",
+          measurment: "การวางแผนและจัดลำดับความสำคัญของงาน",
+          measurmentType: "Behavior",
+        },
+        {
+          key: "",
+          measurment: "การทำงานอย่างมีระบบและมีการจัดตัดสินใจที่ดี",
+          measurmentType: "Behavior",
+        },
+        {
+          key: "",
+          measurment: "การแก้ไขปัญหาและการตัดสินใจ",
+          measurmentType: "Behavior",
+        },
+        {
+          key: "",
+          measurment: "ความคิดริเริ่มที่สามารถนำมาพัฒนาปรับปรุงงงาน",
+          measurmentType: "Behavior",
+        },
+        {
+          key: "",
+          measurment: "การติดต่อสื่อสารและการผสานงาน",
+          measurmentType: "Behavior",
+        },
+        {
+          key: "",
+          measurment: "การพัฒนาผู้ใต้บังคับบัญชา",
+          measurmentType: "Behavior",
+        },
+        {
+          key: "",
+          measurment: "การพัฒนาตัวเอง",
+          measurmentType: "Behavior",
+        },
+        {
+          key: "",
+          measurment: "Family",
+          measurmentType: "Core Value",
+        },
+        {
+          key: "",
+          measurment: "Courage",
+          measurmentType: "Core Value",
+        },
+        {
+          key: "",
+          measurment: "Premium Quality",
+          measurmentType: "Core Value",
+        },
+        {
+          key: "",
+          measurment: "Hapiness",
+          measurmentType: "Core Value",
         },
       ],
       count: 2,

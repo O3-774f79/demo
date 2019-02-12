@@ -140,8 +140,8 @@ export default class EditableTable extends React.Component {
       dataSource: [
         {
           key: "",
-          name: "นาย ทดสอบ ทดสอบ",
-          description: "ทดสอบ",
+          name: "KPI-1",
+          description: "การประเมินดัชนีตัวชี้วัดรอบกลางปี",
         },
       ],
       count: 2,
