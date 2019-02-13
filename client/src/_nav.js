@@ -5,11 +5,7 @@ export default {
       url: '/dashboard',
       icon: 'icon-book-open',
     },
-    // {
-    //   name: 'Organization KPIs',
-    //   url: '/kpi',
-    //   icon: 'icon-paper'
-    // },
+ 
     {
       name: 'Employee Self',
       url: '/emp-dev',
