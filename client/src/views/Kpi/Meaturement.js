@@ -1,4 +1,3 @@
-
 import React from 'react';
 import 'antd/dist/antd.css';
 // import './index.css';
@@ -124,19 +123,27 @@ export default class EditableTable extends React.Component {
       title: 'Target',
       dataIndex: 'Target',
       editable: true,
-    }, 
+
+    }, {
+      title: 'Currency',
+      dataIndex: 'Currency',
+      editable: true,
+    },
     {
-      title: 'Percent',
-      dataIndex: 'Percent',
+      title: 'Actual',
+      dataIndex: 'Actual',
+      editable: true,
+    },
+    {
+      title: 'Stretch goal',
+      dataIndex: 'StretchGoal',
       editable: true,
     },
   
   ];
 
     this.state = {
-      dataSource: [
-        
-      ],
+      dataSource: [],
       count: 2,
     };
   }
@@ -203,11 +210,10 @@ export default class EditableTable extends React.Component {
           components={components}
           rowClassName={() => 'editable-row'}
           bordered
-          dataSource={this.props.dataMea}
+          dataSource={dataSource}
           columns={columns}
         />
       </div>
     );
   }
 }
-          

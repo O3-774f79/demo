@@ -132,7 +132,8 @@ export default class Index extends PureComponent {
                     visible={this.state.visible2}
                     onOk={this.handleOk2}
                     onCancel={this.handleCancel2}
-                    width={900}
+                    left={50}
+                    width={1000}
                     >
                     <Summary />
                     </Modal>
