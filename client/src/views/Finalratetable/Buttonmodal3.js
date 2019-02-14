@@ -5,7 +5,7 @@ import Finaltable from './Finaltable';
 
 export default class Buttonmodal3 extends PureComponent {
 
-state = { visible: false,
+state = { visible: false,recordSelect:null
           }
 
   showModal = () => {
@@ -27,25 +27,25 @@ state = { visible: false,
       visible: false,
     });
   }
-
+componentDidMount(){
+  this.setState({recordSelect:this.props.record})
+}
      render() {
           return(
                <div>
                     <Button type="primary" onClick={this.showModal}>
-          Open
-        </Button>
-        <Modal
-        style={{marginLeft:"20%"}}
-          width="70%"
-          visible={this.state.visible}
-          onOk={this.handleOk}
-          onCancel={this.handleCancel}
-        >
+                    Open
+                  </Button>
+                    <Modal
+                    style={{marginLeft:"20%"}}
+                      width="70%"
+                      visible={this.state.visible}
+                      onOk={this.handleOk}
+                      onCancel={this.handleCancel}
+                    >
 
-        <Finaltable />
-        </Modal>
-
-                    
+                    <Finaltable recordSelect={this.state.recordSelect}/>
+                    </Modal>                
               </div>
           )
      }

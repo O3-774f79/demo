@@ -3,7 +3,7 @@ import React,{PureComponent} from 'react';
 import 'antd/dist/antd.css';
 import './index.css';
 import {
-  Table, Input, Button, Popconfirm, Form,
+  Table, Input, Button, Popconfirm, Form,Card
 } from 'antd';
 
 const FormItem = Form.Item;

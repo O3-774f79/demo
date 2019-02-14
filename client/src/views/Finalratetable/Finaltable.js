@@ -14,7 +14,7 @@ const { Column, ColumnGroup } = Table;
 
 export default class Finaltable extends PureComponent{
 
-    state = {
+    state = {recordSelect:{},
         
        
 
@@ -142,16 +142,26 @@ export default class Finaltable extends PureComponent{
           },
         ]
     }
-
+componentDidMount(){
+  this.setState({recordSelect:this.props.recordSelect}) 
+}
        
     render(){
+      console.log(this.state.recordSelect.branch)
         return(
             <div style={{marginTop:20}}>
+            <div style={{display:"flex",flexWrap:"wrap"}}>
+            <h3 style={{marginRight:10}}>ฝ่าย : {this.state.recordSelect.branch}</h3>
+            <h3>แผนก : {this.state.recordSelect.listname}</h3>
+            </div>
+            <hr />
+            <div style={{display:"flex",justifyContent:"center"}}>
             <Graph />
-<Card
+            </div>
+            <Card
       
-      style={{ width: "100%" }}
-    >
+            style={{ width: "100%" }}
+            >
     
             <Table 
             

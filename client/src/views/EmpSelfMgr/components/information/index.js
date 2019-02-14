@@ -5,6 +5,7 @@ import Task from './Task'
 import TotalSkill from './Totalskill'
 import Accach from './Accach'
 import Compen from './Compen'
+import {Card} from 'antd'
 export default class index extends PureComponent {
      render(){
           return(

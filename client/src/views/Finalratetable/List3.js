@@ -94,33 +94,21 @@ export default class List3 extends PureComponent{
           },{
             title:'',
             width:'10%',
-            render: () => (
-              <Buttonmodal3 /> ),
+            render: (record) => (
+              <Buttonmodal3 record={record}/> ),
 
           }
           ],
-         
-      
-     
-    }
-
-       
+    }       
     render(){
         return(
-            <div>
-           
-            
+            <div>    
             <Table  
             bordered={true} 
             size="small" 
             columns={this.state.col1} 
             dataSource={this.state.data1}
             pagination={false} />
-
-    
-    
-   
-  
             </div>
         )
     }

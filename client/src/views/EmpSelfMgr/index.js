@@ -5,8 +5,6 @@ import TabIcon from './components/TabIcon'
 import 'antd/dist/antd.css';
 import { Card, Button,Row,Col,Icon,Tabs,Modal } from 'antd';
 import Information from './components/information'
-import MDTetable from '../MDratetable'
-import Graph from '../Graph'
 import Summary from '../Kpi'
 import FinalTable from '../Finalratetable'
 const TabPane = Tabs.TabPane;
@@ -33,8 +31,8 @@ const style = {
         flexDirection: 'column',        
     },
     calendarTextForIconTeam:{
-        width: "100px",
-        height: '100px',
+        width: "50px",
+        height: '50px',
         fontSize: 60, 
     },
     calendarBtn:{
@@ -45,7 +43,7 @@ const style = {
     }
 }
 export default class Index extends PureComponent {
-    state={openContent :"1",onChange:"1",showTeam:false,visible: false,visible2: false }
+    state={openContent:1,showTeam:false,visible: false,visible2: false, title:"Information" }
             handleOk = (e) => {
                 console.log(e);
                 this.setState({
@@ -73,78 +71,88 @@ export default class Index extends PureComponent {
                 });
             }
      render() {
-        const onHandleClick = ()=> {
-            this.setState({openContent:"2"})
-            console.log(this.state.openContent)
-        }
-        const onHandleChange = ()=>{
-            this.setState({openContent: this.state.onChange})
-        }
         const _onHandleClick = ()=> {
             this.setState({
                 visible: true,
+                openContent:1,
+                title:"Information"
                 });
         }
         const _onHandleClick2 = ()=> {
             this.setState({
                 visible2: true,
+                openContent:2,
+                title:"Review Goal"
                 });
         }
+        const _onHandleClick3 = ()=> {
+            this.setState({
+                visible: true,
+                openContent:3,
+                title:"Team"
+                });
+        }
+        const _onHandleClick4 = ()=> {
+            this.setState({
+                visible2: true,
+                openContent:4,
+                title:"Review"
+                });
+        } 
           return( 
             <div>
             <div style={style.layoutPage}>
             </div>
             <div style={{display:"flex",justifyContent:"space-between",marginTop:30}}>
-            <div style={{flexGrow:1, marginRight:10,flexWrap:"wrap"}}>
+            <div style={{marginRight:10,flexWrap:"wrap",flexGrow:1,width:"10%"}}>
             <ProfileCard position={"General Manager"} Name={"Somsunh Somburanayut"}/>
                 <Card style={{backgroundColor:"#f5f5ef"}}>
                 <Button style={style.calendarBtn} onClick={_onHandleClick}>
                     <div style={{display:"flex",justifyContent:"center"}}>
+                    <Icon type="info-circle" style={style.calendarTextForIconTeam}/>
+                    </div>
+                    <label style={{marginTop:10}}>Information</label>
+                </Button>
+                <Button style={style.calendarBtn} onClick={_onHandleClick4}>
+                    <div style={{display:"flex",justifyContent:"center"}}>
                     <Icon type="solution" style={style.calendarTextForIconTeam}/>
                     </div>
-                    Review
+                    <label style={{marginTop:10}}>Review</label>
                 </Button>
-                <Modal
-                    title=""
-                    visible={this.state.visible}
-                    onOk={this.handleOk}
-                    onCancel={this.handleCancel}
-                    width={800}
-                    >
-                    {/* <Graph />
-                    <MDTetable /> */}
-                    <FinalTable />
-                    </Modal>
-                <Button style={style.calendarBtn} onClick={onHandleClick}>
+                <Button style={style.calendarBtn} onClick={_onHandleClick3}>
                 <div style={{display:"flex",justifyContent:"center"}}>
                 <Icon type="team" style={style.calendarTextForIconTeam}/>
                 </div>
-                Team
+                <label style={{marginTop:10}}>Team</label>
                 </Button>
                 <Button style={style.calendarBtn} onClick={_onHandleClick2}>
                     <div style={{display:"flex",justifyContent:"center"}}>
                     <Icon type="contacts" style={style.calendarTextForIconTeam}/>
                     </div>
-                    Review Goal
+                    <label style={{marginTop:10}}>Review Goal</label>              
                 </Button>
-                <Modal
-                    title=""
-                    visible={this.state.visible2}
-                    onOk={this.handleOk2}
-                    onCancel={this.handleCancel2}
-                    left={50}
-                    width={1000}
-                    >
-                    <Summary />
-                    </Modal>
                 </Card>
             </div>
-           <div style={{flexGrow:1}}>
+           <div style={{flexGrow:1,width:"70%"}}>
+                <Card style={{marginBottom:5}}>
+                    <h2>{this.state.title}</h2>
+                </Card>
                <Card style={{backgroundColor:"#f5f5ef"}}>
-                <Tabs defaultActiveKey={this.state.openContent} onChange={onHandleChange} activeKey={this.state.openContent}>
-                <TabPane tab={<div style={style.iconFormat}><Icon style={style.iconStyle}type="user" /><label style={style.iconText}>Information</label></div>} key="1"><Information /></TabPane>
-                <TabPane tab={<div style={style.iconFormat}></div>} key="2"><Team /></TabPane>
-                </Tabs>   
+               {(() => {
+                   console.log(this.state.openContent)
+                switch(this.state.openContent) {
+                    case 1:
+                        return  <Information />;
+                    case 2:
+                        return <FinalTable />;
+                    case 3:
+                        return  <Team />;
+                    case 4:
+                        return  <Summary />;
+                    default:
+                        return null;
+                        }
+                })()}
                 </Card>
             </div>    
           </div> 

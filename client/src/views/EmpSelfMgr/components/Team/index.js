@@ -42,13 +42,12 @@ export default class Index extends PureComponent {
      render() {
          return(
             <div style={{padding: '30px' }}>
-            <Card >
-              <Card.Grid style={gridStyle} onClick={this.onhandleModal}>Team Performance Journal</Card.Grid>
+            {/* <Card > */}
+              {/* <Card.Grid style={gridStyle} onClick={this.onhandleModal}>Team Performance Journal</Card.Grid>
               <Card.Grid style={gridStyle}>Team Performance Goals</Card.Grid>
               <Card.Grid style={gridStyle}>Team Performance Reviews</Card.Grid>
-              <Card.Grid style={gridStyle}>Open Positions</Card.Grid>
-             
-            </Card>
+              <Card.Grid style={gridStyle}>Open Positions</Card.Grid> */}
+            {/* </Card> */}
             <Modal
           title="Performance Journal"
           visible={this.state.visible}

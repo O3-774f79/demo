@@ -42,37 +42,20 @@ export default class Index extends PureComponent {
      render() {
          return(
             <div style={{padding: '30px' }}>
-            <Card >
-              <Card.Grid style={gridStyle} onClick={this.onhandleModal}>Team Performance Journal (waiting for design)</Card.Grid>
-              <Card.Grid style={gridStyle}>Team Performance Goals (waiting for design)</Card.Grid>
-              <Card.Grid style={gridStyle}>Team Performance Reviews (waiting for design)</Card.Grid>
-              <Card.Grid style={gridStyle}>Open Positions (waiting for design)</Card.Grid>
-             
-            </Card>
-            {/* <Modal
-          title="Performance Journal"
-          visible={this.state.visible}
-          width= {800}
-          onOk={this.handleOk}
-          onCancel={this.handleCancel}
-          footer={null}
-        >
-          <Tables />
-        </Modal> */}
             <Tabs>
               <TabPane tab="Summary" key="1">
               <div style={{display: "flex",flexWrap:"wrap"}}>
               <Card style={{ width: 300, marginTop: 16,marginLeft:15,marginRight:15 }} 
-                actions={[<Icon type="team" style={{cursor:"pointer"}} onClick={this.onhandleClickTree}/>]}
+                // actions={[<Icon type="team" style={{cursor:"pointer"}} onClick={this.onhandleClickTree}/>]}
                 >
                 <Meta
                   avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
-                  title="นาย ทดสอบ1 ทดสอบ1"
+                  title="นาย ณัฐพล รัศมีรวีมาตร"
                   description={
                   <div>
-                  <label>Marketing Manager</label>
+                  <label>Developer Head</label>
                   <br />
-                  <label>Sales & Marketing</label>
+                  <label>Sofeware Development</label>
                   </div>
                   }
                 />
@@ -89,12 +72,12 @@ export default class Index extends PureComponent {
               <Card style={{ width: 300, marginTop: 16,marginLeft:15,marginRight:15 }}>
                 <Meta
                   avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
-                  title="นาย ทดสอบ2 ทดสอบ2"
+                  title="นาย โชติชัย พลอยอรุณรุ่ง "
                   description={
                     <div>
-                    <label>Sales Manager</label>
+                    <label>Developer</label>
                     <br />
-                    <label>Sales & Marketing</label>
+                    <label>Sofeware Development</label>
                     </div>
                     }
                 />
@@ -102,12 +85,12 @@ export default class Index extends PureComponent {
               <Card style={{ width: 300, marginTop: 16,marginLeft:15,marginRight:15 }}>
                 <Meta
                   avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
-                  title="นาย ทดสอบ3 ทดสอบ3"
+                  title="นาย ธนะศักดิ์ ก๋งเจริญ"
                   description={
                     <div>
-                    <label>Sales Manager</label>
+                    <label>Developer</label>
                     <br />
-                    <label>Sales & Marketing</label>
+                    <label>Sofeware Development</label>
                     </div>
                     }
                 />
@@ -119,12 +102,12 @@ export default class Index extends PureComponent {
               <Card style={{ width: 300, marginTop: 16,marginLeft:15,marginRight:15 }}>
                 <Meta
                   avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
-                  title="นาย ทดสอบ1 ทดสอบ1"
+                  title="นาย ณัฐพล รัศมีรวีมาตร"
                   description={
                   <div>
-                  <label>Marketing Manager</label>
+                  <label>Developer Head</label>
                   <br />
-                  <label>Sales & Marketing</label>
+                  <label>Sofeware Development</label>
                   <hr/>
                   <label>Years in position: 12.9</label>
                   <br />
@@ -138,12 +121,12 @@ export default class Index extends PureComponent {
               <Card style={{ width: 300, marginTop: 16,marginLeft:15,marginRight:15 }}>
                 <Meta
                   avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
-                  title="นาย ทดสอบ2 ทดสอบ2"
+                  title="นาย โชติชัย พลอยอรุณรุ่ง"
                   description={
                     <div>
-                    <label>Sale Manager</label>
+                   <label>Developer</label>
                     <br />
-                    <label>Sales & Marketing</label>
+                    <label>Sofeware Development</label>
                     <hr/>
                     <label>Years in position: 6.9</label>
                     <br />
@@ -157,12 +140,12 @@ export default class Index extends PureComponent {
               <Card style={{ width: 300, marginTop: 16,marginLeft:15,marginRight:15 }}>
                 <Meta
                   avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
-                  title="นาย ทดสอบ3 ทดสอบ3"
+                  title="นาย ธนะศักดิ์ ก๋งเจริญ"
                   description={
                     <div>
-                    <label>Sale Manager</label>
+                    <label>Developer</label>
                     <br />
-                    <label>Sales & Marketing</label>
+                    <label>Sofeware Development</label>
                     <hr/>
                     <label>Years in position: 12.7</label>
                     <br />
@@ -180,12 +163,12 @@ export default class Index extends PureComponent {
               <Card style={{ width: 300, marginTop: 16,marginLeft:15,marginRight:15 }}>
                 <Meta
                   avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
-                  title="นาย ทดสอบ1 ทดสอบ1"
+                  title="นาย ณัฐพล รัศมีรวีมาตร"
                   description={
                   <div>
-                  <label>Marketing Manager</label>
-                  <br />
-                  <label>Sales & Marketing</label>
+                  <label>Developer Head</label>
+                    <br />
+                    <label>Sofeware Development</label>
                   <hr/>
                   <label>Annual salary: 68,310.00</label>
                   <br />
@@ -199,12 +182,12 @@ export default class Index extends PureComponent {
               <Card style={{ width: 300, marginTop: 16,marginLeft:15,marginRight:15 }}>
                 <Meta
                   avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
-                  title="นาย ทดสอบ2 ทดสอบ2"
+                  title="นาย โชติชัย พลอยอรุณรุ่ง"
                   description={
                     <div>
-                    <label>Sale Manager</label>
+                    <label>Developer</label>
                     <br />
-                    <label>Sales & Marketing</label>
+                    <label>Sofeware Development</label>
                     <hr/>
                     <label>Annual salary: 84,300.00</label>
                     <br />
@@ -218,12 +201,12 @@ export default class Index extends PureComponent {
               <Card style={{ width: 300, marginTop: 16,marginLeft:15,marginRight:15 }}>
                 <Meta
                   avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
-                  title="นาย ทดสอบ3 ทดสอบ3"
+                  title="นาย ธนะศักดิ์ ก๋งเจริญ"
                   description={
                     <div>
-                    <label>Sale Manager</label>
+                   <label>Developer</label>
                     <br />
-                    <label>Sales & Marketing</label>
+                    <label>Sofeware Development</label>
                     <hr/>
                     <label>Top balances with activity</label>
                     <br />
@@ -241,12 +224,12 @@ export default class Index extends PureComponent {
               <Card style={{ width: 300, marginTop: 16,marginLeft:15,marginRight:15 }}>
                 <Meta
                   avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
-                  title="นาย ทดสอบ1 ทดสอบ1"
+                  title="นาย ณัฐพล รัศมีรวีมาตร"
                   description={
                   <div>
-                  <label>Marketing Manager</label>
-                  <br />
-                  <label>Sales & Marketing</label>
+                  <label>Developer Head</label>
+                    <br />
+                    <label>Sofeware Development</label>
                   <hr/>
                   <label>Top balances with activity</label>
                     <br />
@@ -260,12 +243,12 @@ export default class Index extends PureComponent {
               <Card style={{ width: 300, marginTop: 16,marginLeft:15,marginRight:15 }}>
                 <Meta
                   avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
-                  title="นาย ทดสอบ2 ทดสอบ2"
+                  title="นาย โชติชัย พลอยอรุณรุ่ง"
                   description={
                     <div>
-                    <label>Sale Manager</label>
+                   <label>Developer</label>
                     <br />
-                    <label>Sales & Marketing</label>
+                    <label>Sofeware Development</label>
                     <hr/>
                     <label>Top balances with activity</label>
                     <br />
@@ -279,12 +262,12 @@ export default class Index extends PureComponent {
               <Card style={{ width: 300, marginTop: 16,marginLeft:15,marginRight:15 }}>
                 <Meta
                   avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
-                  title="นาย ทดสอบ3 ทดสอบ3"
+                  title="นาย ธนะศักดิ์ ก๋งเจริญ"
                   description={
                     <div>
-                    <label>Sale Manager</label>
+                    <label>Developer</label>
                     <br />
-                    <label>Sales & Marketing</label>
+                    <label>Sofeware Development</label>
                     <hr/>
                     <label>Annual salary: 94,815.00</label>
                     <br />
@@ -302,12 +285,12 @@ export default class Index extends PureComponent {
               <Card style={{ width: 300, marginTop: 16,marginLeft:15,marginRight:15 }}>
                 <Meta
                   avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
-                  title="นาย ทดสอบ1 ทดสอบ1"
+                  title="นาย ณัฐพล รัศมีรวีมาตร"
                   description={
                   <div>
-                  <label>Marketing Manager</label>
-                  <br />
-                  <label>Sales & Marketing</label>
+                  <label>Developer Head</label>
+                    <br />
+                    <label>Sofeware Development</label>
                   <hr/>
                     <label>Not started: 1</label>
                     <br />
@@ -319,12 +302,12 @@ export default class Index extends PureComponent {
               <Card style={{ width: 300, marginTop: 16,marginLeft:15,marginRight:15 }}>
                 <Meta
                   avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
-                  title="นาย ทดสอบ2 ทดสอบ2"
+                  title="นาย โชติชัย พลอยอรุณรุ่ง"
                   description={
                     <div>
-                    <label>Sale Manager</label>
+                    <label>Developer</label>
                     <br />
-                    <label>Sales & Marketing</label>
+                    <label>Sofeware Development</label>
                     <hr/>
                     <label>Not started: 2</label>
                     <br />
@@ -336,12 +319,12 @@ export default class Index extends PureComponent {
               <Card style={{ width: 300, marginTop: 16,marginLeft:15,marginRight:15 }}>
                 <Meta
                   avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
-                  title="นาย ทดสอบ3 ทดสอบ3"
+                  title="นาย ธนะศักดิ์ ก๋งเจริญ"
                   description={
                     <div>
-                    <label>Sale Manager</label>
+                    <label>Developer</label>
                     <br />
-                    <label>Sales & Marketing</label>
+                    <label>Sofeware Development</label>
                     <hr/>
                     <label>Not started: 1</label>
                     <br />
@@ -357,12 +340,12 @@ export default class Index extends PureComponent {
               <Card style={{ width: 300, marginTop: 16,marginLeft:15,marginRight:15 }}>
                 <Meta
                   avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
-                  title="นาย ทดสอบ1 ทดสอบ1"
+                  title="นาย ณัฐพล รัศมีรวีมาตร"
                   description={
                   <div>
-                  <label>Marketing Manager</label>
-                  <br />
-                  <label>Sales & Marketing</label>
+                 <label>Developer Head</label>
+                    <br />
+                    <label>Sofeware Development</label>
                   <hr/>
                     <label>In progress: 1</label>
                     <br />
@@ -374,12 +357,12 @@ export default class Index extends PureComponent {
               <Card style={{ width: 300, marginTop: 16,marginLeft:15,marginRight:15 }}>
                 <Meta
                   avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
-                  title="นาย ทดสอบ2 ทดสอบ2"
+                  title="นาย โชติชัย พลอยอรุณรุ่ง"
                   description={
                     <div>
-                    <label>Sale Manager</label>
+                   <label>Developer</label>
                     <br />
-                    <label>Sales & Marketing</label>
+                    <label>Sofeware Development</label>
                     <hr/>
                     <label>In progress: 2</label>
                     <br />
@@ -391,12 +374,12 @@ export default class Index extends PureComponent {
               <Card style={{ width: 300, marginTop: 16,marginLeft:15,marginRight:15 }}>
                 <Meta
                   avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
-                  title="นาย ทดสอบ3 ทดสอบ3"
+                  title="นาย ธนะศักดิ์ ก๋งเจริญ"
                   description={
                     <div>
-                    <label>Sale Manager</label>
+                    <label>Developer</label>
                     <br />
-                    <label>Sales & Marketing</label>
+                    <label>Sofeware Development</label>
                     <hr/>
                     <label>In progress: 1</label>
                     <br />

@@ -16,14 +16,20 @@ function handleBlur() {
 function handleFocus() {
   console.log('focus');
 }
+
 export default class Ratelist1 extends PureComponent{
+  state={record:{}}
+  componentDidMount(){
+    this.setState({record:this.props.record})
+  }
     render(){
+      console.log("testtest",this.state.record)
         return(
             <div>
 <Select
     disabled
     showSearch
-    style={{ width: 50 }}
+    style={{ width: "70%" }}
     defaultValue="B"
     optionFilterProp="children"
     onChange={handleChange}
@@ -31,10 +37,6 @@ export default class Ratelist1 extends PureComponent{
     onBlur={handleBlur}
     filterOption={(input, option) => option.props.children.toLowerCase().indexOf(input.toLowerCase()) >= 0}
   >
-    <Option value="A">A</Option>
-    <Option value="B">B</Option>
-    <Option value="C">C</Option>
-    <Option value="D">D</Option>
   </Select>
             </div>
         )

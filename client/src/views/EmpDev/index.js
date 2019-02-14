@@ -29,8 +29,8 @@ const style = {
         flexDirection: 'column',        
     },
     calendarTextForIconTeam:{
-        width: "100px",
-        height: '100px',
+        width: "50px",
+        height: '50px',
         fontSize: 60,       
     },
     calendarBtn:{
@@ -41,10 +41,14 @@ const style = {
     }
 }
 export default class Index extends PureComponent {
-    state={openContent :"1",onChange:"1",showTeam:false}
+    state={openContent :1,onChange:"1",showTeam:false}
      render() {
         const onHandleClick = ()=> {
-            this.setState({openContent:"2"})
+            this.setState({openContent:1})
+            console.log(this.state.openContent)
+        }
+        const onHandleClick2 = ()=> {
+            this.setState({openContent:2})
             console.log(this.state.openContent)
         }
         const onHandleChange = ()=>{
@@ -55,35 +59,36 @@ export default class Index extends PureComponent {
             <div style={style.layoutPage}>
             </div>
             <div style={{display:"flex",justifyContent:"space-between",marginTop:30}}>
-            <div style={{flexGrow:1, marginRight:10,flexWrap:"wrap"}}>
-            <ProfileCard position={"Developer"}/>
+            <div style={{flexGrow:1, marginRight:10,flexWrap:"wrap",width:"10%"}}>
+            <ProfileCard position={"Developer"} Name={"Ananchai Phahupongsub"}/>
                 <Card style={{backgroundColor:"#f5f5ef"}}>
-                <Button style={style.calendarBtn}>
+                <Button style={style.calendarBtn} onClick={onHandleClick2}>
                     <div style={style.calendarText}>
-                    <label>waiting </label>
-                    for design
-                    </div>
-                </Button>
-                <Button style={style.calendarBtn}>
-                    <div style={style.calendarText}>
-                    <label>waiting </label>
-                    for design
+                    <Icon type="info-circle" style={style.calendarTextForIconTeam}/>
+                <label style={{marginTop:10}}>Infomation</label>
                     </div>
                 </Button>
                 <Button style={style.calendarBtn} onClick={onHandleClick}>
                 <div style={{display:"flex",justifyContent:"center"}}>
                 <Icon type="team" style={style.calendarTextForIconTeam}/>
                 </div>
-                Team
+                <label style={{marginTop:10}}>Team</label>
                 </Button>
                 </Card>
             </div>
-           <div style={{flexGrow:1}}>
-               <Card style={{backgroundColor:"#f5f5ef"}}>
-                <Tabs defaultActiveKey={this.state.openContent} onChange={onHandleChange} activeKey={this.state.openContent}>
-                <TabPane tab={<div style={style.iconFormat}><Icon style={style.iconStyle}type="user" /><label style={style.iconText}>Information</label></div>} key="1"><Information /></TabPane>
-                <TabPane tab={<div style={style.iconFormat}></div>} key="2"><Team /></TabPane>
-                </Tabs>   
+           <div style={{flexGrow:1,width:"70%"}}>
+                <Card style={{backgroundColor:"#f5f5ef"}}>
+               {(() => {
+                   console.log(this.state.openContent)
+                switch(this.state.openContent) {
+                    case 1:
+                        return  <Team />;
+                    case 2:
+                        return <Information />;
+                    default:
+                        return null;
+                        }
+                })()}
                 </Card>
             </div>    
           </div> 
