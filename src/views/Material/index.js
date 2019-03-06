@@ -50,7 +50,7 @@ export default class Index extends PureComponent {
   state = {
     current: 1,}
     render() {
-        const { current } = this.state; 
+        const { current } = this.state;
          return(
             <div className="animated fadeIn">
                     <div><h2><b>Material Master Maintenance</b></h2></div>
@@ -73,40 +73,40 @@ export default class Index extends PureComponent {
               </CardHeader>
               <CardBody>
               <FormGroup row>
-                        <Label for="exampleEmail" sm={1}>วัตถุประสงค์</Label>
+                        <Label for="exampleEmail" sm={2}>วัตถุประสงค์</Label>
                         <Col sm={8}>
                           <Input type="textarea" name="email" id="exampleEmail" />
-                        </Col>                         
+                        </Col>
                       </FormGroup>
                       <FormGroup row>
-                        <Label for="exampleEmail" sm={1}>วันที่   ที่บัญชีรับเอกสาร</Label>
-                        <Col sm={2}>
+                        <Label for="exampleEmail" sm={2}>วันที่   ที่บัญชีรับเอกสาร</Label>
+                        <Col sm={3}>
                           <PickerDate />
                         </Col>
-                        <Label for="exampleEmail" sm={1} >วันที่   ดำเนินการในSAP</Label>
-                        <Col sm={2}>
+                        <Label for="exampleEmail" sm={2} >วันที่   ดำเนินการในSAP</Label>
+                        <Col sm={3}>
                           <PickerDate />
-                        </Col>                        
+                        </Col>
                       </FormGroup>
                       <FormGroup row>
-                        <Label for="exampleEmail" sm={1}>Industry Sector *</Label>
+                        <Label for="exampleEmail" sm={2}>Industry Sector *</Label>
                         <Col sm={8}>
                           <Input type="textarea" name="email" id="exampleEmail" />
-                        </Col>                         
+                        </Col>
                       </FormGroup>
                       <FormGroup row>
-                        <Label for="exampleEmail" sm={1}>Material Type*</Label>
-                        <Col sm={2}>
+                        <Label for="exampleEmail" sm={2}>Material Type*</Label>
+                        <Col sm={3}>
                           <Input type="email" name="email" id="exampleEmail" />
                         </Col>
-                        <Label for="exampleEmail" sm={1} >Material number (ได้จากระบบSAP)</Label>
-                        <Col sm={2}>
+                        <Label for="exampleEmail" sm={2} >Material number (ได้จากระบบSAP)</Label>
+                        <Col sm={3}>
                         <Input type="email" name="email" id="exampleEmail" />
-                        </Col>                        
+                        </Col>
                       </FormGroup>
                       <FormGroup row>
-                        <Label for="exampleEmail" sm={1}>Plant*</Label>
-                        <Col sm={2}>
+                        <Label for="exampleEmail" sm={2}>Plant*</Label>
+                        <Col sm={3}>
                         <Select
                             showSearch
                             style={{ width: 200 }}
@@ -124,7 +124,7 @@ export default class Index extends PureComponent {
                             <Option value="tom">2200</Option>
                         </Select>
                         </Col>
-                        <Label for="exampleEmail" sm={1} >Batch Management*</Label>
+                        <Label for="exampleEmail" sm={2} >Batch Management*</Label>
                         <Col sm={2}>
                         <Select
                             showSearch
@@ -139,13 +139,13 @@ export default class Index extends PureComponent {
                             <Option value="jack">คุมBatch</Option>
                             <Option value="lucy">ไม่คุมBatch</Option>
                         </Select>
-                        </Col>                        
+                        </Col>
                       </FormGroup>
                       <FormGroup row>
-                        <Label for="exampleEmail" sm={1}>วันที่ต้องการใช้</Label>
-                        <Col sm={2}>
+                        <Label for="exampleEmail" sm={2}>วันที่ต้องการใช้</Label>
+                        <Col sm={3}>
                           <PickerDate />
-                        </Col>                      
+                        </Col>
                       </FormGroup>
                 <GeneralData />
                 <Dimensions />
@@ -160,7 +160,7 @@ export default class Index extends PureComponent {
                 <WareHouse />
             </CardBody>
             </Card>
-            </div>  
+            </div>
          )
     }
 }

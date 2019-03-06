@@ -45,7 +45,7 @@ const Users = React.lazy(() => import('./views/Users/Users'));
 const User = React.lazy(() => import('./views/Users/User'));
 
 
-const Indicate = React.lazy(() => import('./views/Indicate/Index'));
+// const Indicate = React.lazy(() => import('./views/Indicate/Index'));
 
 // https://github.com/ReactTraining/react-router/tree/master/packages/react-router-config
 const routes = [
@@ -57,7 +57,7 @@ const routes = [
   { path: '/supplier', exact: true, name: 'Supplier', component: Supplier},
   { path:  '/product',exact:true,name:'Product',component: Product},
   { path:  '/Material-Master-Maintenance',exact:true,name:'Material-Maintenance',component: Material},
-  
+
 
   { path: '/dashboard', name: 'Dashboard', component: Dashboard },
   { path: '/theme', exact: true, name: 'Theme', component: Colors },
@@ -66,7 +66,7 @@ const routes = [
   { path: '/base', exact: true, name: 'Base', component: Cards },
   { path: '/base/cards', name: 'Cards', component: Cards },
   { path: '/base/forms', name: 'Forms', component: Forms },
-  { path: '/base/switches', name: 'Switches', component: Switches },
+  { path: '/base  /switches', name: 'Switches', component: Switches },
   { path: '/base/tables', name: 'Tables', component: Tables },
   { path: '/base/tabs', name: 'Tabs', component: Tabs },
   { path: '/base/breadcrumbs', name: 'Breadcrumbs', component: Breadcrumbs },
@@ -100,8 +100,8 @@ const routes = [
   { path: '/users', exact: true,  name: 'Users', component: Users },
   { path: '/users/:id', exact: true, name: 'User Details', component: User },
 
-  
-  { path: '/indicate', exact: true, name: 'Indicate', component: Indicate },
+
+  // { path: '/indicate', exact: true, name: 'Indicate', component: Indicate },
 ];
 
 export default routes;

@@ -18,59 +18,59 @@ export default class Dimensions extends PureComponent {
               <Panel header="Dimensions/EANs (Basic Data 1) - R&D" key="1">
               <Form>
                       <FormGroup row>
-                        <Label for="exampleEmail" sm={1}>Gross Weight *</Label>
-                        <Col sm={3}>
+                        <Label for="exampleEmail" sm={2}>Gross Weight *</Label>
+                        <Col sm={2}>
                           <Input type="email" name="email" id="exampleEmail" />
                         </Col>
-                        <Label for="exampleEmail" sm={1}>Net Weight *</Label>
+                        <Label for="exampleEmail" sm={2}>Net Weight *</Label>
                         <Col sm={2}>
                         <Input type="email" name="email" id="exampleEmail" />
                         </Col>
-                        <Label for="exampleEmail" sm={1}>Weight unit *</Label>
+                        <Label for="exampleEmail" sm={2}>Weight unit *</Label>
                         <Col sm={2}>
                         <Input type="email" name="email" id="exampleEmail" />
                         </Col>
                       </FormGroup>
                       <FormGroup row>
-                        <Label for="exampleEmail" sm={1} >Laboratory *</Label>
-                        <Col sm={3}>
+                        <Label for="exampleEmail" sm={2} >Laboratory *</Label>
+                        <Col sm={2}>
                         <Input type="email" name="email" id="exampleEmail" />
-                        </Col>  
-                        <Label for="exampleEmail" sm={1} >Volume unit</Label>
-                        <Col sm={3}>
-                        <Input type="email" name="email" id="exampleEmail" />
-                        </Col>                    
-                      </FormGroup>
-                      <FormGroup row>
-                      <Label for="exampleEmail" sm={1} >Size/Dimension</Label>
-                        <Col sm={3}>
+                        </Col>
+                        <Label for="exampleEmail" sm={2} >Volume unit</Label>
+                        <Col sm={2}>
                         <Input type="email" name="email" id="exampleEmail" />
                         </Col>
                       </FormGroup>
                       <FormGroup row>
-                      <Label for="exampleEmail" sm={1} >EANs/BaseUnit</Label>
-                        <Col sm={3}>
-                        <Input type="email" name="email" id="exampleEmail" />
-                        </Col>
-                        <Label for="exampleEmail" sm={1}>EANs Cat</Label>
-                        <Col sm={3}>
+                      <Label for="exampleEmail" sm={2} >Size/Dimension</Label>
+                        <Col sm={2}>
                         <Input type="email" name="email" id="exampleEmail" />
                         </Col>
                       </FormGroup>
                       <FormGroup row>
-                      <Label for="exampleEmail" sm={1} >EANs/Carton</Label>
-                        <Col sm={3}>
+                      <Label for="exampleEmail" sm={2} >EANs/BaseUnit</Label>
+                        <Col sm={2}>
+                        <Input type="email" name="email" id="exampleEmail" />
+                        </Col>
+                        <Label for="exampleEmail" sm={2}>EANs Cat</Label>
+                        <Col sm={2}>
                         <Input type="email" name="email" id="exampleEmail" />
                         </Col>
                       </FormGroup>
                       <FormGroup row>
-                      <Label for="exampleEmail" sm={1} >EANs/Pack</Label>
-                        <Col sm={3}>
+                      <Label for="exampleEmail" sm={2} >EANs/Carton</Label>
+                        <Col sm={2}>
+                        <Input type="email" name="email" id="exampleEmail" />
+                        </Col>
+                      </FormGroup>
+                      <FormGroup row>
+                      <Label for="exampleEmail" sm={2} >EANs/Pack</Label>
+                        <Col sm={2}>
                         <Input type="email" name="email" id="exampleEmail" />
                         </Col>
                       </FormGroup>
                   </Form>
-              </Panel>             
+              </Panel>
             </Collapse>
             </div>
         )

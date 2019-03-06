@@ -15,7 +15,7 @@ export default class TextAdditional extends PureComponent {
         return(
             <div>
             <Collapse onChange={callback} style={{marginTop: 10}}>
-              <Panel header="Unit of measure (Additional Data)" key="1">
+              <Panel header="Text(Additional Data)" key="1">
               <Form>
                    <h6>Basic Data Text*</h6>
                       <FormGroup row>
@@ -36,9 +36,9 @@ export default class TextAdditional extends PureComponent {
                         <Col sm={3}>
                           <Input type="email" name="email" id="exampleEmail" />
                         </Col>
-                      </FormGroup>                  
+                      </FormGroup>
                   </Form>
-              </Panel>             
+              </Panel>
             </Collapse>
             </div>
         )

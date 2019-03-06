@@ -18,95 +18,95 @@ export default class SaleData extends PureComponent {
               <Panel header="Sale Data (กรอกเฉพาะ Material ที่มีการขาย)" key="1">
               <Form>
                       <FormGroup row>
-                        <Label for="exampleEmail" sm={1}>Sale Org. *</Label>
-                        <Col sm={3}>
+                        <Label for="exampleEmail" sm={2}>Sale Org. *</Label>
+                        <Col sm={2}>
                           <Input type="email" name="email" id="exampleEmail" />
                         </Col>
-                        <Label for="exampleEmail" sm={1}>Distribution Channel *</Label>
+                        <Label for="exampleEmail" sm={2}>Distribution Channel *</Label>
                         <Col sm={2}>
                         <Input type="email" name="email" id="exampleEmail" />
                         </Col>
                       </FormGroup>
                       <FormGroup row>
-                        <Label for="exampleEmail" sm={1} ></Label>
-                        <Col sm={3}>
+                        <Label for="exampleEmail" sm={2} ></Label>
+                        <Col sm={2}>
                         {/* <Input type="email" name="email" id="exampleEmail" /> */}
-                        </Col>  
-                        <Label for="exampleEmail" sm={1} >MaterialGroup 1 </Label>
-                        <Col sm={3}>
-                        <Input type="email" name="email" id="exampleEmail" />
-                        </Col>                    
-                      </FormGroup>
-                      <FormGroup row>
-                      <Label for="exampleEmail" sm={1} >Delivery Plant</Label>
-                        <Col sm={3}>
-                        <Input type="email" name="email" id="exampleEmail" />
                         </Col>
-                        <Label for="exampleEmail" sm={1}>MaterialGroup 2</Label>
-                        <Col sm={3}>
+                        <Label for="exampleEmail" sm={2} >MaterialGroup 1 </Label>
+                        <Col sm={2}>
                         <Input type="email" name="email" id="exampleEmail" />
                         </Col>
                       </FormGroup>
                       <FormGroup row>
-                      <Label for="exampleEmail" sm={1} >TaxClassification</Label>
-                        <Col sm={3}>
+                      <Label for="exampleEmail" sm={2} >Delivery Plant</Label>
+                        <Col sm={2}>
                         <Input type="email" name="email" id="exampleEmail" />
                         </Col>
-                        <Label for="exampleEmail" sm={1} >MaterialGroup 3</Label>
-                        <Col sm={3}>
+                        <Label for="exampleEmail" sm={2}>MaterialGroup 2</Label>
+                        <Col sm={2}>
                         <Input type="email" name="email" id="exampleEmail" />
                         </Col>
                       </FormGroup>
                       <FormGroup row>
-                        <Label for="exampleEmail" sm={1} ></Label>
-                        <Col sm={3}>
+                      <Label for="exampleEmail" sm={2} >TaxClassification</Label>
+                        <Col sm={2}>
+                        <Input type="email" name="email" id="exampleEmail" />
+                        </Col>
+                        <Label for="exampleEmail" sm={2} >MaterialGroup 3</Label>
+                        <Col sm={2}>
+                        <Input type="email" name="email" id="exampleEmail" />
+                        </Col>
+                      </FormGroup>
+                      <FormGroup row>
+                        <Label for="exampleEmail" sm={2} ></Label>
+                        <Col sm={2}>
                         {/* <Input type="email" name="email" id="exampleEmail" /> */}
-                        </Col>  
-                        <Label for="exampleEmail" sm={1} >MaterialGroup 4</Label>
-                        <Col sm={3}>
+                        </Col>
+                        <Label for="exampleEmail" sm={2} >MaterialGroup 4</Label>
+                        <Col sm={2}>
                         <Input type="email" name="email" id="exampleEmail" />
-                        </Col>                    
+                        </Col>
                       </FormGroup>
                       <FormGroup row>
-                        <Label for="exampleEmail" sm={1} >Product Hierarchy</Label>
-                        <Col sm={3}>
+                        <Label for="exampleEmail" sm={2} >Product Hierarchy</Label>
+                        <Col sm={2}>
                         <Input type="email" name="email" id="exampleEmail" />
-                        </Col>  
-                        <Label for="exampleEmail" sm={1} >MaterialGroup 5</Label>
-                        <Col sm={3}>
+                        </Col>
+                        <Label for="exampleEmail" sm={2} >MaterialGroup 5</Label>
+                        <Col sm={2}>
                         <Input type="email" name="email" id="exampleEmail" />
-                        </Col>                    
+                        </Col>
                       </FormGroup>
                       <FormGroup row>
-                        <Label for="exampleEmail" sm={1} >Acct assignment grp*</Label>
+                        <Label for="exampleEmail" sm={2} >Acct assignment grp*</Label>
                         <Col sm={2}>
                         <Input type="email" name="email" id="exampleEmail" />
-                        </Col>  
-                        <Label for="exampleEmail" sm={1} >Matl. Statistics grp</Label>
-                        <Col sm={1}>
-                        <Input type="email" name="email" id="exampleEmail" />
-                        </Col>     
-                        <Label for="exampleEmail" sm={1} >Availability check </Label>
+                        </Col>
+                        <Label for="exampleEmail" sm={2} >Matl. Statistics grp</Label>
                         <Col sm={2}>
                         <Input type="email" name="email" id="exampleEmail" />
-                        </Col>                 
+                        </Col>
+                        <Label for="exampleEmail" sm={2} >Availability check </Label>
+                        <Col sm={2}>
+                        <Input type="email" name="email" id="exampleEmail" />
+                        </Col>
                       </FormGroup>
                       <FormGroup row>
-                        <Label for="exampleEmail" sm={1} >Item Catagory Group*</Label>
+                        <Label for="exampleEmail" sm={2} >Item Catagory Group*</Label>
                         <Col sm={2}>
                         <Input type="email" name="email" id="exampleEmail" />
-                        </Col>  
-                        <Label for="exampleEmail" sm={1} >Transport Group*</Label>
+                        </Col>
+                        <Label for="exampleEmail" sm={2} >Transport Group*</Label>
                         <Col sm={2}>
                         <Input type="email" name="email" id="exampleEmail" />
-                        </Col>     
-                        <Label for="exampleEmail" sm={1} >Loading Group*</Label>
+                        </Col>
+                        <Label for="exampleEmail" sm={2} >Loading Group*</Label>
                         <Col sm={2}>
                         <Input type="email" name="email" id="exampleEmail" />
-                        </Col>                 
+                        </Col>
                       </FormGroup>
                   </Form>
-              </Panel>             
+              </Panel>
             </Collapse>
             </div>
         )
